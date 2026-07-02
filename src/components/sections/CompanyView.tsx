@@ -302,9 +302,7 @@ const CompanyView: React.FC<CompanyViewProps> = ({ onBackToHome }) => {
               <p style={{ marginBottom: '2rem' }}>
                 Throughout his career, Nikhil has made significant contributions while working with leading organizations such as Altorum Leren, Repido, Msol Technology, and Walmart. His experience includes delivering over 30 successful projects, showcasing his ability to drive innovation and deliver impactful solutions.
               </p>
-              <p style={{ margin: 0 }}>
-                At Trialshopy, Nikhil is committed to redefining the technological landscape, utilizing data-driven insights to enhance operational efficiency and create exceptional value for clients.
-              </p>
+
             </div>
           </div>
         </div>
