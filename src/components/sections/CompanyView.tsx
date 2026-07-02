@@ -169,7 +169,7 @@ const CompanyView: React.FC<CompanyViewProps> = ({ onBackToHome }) => {
             <div className="company-leader-photo-wrap">
               <img 
                 src="https://stagingmedia.pointai.com/assets/images/nitin-vats.jpeg" 
-                alt="Aarav Sharma" 
+                alt="Nikhil Choudhary" 
                 className="company-leader-photo" 
                 style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }}
               />
@@ -181,7 +181,7 @@ const CompanyView: React.FC<CompanyViewProps> = ({ onBackToHome }) => {
                 className="company-leader-name" 
                 href="https://www.linkedin.com/"
               >
-                Aarav Sharma
+                Nikhil Choudhary
               </a>
             </h3>
             <p className="company-leader-role">Founder &amp; CEO</p>
