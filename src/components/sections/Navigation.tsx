@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import nexusaiLogo from '../../assets/images/nexusai-logo-black.png';
+import { Link } from './Link';
 
 interface NavigationProps {
   onGetStarted: () => void;
@@ -64,10 +65,10 @@ const Navigation: React.FC<NavigationProps> = ({ onGetStarted, activeView, onVie
     <>
       <header className="home-header">
         <div className="home-header-inner">
-          <a className="home-header-logo" href="#" onClick={(e) => { e.preventDefault(); onViewChange('home'); }} style={{ display: 'inline-flex', alignItems: 'center', gap: '0.6rem', textDecoration: 'none' }}>
+          <Link className="home-header-logo" href="/" onClick={() => onViewChange('home')} style={{ display: 'inline-flex', alignItems: 'center', gap: '0.6rem', textDecoration: 'none' }}>
             <img src={nexusaiLogo} alt="NexusAI logo" style={{ width: '2.25rem', height: '2.25rem', objectFit: 'contain' }} />
             <span className="logo-text-bold" style={{ fontFamily: 'var(--font-inter-tight), sans-serif', fontWeight: 700, fontSize: '1.35rem', color: 'var(--primary-color)', letterSpacing: '-0.02em' }}>Nexus AI</span>
-          </a>
+          </Link>
           
           <nav className="home-nav" aria-label="Primary">
             <div 
@@ -93,10 +94,10 @@ const Navigation: React.FC<NavigationProps> = ({ onGetStarted, activeView, onVie
                 </svg>
               </button>
             </div>
-            <a className={`home-nav-link ${activeView === 'research' ? 'active' : ''}`} href="#" onClick={(e) => { e.preventDefault(); onViewChange('research'); }}>Research</a>
-            <a className={`home-nav-link ${activeView === 'company' ? 'active' : ''}`} href="#" onClick={(e) => { e.preventDefault(); onViewChange('company'); }}>Company</a>
-            <a className={`home-nav-link ${activeView === 'blog' ? 'active' : ''}`} href="#" onClick={(e) => { e.preventDefault(); onViewChange('blog'); }}>Blogs</a>
-            <a className={`home-nav-link ${activeView === 'career' ? 'active' : ''}`} href="#" onClick={(e) => { e.preventDefault(); onViewChange('career'); }}>Career</a>
+            <Link className={`home-nav-link ${activeView === 'research' ? 'active' : ''}`} href="/research" onClick={() => onViewChange('research')}>Research</Link>
+            <Link className={`home-nav-link ${activeView === 'company' ? 'active' : ''}`} href="/company" onClick={() => onViewChange('company')}>Company</Link>
+            <Link className={`home-nav-link ${activeView === 'blog' ? 'active' : ''}`} href="/blogs" onClick={() => onViewChange('blog')}>Blogs</Link>
+            <Link className={`home-nav-link ${activeView === 'career' ? 'active' : ''}`} href="/career" onClick={() => onViewChange('career')}>Career</Link>
           </nav>
           
           <div className="home-header-actions">
@@ -125,7 +126,7 @@ const Navigation: React.FC<NavigationProps> = ({ onGetStarted, activeView, onVie
           onMouseLeave={handleMouseLeave}
         >
           <div className="home-products-dropdown-inner">
-            <a className="home-products-item" role="menuitem" style={{ '--item-index': 0 } as React.CSSProperties} href="#" onClick={(e) => { e.preventDefault(); onViewChange('fashion-ecommerce-ai'); setIsDropdownOpen(false); }}>
+            <Link className="home-products-item" role="menuitem" style={{ '--item-index': 0 } as React.CSSProperties} href="/fashion-ecommerce-ai" onClick={() => { onViewChange('fashion-ecommerce-ai'); setIsDropdownOpen(false); }}>
               <span className="home-products-item-icon" aria-hidden="true">
                 <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="1.65" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M6 8h12v11a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V8z"></path>
@@ -137,8 +138,8 @@ const Navigation: React.FC<NavigationProps> = ({ onGetStarted, activeView, onVie
                 <span className="home-products-item-title">AI for Fashion Ecommerce</span>
                 <span className="home-products-item-text">One AI Engine, Endless Fashion Experiences.</span>
               </span>
-            </a>
-            <a className="home-products-item" role="menuitem" style={{ '--item-index': 1 } as React.CSSProperties} href="#" onClick={(e) => { e.preventDefault(); onViewChange('makeup-try-on'); setIsDropdownOpen(false); }}>
+            </Link>
+            <Link className="home-products-item" role="menuitem" style={{ '--item-index': 1 } as React.CSSProperties} href="/makeup-try-on" onClick={() => { onViewChange('makeup-try-on'); setIsDropdownOpen(false); }}>
               <span className="home-products-item-icon" aria-hidden="true">
                 <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="1.65" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M12 3s-4 4.5-4 9a4 4 0 0 0 8 0c0-4.5-4-9-4-9z"></path>
@@ -150,8 +151,8 @@ const Navigation: React.FC<NavigationProps> = ({ onGetStarted, activeView, onVie
                 <span className="home-products-item-title">Makeup Tryon</span>
                 <span className="home-products-item-text">True-to-tone beauty try-on with realistic lighting and skin adaptation.</span>
               </span>
-            </a>
-            <a className="home-products-item" role="menuitem" style={{ '--item-index': 2 } as React.CSSProperties} href="#" onClick={(e) => { e.preventDefault(); onViewChange('accessories-try-on'); setIsDropdownOpen(false); }}>
+            </Link>
+            <Link className="home-products-item" role="menuitem" style={{ '--item-index': 2 } as React.CSSProperties} href="/accessories-try-on" onClick={() => { onViewChange('accessories-try-on'); setIsDropdownOpen(false); }}>
               <span className="home-products-item-icon" aria-hidden="true">
                 <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="1.65" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M4 12h2a4 4 0 0 1 4 4 4 4 0 0 1 8 0h2"></path>
@@ -164,8 +165,8 @@ const Navigation: React.FC<NavigationProps> = ({ onGetStarted, activeView, onVie
                 <span className="home-products-item-title">Accessories Tryon</span>
                 <span className="home-products-item-text">Real-time try-on for eyewear, watches, jewelry, and more.</span>
               </span>
-            </a>
-            <a className="home-products-item" role="menuitem" style={{ '--item-index': 3 } as React.CSSProperties} href="#" onClick={(e) => { e.preventDefault(); onViewChange('smart-assistants-ai'); setIsDropdownOpen(false); }}>
+            </Link>
+            <Link className="home-products-item" role="menuitem" style={{ '--item-index': 3 } as React.CSSProperties} href="/smart-assistants-ai" onClick={() => { onViewChange('smart-assistants-ai'); setIsDropdownOpen(false); }}>
               <span className="home-products-item-icon" aria-hidden="true">
                 <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="1.65" strokeLinecap="round" strokeLinejoin="round">
                   <rect x="5" y="7" width="14" height="11" rx="2"></rect>
@@ -179,8 +180,8 @@ const Navigation: React.FC<NavigationProps> = ({ onGetStarted, activeView, onVie
                 <span className="home-products-item-title">AI for Smart Assistance</span>
                 <span className="home-products-item-text">Context-aware assistants for guided shopping and customer support.</span>
               </span>
-            </a>
-            <a className="home-products-item" role="menuitem" style={{ '--item-index': 4 } as React.CSSProperties} href="#" onClick={(e) => { e.preventDefault(); onViewChange('visualization-ai'); setIsDropdownOpen(false); }}>
+            </Link>
+            <Link className="home-products-item" role="menuitem" style={{ '--item-index': 4 } as React.CSSProperties} href="/visualization-ai" onClick={() => { onViewChange('visualization-ai'); setIsDropdownOpen(false); }}>
               <span className="home-products-item-icon" aria-hidden="true">
                 <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="1.65" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M12 3 21 8v8l-9 5-9-5V8l9-5z"></path>
@@ -193,7 +194,7 @@ const Navigation: React.FC<NavigationProps> = ({ onGetStarted, activeView, onVie
                 <span className="home-products-item-title">AI for 3D Visualization</span>
                 <span className="home-products-item-text">High-fidelity digital twins, drag-and-drop 3D scene editing, and web-native performance.</span>
               </span>
-            </a>
+            </Link>
           </div>
         </div>
       </header>
@@ -216,10 +217,10 @@ const Navigation: React.FC<NavigationProps> = ({ onGetStarted, activeView, onVie
             <button type="button" className="home-mobile-menu-link" id="mobile-menu-products-trigger" onClick={() => setIsMobileProductsPanel(true)}>
               Products
             </button>
-            <a className="home-mobile-menu-link" href="#" onClick={(e) => { e.preventDefault(); setIsMobileMenuOpen(false); onViewChange('research'); }}>Research</a>
-            <a className="home-mobile-menu-link" href="#" onClick={(e) => { e.preventDefault(); setIsMobileMenuOpen(false); onViewChange('company'); }}>Company</a>
-            <a className="home-mobile-menu-link" href="#" onClick={(e) => { e.preventDefault(); setIsMobileMenuOpen(false); onViewChange('blog'); }}>Blogs</a>
-            <a className="home-mobile-menu-link" href="#" onClick={(e) => { e.preventDefault(); setIsMobileMenuOpen(false); onViewChange('career'); }}>Career</a>
+            <Link className="home-mobile-menu-link" href="/research" onClick={() => { setIsMobileMenuOpen(false); onViewChange('research'); }}>Research</Link>
+            <Link className="home-mobile-menu-link" href="/company" onClick={() => { setIsMobileMenuOpen(false); onViewChange('company'); }}>Company</Link>
+            <Link className="home-mobile-menu-link" href="/blogs" onClick={() => { setIsMobileMenuOpen(false); onViewChange('blog'); }}>Blogs</Link>
+            <Link className="home-mobile-menu-link" href="/career" onClick={() => { setIsMobileMenuOpen(false); onViewChange('career'); }}>Career</Link>
             <button 
               type="button" 
               className="home-mobile-menu-link" 
@@ -233,11 +234,11 @@ const Navigation: React.FC<NavigationProps> = ({ onGetStarted, activeView, onVie
           </div>
           
           <div className="home-mobile-menu-panel home-mobile-menu-panel--products">
-            <a className="home-mobile-menu-link" href="#" onClick={(e) => { e.preventDefault(); setIsMobileMenuOpen(false); onViewChange('fashion-ecommerce-ai'); }}>Fashion eCommerce</a>
-            <a className="home-mobile-menu-link" href="#" onClick={(e) => { e.preventDefault(); setIsMobileMenuOpen(false); onViewChange('makeup-try-on'); }}>Makeup Try-on</a>
-            <a className="home-mobile-menu-link" href="#" onClick={(e) => { e.preventDefault(); setIsMobileMenuOpen(false); onViewChange('accessories-try-on'); }}>Accessories Try-on</a>
-            <a className="home-mobile-menu-link" href="#" onClick={(e) => { e.preventDefault(); setIsMobileMenuOpen(false); onViewChange('smart-assistants-ai'); }}>Smart Assistance</a>
-            <a className="home-mobile-menu-link" href="#" onClick={(e) => { e.preventDefault(); setIsMobileMenuOpen(false); onViewChange('visualization-ai'); }}>3D Visualization</a>
+            <Link className="home-mobile-menu-link" href="/fashion-ecommerce-ai" onClick={() => { setIsMobileMenuOpen(false); onViewChange('fashion-ecommerce-ai'); }}>Fashion eCommerce</Link>
+            <Link className="home-mobile-menu-link" href="/makeup-try-on" onClick={() => { setIsMobileMenuOpen(false); onViewChange('makeup-try-on'); }}>Makeup Try-on</Link>
+            <Link className="home-mobile-menu-link" href="/accessories-try-on" onClick={() => { setIsMobileMenuOpen(false); onViewChange('accessories-try-on'); }}>Accessories Try-on</Link>
+            <Link className="home-mobile-menu-link" href="/smart-assistants-ai" onClick={() => { setIsMobileMenuOpen(false); onViewChange('smart-assistants-ai'); }}>Smart Assistance</Link>
+            <Link className="home-mobile-menu-link" href="/visualization-ai" onClick={() => { setIsMobileMenuOpen(false); onViewChange('visualization-ai'); }}>3D Visualization</Link>
           </div>
         </div>
       </div>
