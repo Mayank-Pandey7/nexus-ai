@@ -18,12 +18,11 @@ import AccessoriesTryonView from './components/sections/AccessoriesTryonView';
 import MakeupTryonView from './components/sections/MakeupTryonView';
 import SmartAssistantsView from './components/sections/SmartAssistantsView';
 import VisualizationView from './components/sections/VisualizationView';
-import AutomobileView from './components/sections/AutomobileView';
 
 
 const App: React.FC = () => {
   const [isLoginOpen, setIsLoginOpen] = useState(false);
-  const [activeView, setActiveView] = useState<'home' | 'research' | 'company' | 'blog' | 'career' | 'fashion-ecommerce-ai' | 'accessories-try-on' | 'makeup-try-on' | 'smart-assistants-ai' | 'visualization-ai' | 'automobile-ai'>(() => {
+  const [activeView, setActiveView] = useState<'home' | 'research' | 'company' | 'blog' | 'career' | 'fashion-ecommerce-ai' | 'accessories-try-on' | 'makeup-try-on' | 'smart-assistants-ai' | 'visualization-ai'>(() => {
     const saved = localStorage.getItem('activeView');
     return (saved as any) || 'home';
   });
@@ -80,7 +79,7 @@ const App: React.FC = () => {
             <div className="home-container">
               <Hero />
               <Products onKnowMore={() => setActiveView('fashion-ecommerce-ai')} />
-              <HowItWorks onExplore={() => setActiveView('automobile-ai')} />
+              <HowItWorks />
               <Benefits onKnowMore={() => setActiveView('smart-assistants-ai')} />
               <Testimonials />
               <Pricing />
@@ -99,7 +98,6 @@ const App: React.FC = () => {
           {activeView === 'makeup-try-on' && <MakeupTryonView onBackToHome={() => setActiveView('home')} />}
            {activeView === 'smart-assistants-ai' && <SmartAssistantsView onBackToHome={() => setActiveView('home')} />}
           {activeView === 'visualization-ai' && <VisualizationView onBackToHome={() => setActiveView('home')} />}
-          {activeView === 'automobile-ai' && <AutomobileView onBackToHome={() => setActiveView('home')} />}
         </div>
       )}
       <Footer />
