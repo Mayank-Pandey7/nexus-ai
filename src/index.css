@@ -9297,6 +9297,69 @@ html.automobile-snap-active {
   padding:1.75rem 1rem}
 }
 
+/* Page Transitions */
+.page-transition-container {
+  width: 100%;
+  will-change: opacity, transform, filter;
+  transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+              transform 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+              filter 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 1;
+  transform: scale(1);
+  filter: blur(0);
+}
 
+.page-transition-container.page-exit {
+  opacity: 0;
+  transform: scale(0.90);
+  filter: blur(4px);
+}
 
+.page-transition-container.page-enter {
+  opacity: 0;
+  transform: scale(0.96);
+  filter: blur(0);
+}
 
+.page-transition-container.page-idle {
+  opacity: 1;
+  transform: scale(1);
+  filter: blur(0);
+}
+
+/* Stagger & Fade-In Animations for Team Page */
+@keyframes premium-fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes premium-image-enter {
+  0% {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.premium-fade-heading {
+  animation: premium-fade-in 0.8s cubic-bezier(0.25, 1, 0.5, 1) both;
+}
+
+.premium-card-enter {
+  opacity: 0;
+  animation: premium-fade-in 0.7s cubic-bezier(0.25, 1, 0.5, 1) both;
+}
+
+.premium-image-enter {
+  opacity: 0;
+  animation: premium-image-enter 0.9s cubic-bezier(0.25, 1, 0.5, 1) both;
+}

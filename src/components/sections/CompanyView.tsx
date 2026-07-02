@@ -97,6 +97,18 @@ const CompanyView: React.FC<CompanyViewProps> = ({ onBackToHome, onExploreTeam }
     };
   }, [selectedMember]);
 
+  useEffect(() => {
+    if (localStorage.getItem('scrollToTeamSection') === 'true') {
+      localStorage.removeItem('scrollToTeamSection');
+      setTimeout(() => {
+        const element = document.getElementById('company-team-heading');
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 150);
+    }
+  }, []);
+
   const handleOverlayClick = (e: React.MouseEvent<HTMLDivElement>) => {
     if (e.target === e.currentTarget) {
       handleCloseModal();
