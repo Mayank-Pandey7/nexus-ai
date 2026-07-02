@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { createPortal } from 'react-dom';
 import nexusaiLogoWhiteSparkle from '../../assets/images/nexusai-logo-white-sparkle.png';
-import nitinVatsPhoto from '../../assets/images/nitin-vats.jpg';
+import nikhilChoudharyPhoto from '../../assets/images/nikhil-choudhary.jpg';
 
 interface CompanyViewProps {
   onBackToHome: () => void;
@@ -13,13 +13,13 @@ const CompanyView: React.FC<CompanyViewProps> = ({ onBackToHome }) => {
 
   const teamMembers = [
     {
-      name: "Nitin Vats",
+      name: "Nikhil Choudhary",
       designation: "Founder & CEO",
-      company: "Nexus AI",
-      experience: "8+ Years",
-      bio: "Nitin Vats is the Founder & CEO of Nexus AI, an AI-driven technology company focused on building intelligent digital experiences through Artificial Intelligence, computer vision, and immersive technologies.",
-      photo: nitinVatsPhoto,
-      linkedin: "https://www.linkedin.com/in/nitin-vats-29a7a4118/"
+      company: "Trialshopy Marketplace Pvt. Ltd.",
+      experience: "6+ Years",
+      bio: "Nikhil Choudhary is the Founder & CEO of Trialshopy, bringing a wealth of expertise in Computer Science and Data Science from NIT Patna. He leads the company's long-term technology vision and retail partnerships to build scale-ready AR/AI retail configurations.",
+      photo: nikhilChoudharyPhoto,
+      linkedin: "https://www.linkedin.com/in/nikhil-choudhary-1st-27b4621b8/"
     },
     {
       name: "Pooja Mallick",
@@ -219,14 +219,14 @@ const CompanyView: React.FC<CompanyViewProps> = ({ onBackToHome }) => {
         </div>
       </section>
 
-      {/* Founder Nitin Vats Section */}
+      {/* Founder Nikhil Choudhary Section */}
       <section className="company-leader" aria-labelledby="company-leader-heading">
         <div className="company-inner company-leader-inner">
           <article className="company-leader-card reveal-hover-lift" data-reveal="left" style={{ margin: '0 auto' }}>
             <div className="company-leader-photo-wrap">
               <img 
-                src={nitinVatsPhoto} 
-                alt="Nitin Vats" 
+                src={nikhilChoudharyPhoto} 
+                alt="Nikhil Choudhary" 
                 className="company-leader-photo" 
                 style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }}
               />
@@ -236,19 +236,42 @@ const CompanyView: React.FC<CompanyViewProps> = ({ onBackToHome }) => {
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="company-leader-name" 
-                href="https://www.linkedin.com/in/nitin-vats-29a7a4118/"
+                href="https://www.linkedin.com/in/nikhil-choudhary-1st-27b4621b8/"
+                style={{ color: '#ff7a00' }}
               >
-                Nitin Vats
+                Nikhil Choudhary
               </a>
             </h3>
-            <p className="company-leader-role">Founder &amp; CEO</p>
+            <p className="company-leader-role" style={{ color: '#ffffff', fontWeight: 600 }}>Founder &amp; CEO</p>
+            <p className="company-leader-company" style={{ fontSize: '0.85rem', color: 'rgba(255, 255, 255, 0.5)', marginTop: '0.25rem', fontWeight: 500 }}>
+              Trialshopy Marketplace Pvt. Ltd.
+            </p>
             <div className="company-leader-social" aria-label="Founder social links">
               <a 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="company-social-icon-btn" 
                 aria-label="LinkedIn" 
-                href="https://www.linkedin.com/in/nitin-vats-29a7a4118/"
+                href="https://www.linkedin.com/in/nikhil-choudhary-1st-27b4621b8/"
+                style={{
+                  background: 'rgba(255, 255, 255, 0.05)',
+                  border: '1px solid rgba(255, 255, 255, 0.08)',
+                  borderRadius: '50%',
+                  width: '2.5rem',
+                  height: '2.5rem',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  transition: 'all 0.25s'
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.background = '#ff7a00';
+                  e.currentTarget.style.borderColor = 'transparent';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.background = 'rgba(255, 255, 255, 0.05)';
+                  e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.08)';
+                }}
               >
                 <img 
                   src="https://stagingmedia.pointai.com/assets/images/linkedin.png" 
@@ -262,15 +285,22 @@ const CompanyView: React.FC<CompanyViewProps> = ({ onBackToHome }) => {
             </div>
           </article>
 
-          <div className="company-leader-copy" data-reveal="right">
-            <h2 id="company-leader-heading" className="company-section-title company-section-title--light">
-              Visionary <span className="company-accent">Leader</span>
+          <div className="company-leader-copy" data-reveal="right" style={{ maxWidth: '650px' }}>
+            <h2 id="company-leader-heading" className="company-section-title company-section-title--light" style={{ marginBottom: '2rem' }}>
+              <span style={{ fontFamily: 'Georgia, serif', fontStyle: 'italic', color: '#ffffff', fontWeight: 'normal' }}>Visionary </span>
+              <span style={{ fontFamily: 'Georgia, serif', fontStyle: 'italic', color: '#ff7a00', fontWeight: 'normal' }}>Leader</span>
             </h2>
-            <p className="company-leader-bio" data-reveal="true" data-reveal-delay="120">
-              Nitin Vats is the Founder &amp; CEO of Nexus AI, an AI-driven technology company focused on building intelligent digital experiences through Artificial Intelligence, computer vision, and immersive technologies.
-              <br /><br />
-              His vision is centered on creating scalable AI solutions that transform how businesses engage with users and interact in digital environments. He believes technologies like Digital Twins, AI-powered Virtual Assistants, and immersive experiences represent the future of e-commerce. His focus is on enabling more personalized, interactive, and intelligent user journeys that can reshape the future of fashion and digital commerce.
-            </p>
+            <div className="company-leader-bio" data-reveal="true" data-reveal-delay="120" style={{ fontSize: '1.15rem', color: 'rgba(255, 255, 255, 0.7)', lineHeight: '1.75' }}>
+              <p style={{ marginBottom: '1.5rem' }}>
+                Nikhil Choudhary is the Founder and CEO of Trialshopy, bringing a wealth of expertise from a distinguished career in industrial automation spanning over six years. A proud alumnus of NIT Patna, he holds a B.Tech in Computer Science and Engineering and an M.Tech in Data Science.
+              </p>
+              <p style={{ marginBottom: '1.5rem' }}>
+                Throughout his career, Nikhil has made significant contributions while working with leading organizations such as Altorum Leren, Repido, Msol Technology, and Walmart. His experience includes delivering over 30 successful projects, showcasing his ability to drive innovation and deliver impactful solutions.
+              </p>
+              <p>
+                At Trialshopy, Nikhil is committed to redefining the technological landscape, utilizing data-driven insights to enhance operational efficiency and create exceptional value for clients.
+              </p>
+            </div>
           </div>
         </div>
       </section>
