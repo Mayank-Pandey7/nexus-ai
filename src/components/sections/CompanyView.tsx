@@ -292,11 +292,10 @@ const CompanyView: React.FC<CompanyViewProps> = ({ onBackToHome }) => {
           </article>
 
           <div className="company-leader-copy" data-reveal="right" style={{ maxWidth: '700px' }}>
-            <h2 id="company-leader-heading" style={{ marginBottom: '2.5rem', fontSize: 'clamp(2.75rem, 5vw, 4.25rem)', lineHeight: 1.1, fontWeight: 'normal', margin: 0 }}>
-              <span style={{ fontFamily: 'Georgia, serif', fontStyle: 'italic', color: '#ffffff' }}>Visionary </span>
-              <span style={{ fontFamily: 'Georgia, serif', fontStyle: 'italic', color: '#ff8a00', textShadow: '0 0 20px rgba(255, 138, 0, 0.3)' }}>Leader</span>
+            <h2 id="company-leader-heading" style={{ marginBottom: '2.5rem', fontSize: 'clamp(2.75rem, 5vw, 4.25rem)', lineHeight: 1.1, fontWeight: 'bold', margin: 0 }}>
+              Visionary <span className="company-accent" style={{ color: '#ff8a00', textShadow: '0 0 20px rgba(255, 138, 0, 0.3)' }}>Leader</span>
             </h2>
-            <div className="company-leader-bio" data-reveal="true" data-reveal-delay="120" style={{ fontSize: '1.15rem', color: 'rgba(208, 208, 208, 0.75)', lineHeight: '1.8' }}>
+            <div className="company-leader-bio" data-reveal="true" data-reveal-delay="120" style={{ fontSize: '1rem', color: 'rgba(208, 208, 208, 0.75)', lineHeight: '1.8' }}>
               <p style={{ marginBottom: '2rem' }}>
                 Nikhil Choudhary is the Founder and CEO of Trialshopy, bringing a wealth of expertise from a distinguished career in industrial automation spanning over six years. A proud alumnus of NIT Patna, he holds a B.Tech in Computer Science and Engineering and an M.Tech in Data Science.
               </p>
