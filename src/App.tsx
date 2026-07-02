@@ -17,13 +17,14 @@ import FashionEcommerceView from './components/sections/FashionEcommerceView';
 import AccessoriesTryonView from './components/sections/AccessoriesTryonView';
 import MakeupTryonView from './components/sections/MakeupTryonView';
 import SmartAssistantsView from './components/sections/SmartAssistantsView';
+import VisualizationView from './components/sections/VisualizationView';
 
 
 const App: React.FC = () => {
   const [isLoginOpen, setIsLoginOpen] = useState(false);
-  const [activeView, setActiveView] = useState<'home' | 'research' | 'company' | 'blog' | 'career' | 'fashion-ecommerce-ai' | 'accessories-try-on' | 'makeup-try-on' | 'smart-assistants-ai'>(() => {
+  const [activeView, setActiveView] = useState<'home' | 'research' | 'company' | 'blog' | 'career' | 'fashion-ecommerce-ai' | 'accessories-try-on' | 'makeup-try-on' | 'smart-assistants-ai' | 'visualization-ai'>(() => {
     const saved = localStorage.getItem('activeView');
-    return (saved as 'home' | 'research' | 'company' | 'blog' | 'career' | 'fashion-ecommerce-ai' | 'accessories-try-on' | 'makeup-try-on' | 'smart-assistants-ai') || 'home';
+    return (saved as any) || 'home';
   });
 
   useEffect(() => {
@@ -96,6 +97,7 @@ const App: React.FC = () => {
           {activeView === 'accessories-try-on' && <AccessoriesTryonView onBackToHome={() => setActiveView('home')} />}
           {activeView === 'makeup-try-on' && <MakeupTryonView onBackToHome={() => setActiveView('home')} />}
           {activeView === 'smart-assistants-ai' && <SmartAssistantsView onBackToHome={() => setActiveView('home')} />}
+          {activeView === 'visualization-ai' && <VisualizationView onBackToHome={() => setActiveView('home')} />}
         </div>
       )}
       <Footer />

@@ -3,8 +3,8 @@ import nexusaiLogo from '../../assets/images/nexusai-logo-black.png';
 
 interface NavigationProps {
   onGetStarted: () => void;
-  activeView: 'home' | 'research' | 'company' | 'blog' | 'career' | 'fashion-ecommerce-ai' | 'accessories-try-on' | 'makeup-try-on' | 'smart-assistants-ai';
-  onViewChange: (view: 'home' | 'research' | 'company' | 'blog' | 'career' | 'fashion-ecommerce-ai' | 'accessories-try-on' | 'makeup-try-on' | 'smart-assistants-ai') => void;
+  activeView: 'home' | 'research' | 'company' | 'blog' | 'career' | 'fashion-ecommerce-ai' | 'accessories-try-on' | 'makeup-try-on' | 'smart-assistants-ai' | 'visualization-ai';
+  onViewChange: (view: 'home' | 'research' | 'company' | 'blog' | 'career' | 'fashion-ecommerce-ai' | 'accessories-try-on' | 'makeup-try-on' | 'smart-assistants-ai' | 'visualization-ai') => void;
 }
 
 const Navigation: React.FC<NavigationProps> = ({ onGetStarted, activeView, onViewChange }) => {
@@ -180,6 +180,20 @@ const Navigation: React.FC<NavigationProps> = ({ onGetStarted, activeView, onVie
                 <span className="home-products-item-text">Context-aware assistants for guided shopping and customer support.</span>
               </span>
             </a>
+            <a className="home-products-item" role="menuitem" style={{ '--item-index': 4 } as React.CSSProperties} href="#" onClick={(e) => { e.preventDefault(); onViewChange('visualization-ai'); setIsDropdownOpen(false); }}>
+              <span className="home-products-item-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="1.65" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M12 3 21 8v8l-9 5-9-5V8l9-5z"></path>
+                  <path d="M12 3v10"></path>
+                  <path d="m3 8 9 5 9-5"></path>
+                  <path d="m12 13 9-5"></path>
+                </svg>
+              </span>
+              <span className="home-products-item-content">
+                <span className="home-products-item-title">AI for 3D Visualization</span>
+                <span className="home-products-item-text">High-fidelity digital twins, drag-and-drop 3D scene editing, and web-native performance.</span>
+              </span>
+            </a>
           </div>
         </div>
       </header>
@@ -223,6 +237,7 @@ const Navigation: React.FC<NavigationProps> = ({ onGetStarted, activeView, onVie
             <a className="home-mobile-menu-link" href="#" onClick={(e) => { e.preventDefault(); setIsMobileMenuOpen(false); onViewChange('makeup-try-on'); }}>Makeup Try-on</a>
             <a className="home-mobile-menu-link" href="#" onClick={(e) => { e.preventDefault(); setIsMobileMenuOpen(false); onViewChange('accessories-try-on'); }}>Accessories Try-on</a>
             <a className="home-mobile-menu-link" href="#" onClick={(e) => { e.preventDefault(); setIsMobileMenuOpen(false); onViewChange('smart-assistants-ai'); }}>Smart Assistance</a>
+            <a className="home-mobile-menu-link" href="#" onClick={(e) => { e.preventDefault(); setIsMobileMenuOpen(false); onViewChange('visualization-ai'); }}>3D Visualization</a>
           </div>
         </div>
       </div>
