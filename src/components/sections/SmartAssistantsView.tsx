@@ -103,6 +103,7 @@ const SmartAssistantsView: React.FC<SmartAssistantsViewProps> = ({ onBackToHome 
       {/* Hero Section */}
       <section className="assistants-hero assistants-hero--screen-top" aria-labelledby="assistants-hero-heading">
         <div className="assistants-hero-bg" aria-hidden="true"></div>
+        <div className="assistants-hero-parallax" aria-hidden="true"><div className="assistants-hero-parallax-track"></div></div>
         <div className="assistants-hero-scrim" aria-hidden="true"></div>
         
         <div className="assistants-hero-ui">
