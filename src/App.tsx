@@ -23,56 +23,63 @@ import TeamView from './components/sections/TeamView';
 
 const App: React.FC = () => {
   const [isLoginOpen, setIsLoginOpen] = useState(false);
+  const getViewFromPath = (path: string): 'home' | 'research' | 'company' | 'blog' | 'career' | 'fashion-ecommerce-ai' | 'accessories-try-on' | 'makeup-try-on' | 'smart-assistants-ai' | 'visualization-ai' | 'team' => {
+    switch (path) {
+      case '/products': return 'home';
+      case '/research': return 'research';
+      case '/company': return 'company';
+      case '/blogs': return 'blog';
+      case '/career': return 'career';
+      case '/team': return 'team';
+      case '/fashion-ecommerce-ai': return 'fashion-ecommerce-ai';
+      case '/accessories-try-on': return 'accessories-try-on';
+      case '/makeup-try-on': return 'makeup-try-on';
+      case '/smart-assistants-ai': return 'smart-assistants-ai';
+      case '/visualization-ai': return 'visualization-ai';
+      default: return 'home';
+    }
+  };
+
   const [activeView, setActiveView] = useState<'home' | 'research' | 'company' | 'blog' | 'career' | 'fashion-ecommerce-ai' | 'accessories-try-on' | 'makeup-try-on' | 'smart-assistants-ai' | 'visualization-ai' | 'team'>(() => {
-    const params = new URLSearchParams(window.location.search);
-    const urlView = params.get('view');
-    if (urlView) return urlView as any;
-    const saved = localStorage.getItem('activeView');
-    return (saved as any) || 'home';
+    return getViewFromPath(window.location.pathname);
   });
 
   const triggerViewChange = (newView: typeof activeView, isPopState = false) => {
     if (newView === activeView) return;
     if (!isPopState) {
-      const url = new URL(window.location.href);
-      url.searchParams.set('view', newView);
-      window.history.pushState({ view: newView }, '', url.pathname + url.search);
+      let path = '/';
+      if (newView === 'blog') path = '/blogs';
+      else if (newView !== 'home') path = '/' + newView;
+      window.history.pushState(null, '', path);
     }
     setActiveView(newView);
   };
 
   useEffect(() => {
-    const params = new URLSearchParams(window.location.search);
-    if (!params.has('view')) {
-      const url = new URL(window.location.href);
-      url.searchParams.set('view', activeView);
-      window.history.replaceState({ view: activeView }, '', url.pathname + url.search);
-    } else {
-      window.history.replaceState({ view: activeView }, '', window.location.pathname + window.location.search);
-    }
-  }, []);
-
-  useEffect(() => {
-    const handlePopState = (event: PopStateEvent) => {
-      const stateView = event.state?.view;
-      if (stateView) {
-        triggerViewChange(stateView, true);
-      } else {
-        const params = new URLSearchParams(window.location.search);
-        const urlView = params.get('view') || 'home';
-        triggerViewChange(urlView as any, true);
-      }
+    const handlePopState = () => {
+      setActiveView(getViewFromPath(window.location.pathname));
     };
     window.addEventListener('popstate', handlePopState);
     return () => {
       window.removeEventListener('popstate', handlePopState);
     };
-  }, [activeView]);
+  }, []);
 
   useEffect(() => {
     localStorage.setItem('activeView', activeView);
     if (activeView !== 'company' || localStorage.getItem('scrollToTeamSection') !== 'true') {
       window.scrollTo(0, 0);
+    }
+  }, [activeView]);
+
+  useEffect(() => {
+    if (window.location.pathname === '/products') {
+      setTimeout(() => {
+        const element = document.querySelector('.fashion-section');
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 300);
     }
   }, [activeView]);
 
@@ -116,7 +123,11 @@ const App: React.FC = () => {
 
   return (
     <>
-      <Navigation onGetStarted={() => setIsLoginOpen(true)} activeView={activeView} onViewChange={(v) => triggerViewChange(v)} />
+      <Navigation 
+        onGetStarted={() => setIsLoginOpen(true)} 
+        activeView={activeView} 
+        onViewChange={triggerViewChange} 
+      />
       {activeView === 'home' ? (
         <div className="flex-1">
           <main className="home-page">
