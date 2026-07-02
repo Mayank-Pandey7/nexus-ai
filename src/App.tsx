@@ -27,28 +27,11 @@ const App: React.FC = () => {
     const saved = localStorage.getItem('activeView');
     return (saved as any) || 'home';
   });
-  const [displayView, setDisplayView] = useState(activeView);
-  const [transitionClass, setTransitionClass] = useState<'page-idle' | 'page-exit' | 'page-enter'>('page-idle');
 
   useEffect(() => {
     localStorage.setItem('activeView', activeView);
+    window.scrollTo(0, 0);
   }, [activeView]);
-
-  const triggerViewChange = (newView: typeof activeView) => {
-    if (newView === displayView) return;
-    setTransitionClass('page-exit');
-    setTimeout(() => {
-      setDisplayView(newView);
-      setActiveView(newView);
-      setTransitionClass('page-enter');
-      if (newView !== 'company' || localStorage.getItem('scrollToTeamSection') !== 'true') {
-        window.scrollTo(0, 0);
-      }
-      setTimeout(() => {
-        setTransitionClass('page-idle');
-      }, 50);
-    }, 600); // Duration: 600ms
-  };
 
   useEffect(() => {
     // Immediate reveal trigger
@@ -90,44 +73,42 @@ const App: React.FC = () => {
 
   return (
     <>
-      <Navigation onGetStarted={() => setIsLoginOpen(true)} activeView={activeView} onViewChange={triggerViewChange} />
-      <div className={`page-transition-container ${transitionClass}`}>
-        {displayView === 'home' ? (
-          <div className="flex-1">
-            <main className="home-page">
-              <div className="home-container">
-                <Hero />
-                <Products onKnowMore={() => triggerViewChange('fashion-ecommerce-ai')} />
-                <HowItWorks />
-                <Benefits onKnowMore={() => triggerViewChange('smart-assistants-ai')} />
-                <Testimonials />
-                <Pricing />
-                <FAQ />
-              </div>
-            </main>
-          </div>
-        ) : (
-          <div className="flex-1">
-            {displayView === 'research' && <ResearchView onBackToHome={() => triggerViewChange('home')} />}
-            {displayView === 'company' && <CompanyView onBackToHome={() => triggerViewChange('home')} onExploreTeam={() => triggerViewChange('team')} />}
-            {displayView === 'blog' && <BlogView onBackToHome={() => triggerViewChange('home')} />}
-            {displayView === 'career' && <CareerView onBackToHome={() => triggerViewChange('home')} />}
-            {displayView === 'fashion-ecommerce-ai' && <FashionEcommerceView onBackToHome={() => triggerViewChange('home')} />}
-            {displayView === 'accessories-try-on' && <AccessoriesTryonView onBackToHome={() => triggerViewChange('home')} />}
-            {displayView === 'makeup-try-on' && <MakeupTryonView onBackToHome={() => triggerViewChange('home')} />}
-            {displayView === 'smart-assistants-ai' && <SmartAssistantsView onBackToHome={() => triggerViewChange('home')} />}
-            {displayView === 'visualization-ai' && <VisualizationView onBackToHome={() => triggerViewChange('home')} />}
-            {displayView === 'team' && (
-              <TeamView 
-                onBackToCompany={() => {
-                  localStorage.setItem('scrollToTeamSection', 'true');
-                  triggerViewChange('company');
-                }} 
-              />
-            )}
-          </div>
-        )}
-      </div>
+      <Navigation onGetStarted={() => setIsLoginOpen(true)} activeView={activeView} onViewChange={setActiveView} />
+      {activeView === 'home' ? (
+        <div className="flex-1">
+          <main className="home-page">
+            <div className="home-container">
+              <Hero />
+              <Products onKnowMore={() => setActiveView('fashion-ecommerce-ai')} />
+              <HowItWorks />
+              <Benefits onKnowMore={() => setActiveView('smart-assistants-ai')} />
+              <Testimonials />
+              <Pricing />
+              <FAQ />
+            </div>
+          </main>
+        </div>
+      ) : (
+        <div className="flex-1">
+          {activeView === 'research' && <ResearchView onBackToHome={() => setActiveView('home')} />}
+          {activeView === 'company' && <CompanyView onBackToHome={() => setActiveView('home')} onExploreTeam={() => setActiveView('team')} />}
+          {activeView === 'blog' && <BlogView onBackToHome={() => setActiveView('home')} />}
+          {activeView === 'career' && <CareerView onBackToHome={() => setActiveView('home')} />}
+          {activeView === 'fashion-ecommerce-ai' && <FashionEcommerceView onBackToHome={() => setActiveView('home')} />}
+          {activeView === 'accessories-try-on' && <AccessoriesTryonView onBackToHome={() => setActiveView('home')} />}
+          {activeView === 'makeup-try-on' && <MakeupTryonView onBackToHome={() => setActiveView('home')} />}
+          {activeView === 'smart-assistants-ai' && <SmartAssistantsView onBackToHome={() => setActiveView('home')} />}
+          {activeView === 'visualization-ai' && <VisualizationView onBackToHome={() => setActiveView('home')} />}
+          {activeView === 'team' && (
+            <TeamView 
+              onBackToCompany={() => {
+                localStorage.setItem('scrollToTeamSection', 'true');
+                setActiveView('company');
+              }} 
+            />
+          )}
+        </div>
+      )}
       <Footer />
       <LoginModal isOpen={isLoginOpen} onClose={() => setIsLoginOpen(false)} />
     </>

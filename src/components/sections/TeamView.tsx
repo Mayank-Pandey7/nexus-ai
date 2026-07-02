@@ -178,10 +178,10 @@ const TeamView: React.FC<TeamViewProps> = ({ onBackToCompany }) => {
 
       {/* Main Title Section */}
       <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 2rem 4rem 2rem', textAlign: 'center' }}>
-        <h1 className="premium-fade-heading" style={{ fontSize: 'clamp(2.5rem, 6vw, 4rem)', fontWeight: 'bold', margin: '0 0 1rem 0', letterSpacing: '-0.03em', animationDelay: '100ms' }}>
+        <h1 data-reveal="true" style={{ fontSize: 'clamp(2.5rem, 6vw, 4rem)', fontWeight: 'bold', margin: '0 0 1rem 0', letterSpacing: '-0.03em' }}>
           Meet the <span className="company-accent" style={{ color: '#ff8a00' }}>Innovators</span>
         </h1>
-        <p className="premium-fade-heading" style={{ fontSize: 'clamp(1rem, 2vw, 1.2rem)', color: 'rgba(255, 255, 255, 0.6)', maxWidth: '750px', margin: '0 auto', lineHeight: 1.6, animationDelay: '200ms' }}>
+        <p data-reveal="true" data-reveal-delay="100" style={{ fontSize: 'clamp(1rem, 2vw, 1.2rem)', color: 'rgba(255, 255, 255, 0.6)', maxWidth: '750px', margin: '0 auto', lineHeight: 1.6 }}>
           Discover the complete leadership and engineering team driving advanced 3D &amp; immersive AR retail technology at Trialshopy.
         </p>
       </div>
@@ -194,15 +194,16 @@ const TeamView: React.FC<TeamViewProps> = ({ onBackToCompany }) => {
 
           return (
             <div key={dept} style={{ marginBottom: '5rem' }}>
-              <h2 className="premium-fade-heading" style={{ fontSize: '1.75rem', fontWeight: 700, borderBottom: '1px solid rgba(255, 255, 255, 0.1)', paddingBottom: '0.75rem', marginBottom: '2.5rem', letterSpacing: '-0.02em', animationDelay: '250ms' }}>
+              <h2 data-reveal="true" style={{ fontSize: '1.75rem', fontWeight: 700, borderBottom: '1px solid rgba(255, 255, 255, 0.1)', paddingBottom: '0.75rem', marginBottom: '2.5rem', letterSpacing: '-0.02em' }}>
                 {dept}
               </h2>
 
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: '2rem' }}>
+              <div className="company-team-grid" data-reveal-stagger="true" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: '2rem' }}>
                 {deptMembers.map((member, idx) => (
                   <div 
                     key={idx}
-                    className="premium-card-enter"
+                    className="company-team-card reveal-hover-lift"
+                    data-reveal-item="true"
                     style={{
                       background: 'linear-gradient(135deg, rgba(28, 28, 30, 0.5) 0%, rgba(18, 18, 20, 0.6) 100%)',
                       border: '1px solid rgba(255, 255, 255, 0.06)',
@@ -212,8 +213,7 @@ const TeamView: React.FC<TeamViewProps> = ({ onBackToCompany }) => {
                       alignItems: 'center',
                       gap: '1.25rem',
                       transition: 'all 0.3s cubic-bezier(0.25, 1, 0.5, 1)',
-                      cursor: 'pointer',
-                      animationDelay: `${idx * 50}ms`
+                      cursor: 'pointer'
                     }}
                     onMouseEnter={(e) => {
                       e.currentTarget.style.transform = 'translateY(-4px)';
@@ -234,8 +234,7 @@ const TeamView: React.FC<TeamViewProps> = ({ onBackToCompany }) => {
                       <img 
                         src={member.photo} 
                         alt={member.name} 
-                        className="premium-image-enter"
-                        style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.4s ease', animationDelay: `${150 + idx * 50}ms` }}
+                        style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.4s ease' }}
                       />
                     </div>
                     <div>
