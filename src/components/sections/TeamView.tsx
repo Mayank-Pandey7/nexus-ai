@@ -19,7 +19,7 @@ const TeamView: React.FC<TeamViewProps> = ({ onBackToCompany }) => {
     // Avoid resetting scroll, since behavior requires scrolling smoothly to target section
   }, []);
 
-  const departments = ['Leadership', 'Engineering', 'Design', 'QA', 'HR & Operations'];
+  const departments = ['Leadership', 'Engineering', 'Design', 'HR & Operations'];
 
   const allMembers: TeamMember[] = [
     {
@@ -47,27 +47,11 @@ const TeamView: React.FC<TeamViewProps> = ({ onBackToCompany }) => {
       linkedin: "https://www.linkedin.com/"
     },
     {
-      name: "Dipti",
-      role: "COO",
-      department: "HR & Operations",
-      photo: "https://stagingmedia.pointai.com/assets/images/investors/ganapathy-subramaniam.jpeg",
-      bio: "Dipti leads the daily operational framework, merchant relations, and cross-functional performance tracking.",
-      linkedin: "https://www.linkedin.com/"
-    },
-    {
-      name: "Vivek",
-      role: "CTO",
+      name: "Vinamra",
+      role: "SDE2",
       department: "Engineering",
       photo: "https://stagingmedia.pointai.com/assets/images/investors/vijay-shekhar-sharma.jpeg",
-      bio: "Vivek manages the engineering core, developing low-latency AR algorithms and cloud render infrastructure.",
-      linkedin: "https://www.linkedin.com/"
-    },
-    {
-      name: "Yashika",
-      role: "Frontend Developer",
-      department: "Design",
-      photo: "https://stagingmedia.pointai.com/assets/images/investors/ganapathy-subramaniam.jpeg",
-      bio: "Yashika specializes in high-fidelity interactive user interfaces and smooth web experiences.",
+      bio: "Vinamra is a Software Development Engineer 2 at Trialshopy, specializing in scaling system performance and backend databases.",
       linkedin: "https://www.linkedin.com/"
     },
     {
@@ -75,63 +59,55 @@ const TeamView: React.FC<TeamViewProps> = ({ onBackToCompany }) => {
       role: "SDE1",
       department: "Engineering",
       photo: "https://stagingmedia.pointai.com/assets/images/investors/vinod-sood.jpeg",
-      bio: "Satyam builds backend systems, commerce microservices, and database pipelines.",
+      bio: "Satyam is a Software Development Engineer 1 at Trialshopy, focused on e-commerce microservices and database integration.",
       linkedin: "https://www.linkedin.com/"
     },
     {
-      name: "Rohan Mehta",
-      role: "Lead Frontend Engineer",
+      name: "Janhvi",
+      role: "SDE1",
       department: "Engineering",
-      photo: "https://stagingmedia.pointai.com/assets/images/investors/vijay-shekhar-sharma.jpeg",
-      bio: "Rohan drives UI responsiveness and handles integrations of virtual try-on models.",
+      photo: "https://stagingmedia.pointai.com/assets/images/investors/ganapathy-subramaniam.jpeg",
+      bio: "Janhvi is a Software Development Engineer 1 at Trialshopy, working on frontend interfaces and low-latency digital try-on integrations.",
       linkedin: "https://www.linkedin.com/"
     },
     {
-      name: "Siddharth Rao",
-      role: "AI Engineer",
+      name: "Gurprit Singh",
+      role: "Senior Tester",
       department: "Engineering",
       photo: "https://stagingmedia.pointai.com/assets/images/investors/muralikrishnan-b.jpeg",
-      bio: "Siddharth implements deep learning and shape-matching computer vision pipelines.",
+      bio: "Gurprit leads quality assurance and automated testing across all platform integrations to guarantee release stability.",
       linkedin: "https://www.linkedin.com/"
     },
     {
-      name: "Karan Malhotra",
-      role: "Mobile Architect",
-      department: "Engineering",
-      photo: "https://stagingmedia.pointai.com/assets/images/investors/vinod-sood.jpeg",
-      bio: "Karan leads the cross-platform native SDK development and mobile graphics layers.",
-      linkedin: "https://www.linkedin.com/"
-    },
-    {
-      name: "Pooja Mallick",
-      role: "UX Lead",
+      name: "Yashika",
+      role: "Frontend Dev",
       department: "Design",
       photo: "https://stagingmedia.pointai.com/assets/images/investors/ganapathy-subramaniam.jpeg",
-      bio: "Pooja builds intuitive interaction systems that make virtual try-ons effortless.",
-      linkedin: "https://www.linkedin.com/"
-    },
-    {
-      name: "Neha Sharma",
-      role: "HR Manager",
-      department: "HR & Operations",
-      photo: "https://stagingmedia.pointai.com/assets/images/investors/ganapathy-subramaniam.jpeg",
-      bio: "Neha drives company culture, team recruitment, and talent development projects.",
-      linkedin: "https://www.linkedin.com/"
-    },
-    {
-      name: "Amit Kumar",
-      role: "QA Lead",
-      department: "QA",
-      photo: "https://stagingmedia.pointai.com/assets/images/investors/vinod-sood.jpeg",
-      bio: "Amit directs automation testing across our virtual fitting SDK platform integrations.",
+      bio: "Yashika develops premium, highly interactive client-side web layers and fluid graphics rendering loops.",
       linkedin: "https://www.linkedin.com/"
     },
     {
       name: "Ritu Singh",
-      role: "QA Analyst",
-      department: "QA",
+      role: "UI/UX",
+      department: "Design",
       photo: "https://stagingmedia.pointai.com/assets/images/investors/ganapathy-subramaniam.jpeg",
-      bio: "Ritu leads feature release tests, cross-browser compatibility, and user acceptance testing.",
+      bio: "Ritu is a UI/UX Designer, crafting intuitive human-centered wireframes and user flows for virtual fittings.",
+      linkedin: "https://www.linkedin.com/"
+    },
+    {
+      name: "Dipti",
+      role: "COO",
+      department: "HR & Operations",
+      photo: "https://stagingmedia.pointai.com/assets/images/investors/ganapathy-subramaniam.jpeg",
+      bio: "Dipti leads operations at Trialshopy, coordinating daily operational execution and cross-functional corporate planning.",
+      linkedin: "https://www.linkedin.com/"
+    },
+    {
+      name: "Janhvi",
+      role: "HR Executive",
+      department: "HR & Operations",
+      photo: "https://stagingmedia.pointai.com/assets/images/investors/ganapathy-subramaniam.jpeg",
+      bio: "Janhvi is an HR Executive, driving talent acquisition, onboarding workflows, and community building programs.",
       linkedin: "https://www.linkedin.com/"
     }
   ];
