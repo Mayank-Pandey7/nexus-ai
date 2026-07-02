@@ -109,7 +109,7 @@ const App: React.FC = () => {
           )}
         </div>
       )}
-      <Footer />
+      {activeView !== 'team' && <Footer />}
       <LoginModal isOpen={isLoginOpen} onClose={() => setIsLoginOpen(false)} />
     </>
   );
