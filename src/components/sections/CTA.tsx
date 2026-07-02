@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import logoAnimation from '../../assets/media/logo-animation.mov';
 
 const CTA: React.FC = () => {
   const [name, setName] = useState('');
@@ -59,7 +58,7 @@ const CTA: React.FC = () => {
         <div className="site-footer-hero-media" aria-hidden="true" data-reveal="right">
           <video 
             className="site-footer-animation" 
-            src={logoAnimation} 
+            src="/assets/media/logo-animation.mov" 
             autoPlay 
             muted 
             loop 
