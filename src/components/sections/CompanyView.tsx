@@ -1,4 +1,5 @@
 import React from 'react';
+import nexusaiLogoWhiteSparkle from '../../assets/images/nexusai-logo-white-sparkle.png';
 
 interface CompanyViewProps {
   onBackToHome: () => void;
@@ -322,21 +323,21 @@ const CompanyView: React.FC<CompanyViewProps> = ({ onBackToHome }) => {
       <section className="company-connected" aria-labelledby="company-connected-heading">
         <div className="company-connected-watermark" aria-hidden="true">
           <img 
-            src="https://stagingmedia.pointai.com/assets/images/company-page-Point-ai-logo.png" 
-            alt="PointAI watermark logo" 
+            src={nexusaiLogoWhiteSparkle} 
+            alt="Nexus AI watermark logo" 
             className="company-connected-watermark-img" 
-            style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'contain' }}
+            style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'contain', opacity: 0.12 }}
           />
         </div>
 
         <div className="company-inner company-connected-inner">
           <span className="company-connected-icon" aria-hidden="true">
             <img 
-              src="https://stagingmedia.pointai.com/assets/images/pointai-logo-black-icon.png" 
-              alt="PointAI black icon" 
+              src={nexusaiLogoWhiteSparkle} 
+              alt="Nexus AI icon" 
               className="company-connected-icon-img" 
-              width="28" 
-              height="28" 
+              width="36" 
+              height="36" 
               loading="lazy" 
             />
           </span>
@@ -346,7 +347,7 @@ const CompanyView: React.FC<CompanyViewProps> = ({ onBackToHome }) => {
           <p className="company-connected-lead" data-reveal="true">Don't miss on our updates</p>
 
           <div className="company-social-row" data-reveal-stagger="true">
-            <a target="_blank" rel="noopener noreferrer" className="company-social-pill" data-reveal-item="true" href="https://x.com/PointAIofficial">
+            <a target="_blank" rel="noopener noreferrer" className="company-social-pill" data-reveal-item="true" href="https://x.com/maynkio">
               <span className="company-social-pill-label">Twitter / X</span>
               <span className="company-social-pill-icon-wrap" aria-hidden="true">
                 <svg className="company-social-pill-icon" viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
@@ -355,7 +356,7 @@ const CompanyView: React.FC<CompanyViewProps> = ({ onBackToHome }) => {
               </span>
             </a>
 
-            <a target="_blank" rel="noopener noreferrer" className="company-social-pill" data-reveal-item="true" href="https://www.facebook.com/pointaiofficial/">
+            <a target="_blank" rel="noopener noreferrer" className="company-social-pill" data-reveal-item="true" href="https://www.facebook.com/mayank__pandeyy/">
               <span className="company-social-pill-label">Facebook</span>
               <span className="company-social-pill-icon-wrap" aria-hidden="true">
                 <svg className="company-social-pill-icon" viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
@@ -364,7 +365,7 @@ const CompanyView: React.FC<CompanyViewProps> = ({ onBackToHome }) => {
               </span>
             </a>
 
-            <a target="_blank" rel="noopener noreferrer" className="company-social-pill" data-reveal-item="true" href="https://www.instagram.com/pointaiofficial/">
+            <a target="_blank" rel="noopener noreferrer" className="company-social-pill" data-reveal-item="true" href="https://www.instagram.com/mayank__pandeyy/">
               <span className="company-social-pill-label">Instagram</span>
               <span className="company-social-pill-icon-wrap" aria-hidden="true">
                 <svg className="company-social-pill-icon" viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
@@ -373,7 +374,7 @@ const CompanyView: React.FC<CompanyViewProps> = ({ onBackToHome }) => {
               </span>
             </a>
 
-            <a target="_blank" rel="noopener noreferrer" className="company-social-pill" data-reveal-item="true" href="https://www.linkedin.com/company/pointaiofficial/">
+            <a target="_blank" rel="noopener noreferrer" className="company-social-pill" data-reveal-item="true" href="https://www.linkedin.com/in/mynkdev/">
               <span className="company-social-pill-label">LinkedIn</span>
               <span className="company-social-pill-icon-wrap" aria-hidden="true" style={{ padding: '0.45rem' }}>
                 <img 
