@@ -235,7 +235,7 @@ const CompanyView: React.FC<CompanyViewProps> = ({ onBackToHome }) => {
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="company-leader-name" 
-                href="https://www.linkedin.com/"
+                href="https://www.linkedin.com/in/nikhil-choudhary-1st-27b4621b8/"
               >
                 Nikhil Choudhary
               </a>
