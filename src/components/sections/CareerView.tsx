@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import careerHeroBg from '../../assets/images/career-hero-bg.jpg';
 
 interface CareerViewProps {
   onBackToHome: () => void;
@@ -49,13 +50,13 @@ const CareerView: React.FC<CareerViewProps> = ({ onBackToHome }) => {
       <section className="career-hero" aria-labelledby="career-hero-heading">
         <div className="career-hero-bg" aria-hidden="true">
           <img 
-            src="https://stagingmedia.pointai.com/assets/images/career-hero.jpg" 
+            src={careerHeroBg} 
             alt="PointAI career hero background" 
             className="career-hero-image career-hero-image--desktop" 
             style={{ opacity: 1 }}
           />
           <img 
-            src="https://stagingmedia.pointai.com/assets/images/career-hero-mobile.jpg" 
+            src={careerHeroBg} 
             alt="PointAI career hero background mobile" 
             className="career-hero-image career-hero-image--mobile" 
             style={{ opacity: 1 }}
