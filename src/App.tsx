@@ -79,7 +79,7 @@ const App: React.FC = () => {
           <main className="home-page">
             <div className="home-container">
               <Hero />
-              <Products />
+              <Products onKnowMore={() => setActiveView('fashion-ecommerce-ai')} />
               <HowItWorks onExplore={() => setActiveView('automobile-ai')} />
               <Benefits onKnowMore={() => setActiveView('smart-assistants-ai')} />
               <Testimonials />

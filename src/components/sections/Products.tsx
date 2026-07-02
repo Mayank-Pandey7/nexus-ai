@@ -3,7 +3,11 @@ import p1 from '../../assets/images/p1.jpg';
 import p2 from '../../assets/images/p2.jpg';
 import p3 from '../../assets/images/p3.jpg';
 
-const Products: React.FC = () => {
+interface ProductsProps {
+  onKnowMore: () => void;
+}
+
+const Products: React.FC<ProductsProps> = ({ onKnowMore }) => {
   return (
     <section className="fashion-section">
       <h2 className="fashion-heading" data-reveal="true">AI for <span className="fashion-heading-highlight">Fashion eCommerce</span></h2>
@@ -39,7 +43,16 @@ const Products: React.FC = () => {
         </a>
       </div>
       <div className="home-section-cta-wrap">
-        <a className="home-cta-button" href="#">Know More</a>
+        <a 
+          className="home-cta-button" 
+          href="#"
+          onClick={(e) => {
+            e.preventDefault();
+            onKnowMore();
+          }}
+        >
+          Know More
+        </a>
       </div>
     </section>
   );
