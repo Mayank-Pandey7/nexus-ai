@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { createPortal } from 'react-dom';
 import nexusaiLogoWhiteSparkle from '../../assets/images/nexusai-logo-white-sparkle.png';
 
 interface CompanyViewProps {
@@ -324,14 +325,14 @@ const CompanyView: React.FC<CompanyViewProps> = ({ onBackToHome }) => {
       </section>
 
       {/* Team Member Detail Modal */}
-      {selectedMember && (
+      {selectedMember && createPortal(
         <div 
           className={`team-modal-overlay ${isModalOpen ? 'team-modal-overlay--active' : ''}`}
           onClick={handleOverlayClick}
           style={{
             position: 'fixed',
             inset: 0,
-            zIndex: 9999,
+            zIndex: 99999,
             backgroundColor: 'rgba(0, 0, 0, 0.7)',
             backdropFilter: 'blur(12px)',
             display: 'flex',
@@ -485,7 +486,8 @@ const CompanyView: React.FC<CompanyViewProps> = ({ onBackToHome }) => {
               </a>
             </div>
           </div>
-        </div>
+        </div>,
+        document.body
       )}
 
       {/* In the News Scroll Box */}
