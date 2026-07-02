@@ -225,7 +225,7 @@ const CompanyView: React.FC<CompanyViewProps> = ({ onBackToHome }) => {
             <div className="company-leader-photo-wrap">
               <img 
                 src="https://stagingmedia.pointai.com/assets/images/nitin-vats.jpeg" 
-                alt="Nikhil Choudhary" 
+                alt="Nitin Vats" 
                 className="company-leader-photo" 
                 style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }}
               />
@@ -235,9 +235,9 @@ const CompanyView: React.FC<CompanyViewProps> = ({ onBackToHome }) => {
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="company-leader-name" 
-                href="https://www.linkedin.com/in/nikhil-choudhary-1st-27b4621b8/"
+                href="https://www.linkedin.com/in/nitin-vats-29a7a4118/"
               >
-                Nikhil Choudhary
+                Nitin Vats
               </a>
             </h3>
             <p className="company-leader-role">Founder &amp; CEO</p>
@@ -247,7 +247,7 @@ const CompanyView: React.FC<CompanyViewProps> = ({ onBackToHome }) => {
                 rel="noopener noreferrer" 
                 className="company-social-icon-btn" 
                 aria-label="LinkedIn" 
-                href="https://www.linkedin.com/"
+                href="https://www.linkedin.com/in/nitin-vats-29a7a4118/"
               >
                 <img 
                   src="https://stagingmedia.pointai.com/assets/images/linkedin.png" 
@@ -266,11 +266,9 @@ const CompanyView: React.FC<CompanyViewProps> = ({ onBackToHome }) => {
               Visionary <span className="company-accent">Leader</span>
             </h2>
             <p className="company-leader-bio" data-reveal="true" data-reveal-delay="120">
-              Nikhil Choudhary is the Founder and &amp; CEO of Trialshopy, Bringing a wealth of expertise from a distinguished career in industrial automation spanning over six years. A proud alumnus of NIT Patna, he holds a B.Tech in Computer Science and Engineering and an M.Tech in Data Science.
+              Nitin Vats is the Founder &amp; CEO of Nexus AI, an AI-driven technology company focused on building intelligent digital experiences through Artificial Intelligence, computer vision, and immersive technologies.
               <br /><br />
-              Throughout his career, Nikhil has made significant contributions while working with leading organizations such as Altorum Leren, Repido, Msol Technology, and Walmart. His experience includes delivering over 30 successful projects, showcasing his ability to drive innovation and deliver impactful solutions.
-              <br /><br />
-              At Trialshopy, Nikhil is committed to redefining the technological landscape, utilizing data-driven insights to enhance operational efficiency and create exceptional value for clients.
+              His vision is centered on creating scalable AI solutions that transform how businesses engage with users and interact in digital environments. He believes technologies like Digital Twins, AI-powered Virtual Assistants, and immersive experiences represent the future of e-commerce. His focus is on enabling more personalized, interactive, and intelligent user journeys that can reshape the future of fashion and digital commerce.
             </p>
           </div>
         </div>

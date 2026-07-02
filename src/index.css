@@ -2910,15 +2910,15 @@ textarea {
 .company-leader-name {
   font-family: var(--font-inter-tight), sans-serif;
   letter-spacing: -.02em;
-  color: #fff;
+  color: var(--secondary-color);
   cursor: pointer;
   font-size: 1.4rem;
   font-weight: 700;
   text-decoration: none;
-  transition: color .25s;
+  transition: opacity .25s;
 }
 .company-leader-card:hover .company-leader-name {
-  color: var(--secondary-color);
+  opacity: 0.85;
 }
 .company-leader-role {
   font-family: var(--font-inter-tight), sans-serif;
