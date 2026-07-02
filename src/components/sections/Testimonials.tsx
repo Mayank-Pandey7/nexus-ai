@@ -1,5 +1,4 @@
 import React from 'react';
-import awardsVideo from '../../assets/media/awards.mp4';
 import mlElevate from '../../assets/images/mlelevate.jpeg';
 import patents from '../../assets/images/patents.jpg';
 import innovation from '../../assets/images/innovation.jpg';
@@ -8,7 +7,7 @@ const Testimonials: React.FC = () => {
   return (
     <section className="showcase-section awards-section" aria-labelledby="awards-heading">
       <div className="showcase-card awards-showcase-card">
-        <video className="showcase-video showcase-video-right" src={awardsVideo} autoPlay muted loop playsInline preload="auto" disablePictureInPicture controlsList="nodownload nofullscreen noplaybackrate"></video>
+        <video className="showcase-video showcase-video-right" src="/assets/media/awards.mp4" autoPlay muted loop playsInline preload="auto" disablePictureInPicture controlsList="nodownload nofullscreen noplaybackrate"></video>
         <div className="awards-sparkles" aria-hidden="true"></div>
         <div className="showcase-content" data-reveal="true">
           <h2 id="awards-heading" className="showcase-heading awards-showcase-heading">What makes us the <span className="showcase-highlight">Best?</span></h2>
