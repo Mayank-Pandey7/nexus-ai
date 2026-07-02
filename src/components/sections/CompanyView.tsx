@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import nexusaiLogoWhiteSparkle from '../../assets/images/nexusai-logo-white-sparkle.png';
 
 interface CompanyViewProps {
@@ -6,44 +6,99 @@ interface CompanyViewProps {
 }
 
 const CompanyView: React.FC<CompanyViewProps> = ({ onBackToHome }) => {
-  const mentors = [
+  const [selectedMember, setSelectedMember] = useState<any | null>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const teamMembers = [
     {
-      name: "Marcus Vance",
-      role: "Experienced Chief Executive Officer with a demonstrated history of working in the computer software industry. Skilled in EDA, Software as a Service (SaaS), Mergers & Acquisitions (M&A), Application-Specific Integrated Circuits (ASIC), and Start-ups. Strong business development professional graduated from University of San Francisco.",
+      name: "Nikhil Choudhary",
+      designation: "Founder & CEO",
+      company: "Trialshopy",
+      experience: "6+ Years",
+      bio: "Nikhil Choudhary is the Founder & CEO of Trialshopy, bringing a wealth of expertise in Computer Science and Data Science from NIT Patna. He leads the company's long-term technology vision and retail partnerships to build scale-ready AR/AI retail configurations.",
+      photo: "https://stagingmedia.pointai.com/assets/images/nitin-vats.jpeg",
+      linkedin: "https://www.linkedin.com/in/nitin-vats-29a7a4118/"
+    },
+    {
+      name: "Pooja Mallick",
+      designation: "COO & UX Lead",
+      company: "Trialshopy",
+      experience: "4+ Years",
+      bio: "Pooja Mallick is the Chief Operating Officer and User Experience Lead at Trialshopy. She specializes in designing intuitive, human-centered AR flows that simplify virtual clothing try-ons and conversion paths.",
+      photo: "https://stagingmedia.pointai.com/assets/images/investors/ganapathy-subramaniam.jpeg",
+      linkedin: "https://www.linkedin.com/"
+    },
+    {
+      name: "Suresh Choudhry",
+      designation: "Director & Co-Founder",
+      company: "Trialshopy",
+      experience: "10+ Years",
+      bio: "Suresh Choudhry drives the business architecture and market positioning at Trialshopy, bringing a decade of expertise in scaling e-commerce distribution networks and corporate investment strategies.",
       photo: "https://stagingmedia.pointai.com/assets/images/investors/lip-bu-tan.jpg",
       linkedin: "https://www.linkedin.com/"
     },
     {
       name: "Rohan Mehta",
-      role: "A pioneer in India’s digital payments space. An engineer by education, who led rise of major fintech platforms.",
+      designation: "Lead Frontend Engineer",
+      company: "Trialshopy",
+      experience: "5+ Years",
+      bio: "Rohan leads the web interface engineering, crafting premium, responsive web platforms and integrating low-latency 3D scene modules that execute directly in browsers.",
       photo: "https://stagingmedia.pointai.com/assets/images/investors/vijay-shekhar-sharma.jpeg",
       linkedin: "https://www.linkedin.com/"
     },
     {
-      name: "Vikram Sen",
-      role: "A deep-tech and veteran with over 25 years of experience. He has co-founded venture funds investing in semiconductors, AI, robotics, and advanced tech.",
-      photo: "https://stagingmedia.pointai.com/assets/images/investors/ganapathy-subramaniam.jpeg",
-      linkedin: "https://www.linkedin.com/"
-    },
-    {
       name: "Siddharth Rao",
-      role: "A Consumer Internet & eCommerce expert with a flair for Strategy, Operations & Product Management. An Engineer with cross-functional experience across FMCG and Consumer Internet / eCommerce domains.",
+      designation: "AI & Computer Vision Engineer",
+      company: "Trialshopy",
+      experience: "4+ Years",
+      bio: "Siddharth designs the proprietary deep learning computer vision frameworks, enabling real-time size mapping, texture detection, and model fit evaluation.",
       photo: "https://stagingmedia.pointai.com/assets/images/investors/muralikrishnan-b.jpeg",
       linkedin: "https://www.linkedin.com/"
     },
     {
-      name: "Alan Mercer",
-      role: "A seasoned investor who has led major strategy and investment groups, with prior roles in global investment banking and strategy leadership.",
-      photo: "https://stagingmedia.pointai.com/assets/images/investors/mathew-cyriac.jpeg",
-      linkedin: "https://www.linkedin.com/"
-    },
-    {
       name: "Karan Malhotra",
-      role: "A technology veteran with 38+ years in engineering leadership. He actively mentors startups and serves on industry and academic boards.",
+      designation: "Lead Mobile Architect",
+      company: "Trialshopy",
+      experience: "6+ Years",
+      bio: "Karan manages mobile product deployment, building fluid cross-platform AR/VR fitting app integrations leveraging Flutter and native graphics layers.",
       photo: "https://stagingmedia.pointai.com/assets/images/investors/vinod-sood.jpeg",
       linkedin: "https://www.linkedin.com/"
     }
   ];
+
+  const handleOpenModal = (member: any) => {
+    setSelectedMember(member);
+    setTimeout(() => {
+      setIsModalOpen(true);
+    }, 10);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+    setTimeout(() => {
+      setSelectedMember(null);
+    }, 300);
+  };
+
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        handleCloseModal();
+      }
+    };
+    if (selectedMember) {
+      window.addEventListener('keydown', handleKeyDown);
+    }
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [selectedMember]);
+
+  const handleOverlayClick = (e: React.MouseEvent<HTMLDivElement>) => {
+    if (e.target === e.currentTarget) {
+      handleCloseModal();
+    }
+  };
 
   const news = [
     {
@@ -220,63 +275,206 @@ const CompanyView: React.FC<CompanyViewProps> = ({ onBackToHome }) => {
         </div>
       </section>
 
-      {/* Investors & Mentors Grid */}
+      {/* Meet the Team Grid */}
       <section className="company-team" aria-labelledby="company-team-heading">
         <div className="company-inner">
           <h2 id="company-team-heading" className="company-section-title company-section-title--light company-section-title--center" data-reveal="true">
-            Our <span className="company-accent">Investors &amp; Mentors</span>
+            Meet the <span className="company-accent">Team</span>
           </h2>
-          <p className="company-section-lead company-section-lead--light" data-reveal="true">
-            Backed by visionary investors who believe in the future of AI for Business. Their support fuels our mission to create seamless, personalized digital experiences.
+          <p className="company-section-lead company-section-lead--light" data-reveal="true" style={{ textAlign: 'center' }}>
+            The innovators, creators, and leaders driving the future of immersive AI technology at Trialshopy.
           </p>
 
           <div className="company-team-grid" data-reveal-stagger="true">
-            {mentors.map((mentor, index) => (
-              <article key={index} className="company-team-card reveal-hover-lift" data-reveal-item="true">
-                <div className="company-team-card-top">
-                  <div className="company-team-photo-wrap">
+            {teamMembers.map((member, index) => (
+              <article 
+                key={index} 
+                className="company-team-card reveal-hover-lift" 
+                data-reveal-item="true"
+                style={{ cursor: 'pointer' }}
+                onClick={() => handleOpenModal(member)}
+              >
+                <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '1.25rem' }}>
+                  <div className="company-team-photo-wrap" style={{ borderRadius: '50%' }}>
                     <img 
-                      src={mentor.photo} 
-                      alt={mentor.name} 
+                      src={member.photo} 
+                      alt={member.name} 
                       className="company-team-photo" 
                       style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }}
                     />
                   </div>
-                  <div className="company-team-social" aria-label={`${mentor.name} social links`}>
-                    <a 
-                      target="_blank" 
-                      rel="noopener noreferrer" 
-                      className="company-social-icon-btn" 
-                      aria-label={`${mentor.name} on LinkedIn`} 
-                      href={mentor.linkedin}
-                    >
-                      <img 
-                        src="https://stagingmedia.pointai.com/assets/images/linkedin.png" 
-                        alt="LinkedIn Icon" 
-                        className="company-linkedin-icon" 
-                        width="18" 
-                        height="18" 
-                        loading="lazy" 
-                      />
-                    </a>
-                  </div>
                 </div>
-                <h3 className="company-team-name-wrap">
-                  <a 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
-                    className="company-team-name" 
-                    href={mentor.linkedin}
-                  >
-                    {mentor.name}
-                  </a>
+                <h3 className="company-team-name-wrap" style={{ textAlign: 'center' }}>
+                  <span className="company-team-name">{member.name}</span>
                 </h3>
-                <p className="company-team-role">{mentor.role}</p>
+                <p className="company-team-role" style={{ textAlign: 'center', color: 'rgba(255,255,255,0.5)', fontSize: '0.85rem', marginTop: '0.35rem' }}>
+                  {member.designation}
+                </p>
               </article>
             ))}
           </div>
         </div>
       </section>
+
+      {/* Team Member Detail Modal */}
+      {selectedMember && (
+        <div 
+          className={`team-modal-overlay ${isModalOpen ? 'team-modal-overlay--active' : ''}`}
+          onClick={handleOverlayClick}
+          style={{
+            position: 'fixed',
+            inset: 0,
+            zIndex: 9999,
+            backgroundColor: 'rgba(0, 0, 0, 0.7)',
+            backdropFilter: 'blur(12px)',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            opacity: isModalOpen ? 1 : 0,
+            transition: 'opacity 0.3s ease',
+            padding: '1.5rem'
+          }}
+        >
+          <div 
+            className="team-modal-content"
+            style={{
+              background: 'linear-gradient(135deg, rgba(28, 28, 30, 0.9) 0%, rgba(18, 18, 20, 0.95) 100%)',
+              border: '1px solid rgba(255, 255, 255, 0.1)',
+              borderRadius: '24px',
+              padding: '2.5rem 2rem',
+              maxWidth: '520px',
+              width: '100%',
+              boxShadow: '0 20px 50px rgba(0, 0, 0, 0.5), inset 0 1px rgba(255, 255, 255, 0.1)',
+              transform: isModalOpen ? 'scale(1)' : 'scale(0.95)',
+              opacity: isModalOpen ? 1 : 0,
+              transition: 'transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.3s ease',
+              position: 'relative'
+            }}
+          >
+            {/* Close Button Top Right */}
+            <button 
+              onClick={handleCloseModal}
+              aria-label="Close modal"
+              style={{
+                position: 'absolute',
+                top: '1.25rem',
+                right: '1.25rem',
+                background: 'rgba(255, 255, 255, 0.05)',
+                border: '1px solid rgba(255, 255, 255, 0.08)',
+                borderRadius: '50%',
+                width: '2rem',
+                height: '2rem',
+                color: '#ffffff',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                cursor: 'pointer',
+                transition: 'all 0.2s'
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.background = 'rgba(255, 255, 255, 0.12)';
+                e.currentTarget.style.transform = 'rotate(90deg)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.background = 'rgba(255, 255, 255, 0.05)';
+                e.currentTarget.style.transform = 'rotate(0)';
+              }}
+            >
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+              </svg>
+            </button>
+
+            {/* Modal Body */}
+            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }}>
+              {/* Large Profile Photo */}
+              <div 
+                style={{ 
+                  width: '7.5rem', 
+                  height: '7.5rem', 
+                  borderRadius: '50%', 
+                  overflow: 'hidden', 
+                  position: 'relative',
+                  border: '2px solid rgba(255, 255, 255, 0.15)',
+                  boxShadow: '0 8px 24px rgba(0, 0, 0, 0.3)',
+                  marginBottom: '1.25rem',
+                  backgroundColor: '#1c1c1e'
+                }}
+              >
+                <img 
+                  src={selectedMember.photo} 
+                  alt={selectedMember.name} 
+                  style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                />
+              </div>
+
+              {/* Name & Designation */}
+              <h3 style={{ fontSize: '1.75rem', fontWeight: 700, color: '#ffffff', margin: 0, letterSpacing: '-0.02em' }}>
+                {selectedMember.name}
+              </h3>
+              <p style={{ fontSize: '0.95rem', color: 'var(--secondary-color)', fontWeight: 600, margin: '0.25rem 0 0' }}>
+                {selectedMember.designation}
+              </p>
+              
+              {/* Company & Experience pills */}
+              <div style={{ display: 'flex', gap: '0.5rem', marginTop: '0.75rem', marginBottom: '1.5rem' }}>
+                <span style={{ fontSize: '0.75rem', color: 'rgba(255,255,255,0.7)', background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.08)', borderRadius: '999px', padding: '0.2rem 0.65rem', fontWeight: 500 }}>
+                  {selectedMember.company}
+                </span>
+                <span style={{ fontSize: '0.75rem', color: 'rgba(255,255,255,0.7)', background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.08)', borderRadius: '999px', padding: '0.2rem 0.65rem', fontWeight: 500 }}>
+                  Experience: {selectedMember.experience}
+                </span>
+              </div>
+
+              {/* Bio Divider */}
+              <div style={{ width: '100%', height: '1px', background: 'rgba(255, 255, 255, 0.08)', marginBottom: '1.25rem' }} />
+
+              {/* Short Bio */}
+              <p style={{ fontSize: '0.925rem', color: 'rgba(255, 255, 255, 0.7)', lineHeight: 1.6, margin: '0 0 1.75rem', fontWeight: 400 }}>
+                {selectedMember.bio}
+              </p>
+
+              {/* LinkedIn Button */}
+              <a 
+                href={selectedMember.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  background: 'rgba(255, 255, 255, 0.05)',
+                  border: '1px solid rgba(255, 255, 255, 0.08)',
+                  color: '#ffffff',
+                  borderRadius: '999px',
+                  padding: '0.75rem 2rem',
+                  fontSize: '0.9rem',
+                  fontWeight: 600,
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '0.5rem',
+                  cursor: 'pointer',
+                  textDecoration: 'none',
+                  transition: 'all 0.25s'
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.background = '#0077b5';
+                  e.currentTarget.style.borderColor = 'transparent';
+                  e.currentTarget.style.transform = 'translateY(-2px)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.background = 'rgba(255, 255, 255, 0.05)';
+                  e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.08)';
+                  e.currentTarget.style.transform = 'translateY(0)';
+                }}
+              >
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                  <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                </svg>
+                Connect on LinkedIn
+              </a>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* In the News Scroll Box */}
       <section className="company-news" aria-labelledby="company-news-heading">
