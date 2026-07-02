@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { createPortal } from 'react-dom';
 import nexusaiLogoWhiteSparkle from '../../assets/images/nexusai-logo-white-sparkle.png';
+import nitinVatsPhoto from '../../assets/images/nitin-vats.jpg';
 
 interface CompanyViewProps {
   onBackToHome: () => void;
@@ -12,12 +13,12 @@ const CompanyView: React.FC<CompanyViewProps> = ({ onBackToHome }) => {
 
   const teamMembers = [
     {
-      name: "Nikhil Choudhary",
+      name: "Nitin Vats",
       designation: "Founder & CEO",
-      company: "Trialshopy",
-      experience: "6+ Years",
-      bio: "Nikhil Choudhary is the Founder & CEO of Trialshopy, bringing a wealth of expertise in Computer Science and Data Science from NIT Patna. He leads the company's long-term technology vision and retail partnerships to build scale-ready AR/AI retail configurations.",
-      photo: "https://stagingmedia.pointai.com/assets/images/nitin-vats.jpeg",
+      company: "Nexus AI",
+      experience: "8+ Years",
+      bio: "Nitin Vats is the Founder & CEO of Nexus AI, an AI-driven technology company focused on building intelligent digital experiences through Artificial Intelligence, computer vision, and immersive technologies.",
+      photo: nitinVatsPhoto,
       linkedin: "https://www.linkedin.com/in/nitin-vats-29a7a4118/"
     },
     {
@@ -224,7 +225,7 @@ const CompanyView: React.FC<CompanyViewProps> = ({ onBackToHome }) => {
           <article className="company-leader-card reveal-hover-lift" data-reveal="left" style={{ margin: '0 auto' }}>
             <div className="company-leader-photo-wrap">
               <img 
-                src="https://stagingmedia.pointai.com/assets/images/nitin-vats.jpeg" 
+                src={nitinVatsPhoto} 
                 alt="Nitin Vats" 
                 className="company-leader-photo" 
                 style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }}
