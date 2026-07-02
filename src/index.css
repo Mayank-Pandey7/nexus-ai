@@ -2936,24 +2936,25 @@ textarea {
 .company-social-icon-btn {
   color: #fff;
   cursor: pointer;
-  background: radial-gradient(62.56% 62.56% at 28.14% -10.42%, #ffffff4d 0%, #fff0 100%), linear-gradient(#272727, #272727);
-  border: 0;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 50%;
   flex-shrink: 0;
   justify-content: center;
   align-items: center;
-  width: 3rem;
-  height: 3rem;
+  width: 2.75rem;
+  height: 2.75rem;
   text-decoration: none;
-  transition: transform .2s;
+  transition: transform .2s, background .2s, border-color .2s;
   display: inline-flex;
-  box-shadow: inset 0 -3px #080808, inset 0 1px #ffffff4d, 0 2.77px 2.21px #0000001f, 0 6.65px 5.32px #00000021, 0 12.52px 10.02px #0002, 0 22.34px 17.87px #00000024, 0 41.78px 33.42px #00000026, 0 100px 80px #00000026, 0 3px 3px #00000024, 0 2.77px 2.21px #0000001f;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15), inset 0 1px rgba(255, 255, 255, 0.05);
 }
 .company-social-icon-btn:hover {
   color: #fff;
-  background: radial-gradient(62.56% 62.56% at 50% -13%, #ffffffb3 0%, #fff0 100%), linear-gradient(#272727, #272727);
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.15);
   transform: translateY(-2px);
-  box-shadow: inset 0 -3px #080808, inset 0 1px #ffffff4d, 0 2.77px 2.21px #0000001f, 0 6.65px 5.32px #00000021, 0 12.52px 10.02px #00000024, 0 22.34px 17.87px #00000024, 0 41.78px 33.42px #00000026, 0 100px 80px #00000026, 0 3px 3px #00000024, 0 2.77px 2.21px #0000001f;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25), inset 0 1px rgba(255, 255, 255, 0.1);
 }
 .company-social-icon-btn svg, .company-social-icon-btn .company-social-svg-icon, .company-social-icon-btn .company-linkedin-icon {
   display: block;
@@ -2999,28 +3000,34 @@ textarea {
   display: grid;
 }
 .company-team-card {
-  background: linear-gradient(0deg, var(--neutral-900, #18181b), var(--neutral-900, #18181b)), radial-gradient(62.56% 62.56% at 28.14% -10.42%, #ffffff1a 0%, #fff0 100%);
-  border: 1px solid #ffffff0f;
+  background: linear-gradient(135deg, rgba(28, 28, 30, 0.7) 0%, rgba(18, 18, 20, 0.8) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 16px;
-  padding: 1rem 1.1rem 1.15rem;
-  box-shadow: 0 7.77px 2.21px #0000000f, 0 3px 3px #0000001a, inset 0 -8px #111, inset 0 4px #ffffff1a;
+  padding: 1.5rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35), inset 0 1px rgba(255, 255, 255, 0.05);
+  transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
+}
+.company-team-card:hover {
+  border-color: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.5), inset 0 1px rgba(255, 255, 255, 0.08);
+  transform: translateY(-2px);
 }
 .company-team-card-top {
   justify-content: space-between;
   align-items: flex-start;
   gap: .75rem;
-  margin-bottom: .85rem;
+  margin-bottom: 1.25rem;
   display: flex;
 }
 .company-team-photo-wrap {
-  border: 1px solid #ffffff0f;
-  border-radius: .65rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
   flex-shrink: 0;
-  width: 4.5rem;
-  height: 4.5rem;
+  width: 4.75rem;
+  height: 4.75rem;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 2.77px 2.21px #0000001f, 0 6.65px 5.32px #00000021, 0 12.52px 10.02px #0002, 0 22.34px 17.87px #00000024, 0 41.78px 33.42px #00000026, 0 100px 80px #00000026;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
 }
 .company-team-photo {
   object-fit: cover;
@@ -3037,8 +3044,8 @@ textarea {
   letter-spacing: -.01em;
   color: #fff;
   cursor: pointer;
-  font-size: 1rem;
-  font-weight: 600;
+  font-size: 1.1rem;
+  font-weight: 700;
   text-decoration: none;
   transition: color .25s;
 }
@@ -3047,14 +3054,10 @@ textarea {
 }
 .company-team-role {
   font-family: var(--font-inter-tight), sans-serif;
-  color: #ffffff8c;
-  -webkit-line-clamp: 4;
-  -webkit-box-orient: vertical;
-  margin: .35rem 0 0;
-  font-size: .82rem;
-  line-height: 1.5;
-  display: -webkit-box;
-  overflow: hidden;
+  color: rgba(255, 255, 255, 0.55);
+  margin: .65rem 0 0;
+  font-size: .85rem;
+  line-height: 1.6;
 }
 
 @media (min-width: 640px) {
