@@ -121,7 +121,7 @@ const FashionEcommerceView: React.FC<FashionEcommerceViewProps> = ({ onBackToHom
     },
     {
       title: "Customization",
-      copy: "Configure PointAI features, branding, recommendations, and analytics to match your ecommerce experience.",
+      copy: "Configure Nexus AI features, branding, recommendations, and analytics to match your ecommerce experience.",
       index: "02/03"
     },
     {
@@ -394,7 +394,7 @@ const FashionEcommerceView: React.FC<FashionEcommerceViewProps> = ({ onBackToHom
               Plugin <span className="fashion-process-title-accent">Implementation</span>
             </h2>
             <p className="fashion-process-body">
-              Deploy PointAI's fashion commerce SDK as a fully customized plugin for your website and app — enabling virtual try-on, fit guidance, AI-powered styling, and enriched product experiences with seamless integration, analytics, and minimal engineering effort.
+              Deploy Nexus AI's fashion commerce SDK as a fully customized plugin for your website and app — enabling virtual try-on, fit guidance, AI-powered styling, and enriched product experiences with seamless integration, analytics, and minimal engineering effort.
             </p>
           </div>
 

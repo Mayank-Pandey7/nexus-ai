@@ -32,7 +32,7 @@ const BlogDetailsView: React.FC<BlogDetailsViewProps> = ({ onBackToBlogs }) => {
       {/* Blog Header */}
       <div className="blog-details-header">
         <div className="blog-details-eyebrow">e-commerce simulation</div>
-        <h1>Generative AI vs PointAI's Simulation AI</h1>
+        <h1>Generative AI vs Nexus AI's Simulation AI</h1>
         <p className="blog-details-subtitle">Why Simulation AI is the New Future for Ecommerce &amp; Enterprises</p>
       </div>
 
@@ -161,17 +161,17 @@ const BlogDetailsView: React.FC<BlogDetailsViewProps> = ({ onBackToBlogs }) => {
           <div className="blog-details-comparison-img-wrap">
             <img 
               src="https://stagingmedia.pointai.com/assets/blogs/blogs/genai-vs-simai.jpeg" 
-              alt="GenAI vs PointAI Simulation Comparison" 
+              alt="GenAI vs Nexus AI Simulation Comparison" 
             />
           </div>
         </div>
       </div>
 
-      {/* PointAI Simulation AI Section */}
+      {/* Nexus AI Simulation AI Section */}
       <div className="blog-details-simulation-section">
         <div className="blog-details-wrap">
           <h2 className="blog-details-heading" style={{ maxWidth: '680px' }}>
-            PointAI's Simulation AI doesn't recreate Appearances —<br/>
+            Nexus AI's Simulation AI doesn't recreate Appearances —<br/>
             <span className="accent">it recreates reality.</span>
           </h2>
           <div className="blog-details-divider"></div>
@@ -199,14 +199,14 @@ const BlogDetailsView: React.FC<BlogDetailsViewProps> = ({ onBackToBlogs }) => {
           </div>
 
           <p className="blog-details-sim-closing">
-            At PointAI, we go beyond Visuals — blending Photorealism with physics to show not just how a garment <em>looks</em>, but how it truly <em>behaves</em>.<br/><br/>
+            At Nexus AI, we go beyond Visuals — blending Photorealism with physics to show not just how a garment <em>looks</em>, but how it truly <em>behaves</em>.<br/><br/>
             And that's what transforms online shopping from <strong>Uncertainty into Certainty.</strong>
           </p>
 
           <div className="blog-details-sim-banner-img">
             <img 
               src="https://stagingmedia.pointai.com/assets/blogs/blogs/genai-vs-simai.jpeg" 
-              alt="PointAI — See It. Try It. Buy It." 
+              alt="Nexus AI — See It. Try It. Buy It." 
             />
           </div>
         </div>
@@ -240,7 +240,7 @@ const BlogDetailsView: React.FC<BlogDetailsViewProps> = ({ onBackToBlogs }) => {
             Copy Link
           </a>
           <a 
-            href="https://twitter.com/intent/tweet?url=https://www.pointai.com/blog-details/genai-vs-simai" 
+            href="https://twitter.com/intent/tweet?url=https://www.nexusai.com/blog-details/genai-vs-simai" 
             target="_blank" 
             rel="noopener noreferrer" 
             className="blog-details-share-icon tw"
@@ -251,7 +251,7 @@ const BlogDetailsView: React.FC<BlogDetailsViewProps> = ({ onBackToBlogs }) => {
             X (Twitter)
           </a>
           <a 
-            href="https://www.facebook.com/sharer/sharer.php?u=https://www.pointai.com/blog-details/genai-vs-simai" 
+            href="https://www.facebook.com/sharer/sharer.php?u=https://www.nexusai.com/blog-details/genai-vs-simai" 
             target="_blank" 
             rel="noopener noreferrer" 
             className="blog-details-share-icon fb"
@@ -262,7 +262,7 @@ const BlogDetailsView: React.FC<BlogDetailsViewProps> = ({ onBackToBlogs }) => {
             Facebook
           </a>
           <a 
-            href="https://www.linkedin.com/sharing/share-offsite/?url=https://www.pointai.com/blog-details/genai-vs-simai" 
+            href="https://www.linkedin.com/sharing/share-offsite/?url=https://www.nexusai.com/blog-details/genai-vs-simai" 
             target="_blank" 
             rel="noopener noreferrer" 
             className="blog-details-share-icon li"

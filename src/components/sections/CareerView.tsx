@@ -12,12 +12,12 @@ const CareerView: React.FC<CareerViewProps> = ({ onBackToHome }) => {
     {
       title: "Senior Machine Learning Engineer",
       summary: "Design and ship models for virtual try-on, size recommendation, and personalization. You will work across data pipelines, evaluation, and production APIs.",
-      applyUrl: "mailto:careers@pointai.com?subject=Application for Senior Machine Learning Engineer"
+      applyUrl: "mailto:careers@nexusai.com?subject=Application for Senior Machine Learning Engineer"
     },
     {
       title: "Frontend Engineer (React / WebGL)",
       summary: "Build polished, performant experiences for try-on, 3D viewers, and merchant dashboards using modern React and real-time graphics.",
-      applyUrl: "mailto:careers@pointai.com?subject=Application for Frontend Engineer (React / WebGL)"
+      applyUrl: "mailto:careers@nexusai.com?subject=Application for Frontend Engineer (React / WebGL)"
     }
   ];
 
@@ -51,13 +51,13 @@ const CareerView: React.FC<CareerViewProps> = ({ onBackToHome }) => {
         <div className="career-hero-bg" aria-hidden="true">
           <img 
             src={careerHeroBg} 
-            alt="PointAI career hero background" 
+            alt="Nexus AI career hero background" 
             className="career-hero-image career-hero-image--desktop" 
             style={{ opacity: 1 }}
           />
           <img 
             src={careerHeroBg} 
-            alt="PointAI career hero background mobile" 
+            alt="Nexus AI career hero background mobile" 
             className="career-hero-image career-hero-image--mobile" 
             style={{ opacity: 1 }}
           />
@@ -113,11 +113,11 @@ const CareerView: React.FC<CareerViewProps> = ({ onBackToHome }) => {
         </div>
       </section>
 
-      {/* Why PointAI Section */}
+      {/* Why Nexus AI Section */}
       <section className="career-why" aria-labelledby="career-why-heading">
         <div className="career-why-inner">
           <h2 id="career-why-heading" className="career-section-title">
-            Why <span className="career-section-title-accent">PointAI?</span>
+            Why <span className="career-section-title-accent">Nexus AI?</span>
           </h2>
           <p className="career-section-lead career-why-lead">
             We are redefining how people shop online through AI—virtual try-on, size intelligence, and immersive 3D experiences that feel real.
@@ -145,7 +145,7 @@ const CareerView: React.FC<CareerViewProps> = ({ onBackToHome }) => {
             Open <span className="career-section-title-accent">Positions</span>
           </h2>
           <p className="career-section-lead">
-            Explore open roles across teams at PointAI.
+            Explore open roles across teams at Nexus AI.
           </p>
           <div className="career-positions-list">
             {jobs.map((job, index) => {

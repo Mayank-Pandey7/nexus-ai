@@ -195,7 +195,7 @@ const MakeupTryonView: React.FC<MakeupTryonViewProps> = ({ onBackToHome }) => {
           <div className="makeup-ipad-visual">
             <iframe 
               src="https://makeup.tryndbuy.com/makeup-ui2/makeup-ui2.html#/vm" 
-              title="PointAI virtual makeup try-on interactive demo" 
+              title="Nexus AI virtual makeup try-on interactive demo" 
               className="makeup-ipad-iframe" 
               loading="lazy" 
               allow="camera; microphone; accelerometer; gyroscope; fullscreen" 

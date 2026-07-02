@@ -10,7 +10,7 @@ const BlogView: React.FC<BlogViewProps> = ({ onBackToHome }) => {
 
   const blogs = [
     {
-      title: "Generative AI vs PointAI's Simulation AI",
+      title: "Generative AI vs Nexus AI's Simulation AI",
       category: "In the fast-evolving world of fashion e-commerce, AI-powered Virtual Try-on (VTO) tools promised to solve one of retail's biggest questions…..",
       image: "https://stagingmedia.pointai.com/assets/blogs/blogs/genai-vs-simai.jpeg"
     }
@@ -27,7 +27,7 @@ const BlogView: React.FC<BlogViewProps> = ({ onBackToHome }) => {
         <div className="blog-hero-bg" aria-hidden="true">
           <img 
             src="https://stagingmedia.pointai.com/assets/images/blog-hero.jpg" 
-            alt="PointAI blog hero background" 
+            alt="Nexus AI blog hero background" 
             className="blog-hero-image" 
             style={{ opacity: 1 }}
           />
@@ -75,18 +75,18 @@ const BlogView: React.FC<BlogViewProps> = ({ onBackToHome }) => {
             <div 
               className="blog-hero-simulative-card-link" 
               style={{ cursor: 'pointer' }}
-              aria-label="Read latest blog: Generative AI vs PointAI's Simulation AI" 
+              aria-label="Read latest blog: Generative AI vs Nexus AI's Simulation AI" 
               onClick={() => setActiveSubView('details')}
             >
               <article className="research-simulative-card reveal-hover-lift blog-hero-simulative-card is-revealed">
                 <img 
                   src="https://stagingmedia.pointai.com/assets/blogs/blogs/genai-vs-simai.jpeg" 
-                  alt="Generative AI vs PointAI's Simulation AI" 
+                  alt="Generative AI vs Nexus AI's Simulation AI" 
                   className="blog-simulative-card-img" 
                   style={{ opacity: 1 }}
                 />
                 <div className="research-simulative-card-body">
-                  <h3 className="research-simulative-card-title">Generative AI vs PointAI's Simulation AI</h3>
+                  <h3 className="research-simulative-card-title">Generative AI vs Nexus AI's Simulation AI</h3>
                   <p className="research-simulative-card-text">
                     In the fast-evolving world of fashion e-commerce, AI-powered Virtual Try-on (VTO) tools promised to solve one of retail's biggest questions…..
                   </p>
