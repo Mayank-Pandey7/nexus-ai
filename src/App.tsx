@@ -18,11 +18,12 @@ import AccessoriesTryonView from './components/sections/AccessoriesTryonView';
 import MakeupTryonView from './components/sections/MakeupTryonView';
 import SmartAssistantsView from './components/sections/SmartAssistantsView';
 import VisualizationView from './components/sections/VisualizationView';
+import TeamView from './components/sections/TeamView';
 
 
 const App: React.FC = () => {
   const [isLoginOpen, setIsLoginOpen] = useState(false);
-  const [activeView, setActiveView] = useState<'home' | 'research' | 'company' | 'blog' | 'career' | 'fashion-ecommerce-ai' | 'accessories-try-on' | 'makeup-try-on' | 'smart-assistants-ai' | 'visualization-ai'>(() => {
+  const [activeView, setActiveView] = useState<'home' | 'research' | 'company' | 'blog' | 'career' | 'fashion-ecommerce-ai' | 'accessories-try-on' | 'makeup-try-on' | 'smart-assistants-ai' | 'visualization-ai' | 'team'>(() => {
     const saved = localStorage.getItem('activeView');
     return (saved as any) || 'home';
   });
@@ -90,7 +91,7 @@ const App: React.FC = () => {
       ) : (
         <div className="flex-1">
           {activeView === 'research' && <ResearchView onBackToHome={() => setActiveView('home')} />}
-          {activeView === 'company' && <CompanyView onBackToHome={() => setActiveView('home')} />}
+          {activeView === 'company' && <CompanyView onBackToHome={() => setActiveView('home')} onExploreTeam={() => setActiveView('team')} />}
           {activeView === 'blog' && <BlogView onBackToHome={() => setActiveView('home')} />}
           {activeView === 'career' && <CareerView onBackToHome={() => setActiveView('home')} />}
           {activeView === 'fashion-ecommerce-ai' && <FashionEcommerceView onBackToHome={() => setActiveView('home')} />}
@@ -98,6 +99,7 @@ const App: React.FC = () => {
           {activeView === 'makeup-try-on' && <MakeupTryonView onBackToHome={() => setActiveView('home')} />}
            {activeView === 'smart-assistants-ai' && <SmartAssistantsView onBackToHome={() => setActiveView('home')} />}
           {activeView === 'visualization-ai' && <VisualizationView onBackToHome={() => setActiveView('home')} />}
+          {activeView === 'team' && <TeamView onBackToHome={() => setActiveView('home')} />}
         </div>
       )}
       <Footer />

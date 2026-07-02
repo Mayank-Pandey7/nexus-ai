@@ -5,64 +5,65 @@ import nikhilChoudharyPhoto from '../../assets/images/nikhil-choudhary.jpg';
 
 interface CompanyViewProps {
   onBackToHome: () => void;
+  onExploreTeam?: () => void;
 }
 
-const CompanyView: React.FC<CompanyViewProps> = ({ onBackToHome }) => {
+const CompanyView: React.FC<CompanyViewProps> = ({ onBackToHome, onExploreTeam }) => {
   const [selectedMember, setSelectedMember] = useState<any | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const teamMembers = [
     {
-      name: "Nikhil Choudhary",
-      designation: "Founder & CEO",
-      company: "Trialshopy",
-      experience: "6+ Years",
-      bio: "Nikhil Choudhary is the Founder & CEO of Trialshopy, bringing a wealth of expertise in Computer Science and Data Science from NIT Patna. He leads the company's long-term technology vision and retail partnerships to build scale-ready AR/AI retail configurations.",
-      photo: nikhilChoudharyPhoto,
-      linkedin: "https://www.linkedin.com/in/nikhil-choudhary-1st-27b4621b8/"
-    },
-    {
-      name: "Pooja Mallick",
-      designation: "COO & UX Lead",
-      company: "Trialshopy",
-      experience: "4+ Years",
-      bio: "Pooja Mallick is the Chief Operating Officer and User Experience Lead at Trialshopy. She specializes in designing intuitive, human-centered AR flows that simplify virtual clothing try-ons and conversion paths.",
-      photo: "https://stagingmedia.pointai.com/assets/images/investors/ganapathy-subramaniam.jpeg",
-      linkedin: "https://www.linkedin.com/"
-    },
-    {
-      name: "Suresh Choudhry",
-      designation: "Director & Co-Founder",
-      company: "Trialshopy",
-      experience: "10+ Years",
-      bio: "Suresh Choudhry drives the business architecture and market positioning at Trialshopy, bringing a decade of expertise in scaling e-commerce distribution networks and corporate investment strategies.",
-      photo: "https://stagingmedia.pointai.com/assets/images/investors/lip-bu-tan.jpg",
-      linkedin: "https://www.linkedin.com/"
-    },
-    {
-      name: "Rohan Mehta",
-      designation: "Lead Frontend Engineer",
+      name: "Shubhang Sheel",
+      designation: "Co-Founder & CMO",
       company: "Trialshopy",
       experience: "5+ Years",
-      bio: "Rohan leads the web interface engineering, crafting premium, responsive web platforms and integrating low-latency 3D scene modules that execute directly in browsers.",
-      photo: "https://stagingmedia.pointai.com/assets/images/investors/vijay-shekhar-sharma.jpeg",
-      linkedin: "https://www.linkedin.com/"
-    },
-    {
-      name: "Siddharth Rao",
-      designation: "AI & Computer Vision Engineer",
-      company: "Trialshopy",
-      experience: "4+ Years",
-      bio: "Siddharth designs the proprietary deep learning computer vision frameworks, enabling real-time size mapping, texture detection, and model fit evaluation.",
+      bio: "Shubhang Sheel is the Co-Founder & CMO at Trialshopy. He directs brand architecture, digital distribution channels, and retail marketplace user growth strategies globally.",
       photo: "https://stagingmedia.pointai.com/assets/images/investors/muralikrishnan-b.jpeg",
       linkedin: "https://www.linkedin.com/"
     },
     {
-      name: "Karan Malhotra",
-      designation: "Lead Mobile Architect",
+      name: "Suresh Choudhary",
+      designation: "Director",
+      company: "Trialshopy",
+      experience: "10+ Years",
+      bio: "Suresh Choudhary directs corporate investments, retail distribution pipelines, and strategic brand partnerships at Trialshopy.",
+      photo: "https://stagingmedia.pointai.com/assets/images/investors/lip-bu-tan.jpg",
+      linkedin: "https://www.linkedin.com/"
+    },
+    {
+      name: "Vivek",
+      designation: "CTO",
+      company: "Trialshopy",
+      experience: "7+ Years",
+      bio: "Vivek leads product engineering at Trialshopy, managing advanced 3D render pipelines and low-latency computer vision backend models.",
+      photo: "https://stagingmedia.pointai.com/assets/images/investors/vijay-shekhar-sharma.jpeg",
+      linkedin: "https://www.linkedin.com/"
+    },
+    {
+      name: "Dipti",
+      designation: "COO",
       company: "Trialshopy",
       experience: "6+ Years",
-      bio: "Karan manages mobile product deployment, building fluid cross-platform AR/VR fitting app integrations leveraging Flutter and native graphics layers.",
+      bio: "Dipti coordinates day-to-day operations, strategic planning, cross-functional HR tasks, and corporate governance protocols.",
+      photo: "https://stagingmedia.pointai.com/assets/images/investors/ganapathy-subramaniam.jpeg",
+      linkedin: "https://www.linkedin.com/"
+    },
+    {
+      name: "Yashika",
+      designation: "Frontend Developer",
+      company: "Trialshopy",
+      experience: "3+ Years",
+      bio: "Yashika builds responsive, high-performance web applications and sleek interactive design frameworks for Trialshopy Marketplace.",
+      photo: "https://stagingmedia.pointai.com/assets/images/investors/ganapathy-subramaniam.jpeg", // Placeholder
+      linkedin: "https://www.linkedin.com/"
+    },
+    {
+      name: "Satyam",
+      designation: "SDE1",
+      company: "Trialshopy",
+      experience: "2+ Years",
+      bio: "Satyam works on our backend services, merchant api interfaces, database indexing, and performance optimization layers.",
       photo: "https://stagingmedia.pointai.com/assets/images/investors/vinod-sood.jpeg",
       linkedin: "https://www.linkedin.com/"
     }
@@ -351,6 +352,39 @@ const CompanyView: React.FC<CompanyViewProps> = ({ onBackToHome }) => {
                 </p>
               </article>
             ))}
+          </div>
+
+          <div style={{ display: 'flex', justifyContent: 'center', marginTop: '4rem' }}>
+            <button 
+              onClick={onExploreTeam}
+              className="home-cta-button"
+              style={{
+                background: 'rgba(255, 255, 255, 0.05)',
+                border: '1px solid rgba(255, 255, 255, 0.08)',
+                color: '#ffffff',
+                borderRadius: '999px',
+                padding: '0.85rem 2.25rem',
+                fontSize: '1rem',
+                fontWeight: 600,
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '0.6rem',
+                cursor: 'pointer',
+                transition: 'all 0.25s'
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.background = '#ff8a00';
+                e.currentTarget.style.borderColor = 'transparent';
+                e.currentTarget.style.transform = 'translateY(-2px)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.background = 'rgba(255, 255, 255, 0.05)';
+                e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.08)';
+                e.currentTarget.style.transform = 'translateY(0)';
+              }}
+            >
+              Explore Our Team &rarr;
+            </button>
           </div>
         </div>
       </section>
