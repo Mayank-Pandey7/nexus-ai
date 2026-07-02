@@ -1,11 +1,7 @@
 import React from 'react';
 import automobileBanner from '../../assets/images/automobile-banner.jpg';
 
-interface HowItWorksProps {
-  onExplore: () => void;
-}
-
-const HowItWorks: React.FC<HowItWorksProps> = ({ onExplore }) => {
+const HowItWorks: React.FC = () => {
   return (
     <section className="automobile-section" aria-labelledby="automobile-heading">
       <div className="automobile-banner-visual">
@@ -28,16 +24,7 @@ const HowItWorks: React.FC<HowItWorksProps> = ({ onExplore }) => {
             Interactive configurators, AI-powered guidance, and digital vehicle experiences that turn curiosity into purchase confidence.
           </p>
           <div className="home-section-cta-wrap">
-            <a 
-              className="home-cta-button automobile-cta-button" 
-              href="#"
-              onClick={(e) => {
-                e.preventDefault();
-                onExplore();
-              }}
-            >
-              Explore
-            </a>
+            <a className="home-cta-button automobile-cta-button" href="#">Explore</a>
           </div>
         </div>
       </div>
