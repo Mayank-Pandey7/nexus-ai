@@ -286,9 +286,8 @@ const CompanyView: React.FC<CompanyViewProps> = ({ onBackToHome }) => {
           </article>
 
           <div className="company-leader-copy" data-reveal="right" style={{ maxWidth: '650px' }}>
-            <h2 id="company-leader-heading" className="company-section-title company-section-title--light" style={{ marginBottom: '2rem' }}>
-              <span style={{ fontFamily: 'Georgia, serif', fontStyle: 'italic', color: '#ffffff', fontWeight: 'normal' }}>Visionary </span>
-              <span style={{ fontFamily: 'Georgia, serif', fontStyle: 'italic', color: '#ff7a00', fontWeight: 'normal' }}>Leader</span>
+            <h2 id="company-leader-heading" className="company-section-title company-section-title--light" style={{ marginBottom: '2rem', fontSize: '30px' }}>
+              Visionary <span className="company-accent">Leader</span>
             </h2>
             <div className="company-leader-bio" data-reveal="true" data-reveal-delay="120" style={{ fontSize: '1.15rem', color: 'rgba(255, 255, 255, 0.7)', lineHeight: '1.75' }}>
               <p style={{ marginBottom: '1.5rem' }}>
