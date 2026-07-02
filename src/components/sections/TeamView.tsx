@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import nikhilChoudharyPhoto from '../../assets/images/nikhil-choudhary.jpg';
 
 interface TeamViewProps {
-  onBackToHome: () => void;
+  onBackToCompany: () => void;
 }
 
 interface TeamMember {
@@ -14,9 +14,9 @@ interface TeamMember {
   linkedin: string;
 }
 
-const TeamView: React.FC<TeamViewProps> = ({ onBackToHome }) => {
+const TeamView: React.FC<TeamViewProps> = ({ onBackToCompany }) => {
   useEffect(() => {
-    window.scrollTo(0, 0);
+    // Avoid resetting scroll, since behavior requires scrolling smoothly to target section
   }, []);
 
   const departments = ['Leadership', 'Engineering', 'Design', 'QA', 'HR & Operations'];
@@ -141,45 +141,47 @@ const TeamView: React.FC<TeamViewProps> = ({ onBackToHome }) => {
       {/* Back Button Header */}
       <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '6.5rem 2rem 2rem 2rem' }}>
         <button 
-          onClick={onBackToHome}
+          onClick={onBackToCompany}
           style={{ 
-            background: 'rgba(255, 255, 255, 0.05)', 
+            background: 'rgba(255, 255, 255, 0.03)', 
             border: '1px solid rgba(255, 255, 255, 0.08)', 
             borderRadius: '999px',
             color: '#ffffff', 
-            fontWeight: 600, 
-            fontSize: '0.9rem', 
+            fontWeight: 500, 
+            fontSize: '0.85rem', 
             cursor: 'pointer', 
             display: 'inline-flex', 
             alignItems: 'center', 
-            gap: '0.6rem',
-            padding: '0.6rem 1.4rem',
+            gap: '0.4rem',
+            padding: '0.5rem 1.1rem',
             transition: 'all 0.2s',
-            boxShadow: '0 4px 12px rgba(0,0,0,0.2)'
+            boxShadow: '0 4px 12px rgba(0,0,0,0.1)'
           }}
           onMouseEnter={(e) => {
-            e.currentTarget.style.background = 'rgba(255, 255, 255, 0.12)';
-            e.currentTarget.style.transform = 'translateY(-1px)';
+            e.currentTarget.style.borderColor = '#ff8a00';
+            e.currentTarget.style.color = '#ff8a00';
+            e.currentTarget.style.transform = 'translateX(-2px)';
           }}
           onMouseLeave={(e) => {
-            e.currentTarget.style.background = 'rgba(255, 255, 255, 0.05)';
-            e.currentTarget.style.transform = 'translateY(0)';
+            e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.08)';
+            e.currentTarget.style.color = '#ffffff';
+            e.currentTarget.style.transform = 'translateX(0)';
           }}
         >
-          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
             <line x1="19" y1="12" x2="5" y2="12"></line>
             <polyline points="12 19 5 12 12 5"></polyline>
           </svg>
-          Back to Home
+          Back
         </button>
       </div>
 
       {/* Main Title Section */}
       <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 2rem 4rem 2rem', textAlign: 'center' }}>
-        <h1 style={{ fontSize: 'clamp(2.5rem, 6vw, 4rem)', fontWeight: 'bold', margin: '0 0 1rem 0', letterSpacing: '-0.03em' }}>
+        <h1 className="premium-fade-heading" style={{ fontSize: 'clamp(2.5rem, 6vw, 4rem)', fontWeight: 'bold', margin: '0 0 1rem 0', letterSpacing: '-0.03em', animationDelay: '100ms' }}>
           Meet the <span className="company-accent" style={{ color: '#ff8a00' }}>Innovators</span>
         </h1>
-        <p style={{ fontSize: 'clamp(1rem, 2vw, 1.2rem)', color: 'rgba(255, 255, 255, 0.6)', maxWidth: '750px', margin: '0 auto', lineHeight: 1.6 }}>
+        <p className="premium-fade-heading" style={{ fontSize: 'clamp(1rem, 2vw, 1.2rem)', color: 'rgba(255, 255, 255, 0.6)', maxWidth: '750px', margin: '0 auto', lineHeight: 1.6, animationDelay: '200ms' }}>
           Discover the complete leadership and engineering team driving advanced 3D &amp; immersive AR retail technology at Trialshopy.
         </p>
       </div>
@@ -192,7 +194,7 @@ const TeamView: React.FC<TeamViewProps> = ({ onBackToHome }) => {
 
           return (
             <div key={dept} style={{ marginBottom: '5rem' }}>
-              <h2 style={{ fontSize: '1.75rem', fontWeight: 700, borderBottom: '1px solid rgba(255, 255, 255, 0.1)', paddingBottom: '0.75rem', marginBottom: '2.5rem', letterSpacing: '-0.02em' }}>
+              <h2 className="premium-fade-heading" style={{ fontSize: '1.75rem', fontWeight: 700, borderBottom: '1px solid rgba(255, 255, 255, 0.1)', paddingBottom: '0.75rem', marginBottom: '2.5rem', letterSpacing: '-0.02em', animationDelay: '250ms' }}>
                 {dept}
               </h2>
 
@@ -200,6 +202,7 @@ const TeamView: React.FC<TeamViewProps> = ({ onBackToHome }) => {
                 {deptMembers.map((member, idx) => (
                   <div 
                     key={idx}
+                    className="premium-card-enter"
                     style={{
                       background: 'linear-gradient(135deg, rgba(28, 28, 30, 0.5) 0%, rgba(18, 18, 20, 0.6) 100%)',
                       border: '1px solid rgba(255, 255, 255, 0.06)',
@@ -209,7 +212,8 @@ const TeamView: React.FC<TeamViewProps> = ({ onBackToHome }) => {
                       alignItems: 'center',
                       gap: '1.25rem',
                       transition: 'all 0.3s cubic-bezier(0.25, 1, 0.5, 1)',
-                      cursor: 'pointer'
+                      cursor: 'pointer',
+                      animationDelay: `${idx * 50}ms`
                     }}
                     onMouseEnter={(e) => {
                       e.currentTarget.style.transform = 'translateY(-4px)';
@@ -230,7 +234,8 @@ const TeamView: React.FC<TeamViewProps> = ({ onBackToHome }) => {
                       <img 
                         src={member.photo} 
                         alt={member.name} 
-                        style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.4s ease' }}
+                        className="premium-image-enter"
+                        style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.4s ease', animationDelay: `${150 + idx * 50}ms` }}
                       />
                     </div>
                     <div>
