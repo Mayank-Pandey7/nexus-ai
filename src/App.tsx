@@ -80,7 +80,7 @@ const App: React.FC = () => {
               <Hero />
               <Products />
               <HowItWorks />
-              <Benefits onKnowMore={() => setActiveView('smart-assistants-ai')} />
+              <Benefits />
               <Testimonials />
               <Pricing />
               <FAQ />
