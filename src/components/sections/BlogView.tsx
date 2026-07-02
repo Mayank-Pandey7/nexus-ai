@@ -1,18 +1,24 @@
-import React from 'react';
+import React, { useState } from 'react';
+import BlogDetailsView from './BlogDetailsView';
 
 interface BlogViewProps {
   onBackToHome: () => void;
 }
 
 const BlogView: React.FC<BlogViewProps> = ({ onBackToHome }) => {
+  const [activeSubView, setActiveSubView] = useState<'list' | 'details'>('list');
+
   const blogs = [
     {
       title: "Generative AI vs PointAI's Simulation AI",
       category: "In the fast-evolving world of fashion e-commerce, AI-powered Virtual Try-on (VTO) tools promised to solve one of retail's biggest questions…..",
-      image: "https://stagingmedia.pointai.com/assets/blogs/blogs/genai-vs-simai.jpeg",
-      url: "https://www.pointai.com/blog-details/genai-vs-simai"
+      image: "https://stagingmedia.pointai.com/assets/blogs/blogs/genai-vs-simai.jpeg"
     }
   ];
+
+  if (activeSubView === 'details') {
+    return <BlogDetailsView onBackToBlogs={() => setActiveSubView('list')} />;
+  }
 
   return (
     <div className="blog-page tab-pop-in">
@@ -66,12 +72,11 @@ const BlogView: React.FC<BlogViewProps> = ({ onBackToHome }) => {
 
         <div className="blog-hero-inner home-container" style={{ marginTop: 'auto', marginBottom: 'auto' }}>
           <div className="blog-hero-visual">
-            <a 
+            <div 
               className="blog-hero-simulative-card-link" 
+              style={{ cursor: 'pointer' }}
               aria-label="Read latest blog: Generative AI vs PointAI's Simulation AI" 
-              href="https://www.pointai.com/blog-details/genai-vs-simai"
-              target="_blank"
-              rel="noopener noreferrer"
+              onClick={() => setActiveSubView('details')}
             >
               <article className="research-simulative-card reveal-hover-lift blog-hero-simulative-card is-revealed">
                 <img 
@@ -91,7 +96,7 @@ const BlogView: React.FC<BlogViewProps> = ({ onBackToHome }) => {
                   </span>
                 </div>
               </article>
-            </a>
+            </div>
           </div>
 
           <div className="blog-hero-copy">
@@ -115,11 +120,10 @@ const BlogView: React.FC<BlogViewProps> = ({ onBackToHome }) => {
           <div className="blog-recent-grid">
             {blogs.map((blog, index) => (
               <article key={index} className="blog-card reveal-hover-lift">
-                <a 
+                <div 
                   className="blog-card-image-link" 
-                  href={blog.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  style={{ cursor: 'pointer' }}
+                  onClick={() => setActiveSubView('details')}
                 >
                   <span className="blog-card-image-wrap">
                     <img 
@@ -129,28 +133,26 @@ const BlogView: React.FC<BlogViewProps> = ({ onBackToHome }) => {
                       style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }}
                     />
                   </span>
-                </a>
+                </div>
                 <div className="blog-card-content">
-                  <a 
+                  <div 
                     className="blog-card-title-link" 
-                    href={blog.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    style={{ cursor: 'pointer' }}
+                    onClick={() => setActiveSubView('details')}
                   >
                     <div className="blog-card-infor">
                       <h3 className="blog-card-title">{blog.title}</h3>
                       <p className="blog-card-category">{blog.category}</p>
                     </div>
-                  </a>
-                  <a 
+                  </div>
+                  <button 
                     className="blog-card-read-more" 
-                    href={blog.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    style={{ border: 'none', background: 'transparent', cursor: 'pointer' }}
+                    onClick={() => setActiveSubView('details')}
                   >
                     Read more
                     <span className="blog-card-read-more-icon" aria-hidden="true">↗</span>
-                  </a>
+                  </button>
                 </div>
               </article>
             ))}
