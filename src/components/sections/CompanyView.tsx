@@ -220,8 +220,8 @@ const CompanyView: React.FC<CompanyViewProps> = ({ onBackToHome }) => {
       </section>
 
       {/* Founder Nikhil Choudhary Section */}
-      <section className="company-leader" aria-labelledby="company-leader-heading">
-        <div className="company-inner company-leader-inner">
+      <section className="company-leader" aria-labelledby="company-leader-heading" style={{ background: '#000', padding: 'clamp(6rem, 10vw, 8rem) 0' }}>
+        <div className="company-inner company-leader-inner" style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 2rem' }}>
           <article className="company-leader-card reveal-hover-lift" data-reveal="left" style={{ margin: '0 auto' }}>
             <div className="company-leader-photo-wrap">
               <img 
@@ -231,72 +231,79 @@ const CompanyView: React.FC<CompanyViewProps> = ({ onBackToHome }) => {
                 style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }}
               />
             </div>
-            <h3 className="company-leader-name-wrap">
-              <a 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="company-leader-name" 
-                href="https://www.linkedin.com/in/nikhil-choudhary-1st-27b4621b8/"
-                style={{ color: '#ff7a00' }}
-              >
-                Nikhil Choudhary
-              </a>
-            </h3>
-            <p className="company-leader-role" style={{ color: '#ffffff', fontWeight: 600 }}>Founder &amp; CEO</p>
-            <p className="company-leader-company" style={{ fontSize: '0.85rem', color: 'rgba(255, 255, 255, 0.5)', marginTop: '0.25rem', fontWeight: 500 }}>
-              Trialshopy Marketplace Pvt. Ltd.
-            </p>
-            <div className="company-leader-social" aria-label="Founder social links">
-              <a 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="company-social-icon-btn" 
-                aria-label="LinkedIn" 
-                href="https://www.linkedin.com/in/nikhil-choudhary-1st-27b4621b8/"
-                style={{
-                  background: 'rgba(255, 255, 255, 0.05)',
-                  border: '1px solid rgba(255, 255, 255, 0.08)',
-                  borderRadius: '50%',
-                  width: '2.5rem',
-                  height: '2.5rem',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  transition: 'all 0.25s'
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.background = '#ff7a00';
-                  e.currentTarget.style.borderColor = 'transparent';
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.background = 'rgba(255, 255, 255, 0.05)';
-                  e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.08)';
-                }}
-              >
-                <img 
-                  src="https://stagingmedia.pointai.com/assets/images/linkedin.png" 
-                  alt="LinkedIn icon" 
-                  className="company-linkedin-icon" 
-                  width="18" 
-                  height="18" 
-                  loading="lazy"
-                />
-              </a>
+            
+            <div style={{ display: 'flex', flexDirection: 'column', marginTop: '1.5rem', flex: 1, justifyContent: 'space-between' }}>
+              <div>
+                <h3 className="company-leader-name-wrap" style={{ margin: 0 }}>
+                  <a 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="company-leader-name" 
+                    href="https://www.linkedin.com/in/nikhil-choudhary-1st-27b4621b8/"
+                    style={{ color: '#ff8a00', fontWeight: 'bold', fontSize: '1.45rem', textDecoration: 'none' }}
+                  >
+                    Nikhil Choudhary
+                  </a>
+                </h3>
+                <p style={{ color: '#ffffff', fontWeight: 500, fontSize: '1.05rem', marginTop: '0.35rem', marginBottom: '0.25rem' }}>
+                  Founder &amp; CEO
+                </p>
+                <p style={{ color: 'rgba(255, 255, 255, 0.5)', fontSize: '0.88rem', fontWeight: 500, margin: 0 }}>
+                  Trialshopy Marketplace Pvt. Ltd.
+                </p>
+              </div>
+              
+              <div style={{ marginTop: '1.5rem', display: 'flex', justifyContent: 'flex-start' }}>
+                <a 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  aria-label="LinkedIn Profile" 
+                  href="https://www.linkedin.com/in/nikhil-choudhary-1st-27b4621b8/"
+                  style={{
+                    background: 'rgba(255, 255, 255, 0.05)',
+                    border: '1px solid rgba(255, 255, 255, 0.08)',
+                    borderRadius: '50%',
+                    width: '2.5rem',
+                    height: '2.5rem',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    transition: 'all 0.25s'
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.background = '#ff8a00';
+                    e.currentTarget.style.borderColor = 'transparent';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.background = 'rgba(255, 255, 255, 0.05)';
+                    e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.08)';
+                  }}
+                >
+                  <img 
+                    src="https://stagingmedia.pointai.com/assets/images/linkedin.png" 
+                    alt="LinkedIn icon" 
+                    width="18" 
+                    height="18" 
+                    loading="lazy"
+                  />
+                </a>
+              </div>
             </div>
           </article>
 
-          <div className="company-leader-copy" data-reveal="right" style={{ maxWidth: '650px' }}>
-            <h2 id="company-leader-heading" className="company-section-title company-section-title--light" style={{ marginBottom: '2rem', fontSize: '30px' }}>
-              Visionary <span className="company-accent">Leader</span>
+          <div className="company-leader-copy" data-reveal="right" style={{ maxWidth: '700px' }}>
+            <h2 id="company-leader-heading" style={{ marginBottom: '2.5rem', fontSize: 'clamp(2.75rem, 5vw, 4.25rem)', lineHeight: 1.1, fontWeight: 'normal', margin: 0 }}>
+              <span style={{ fontFamily: 'Georgia, serif', fontStyle: 'italic', color: '#ffffff' }}>Visionary </span>
+              <span style={{ fontFamily: 'Georgia, serif', fontStyle: 'italic', color: '#ff8a00', textShadow: '0 0 20px rgba(255, 138, 0, 0.3)' }}>Leader</span>
             </h2>
-            <div className="company-leader-bio" data-reveal="true" data-reveal-delay="120" style={{ fontSize: '1.15rem', color: 'rgba(255, 255, 255, 0.7)', lineHeight: '1.75' }}>
-              <p style={{ marginBottom: '1.5rem' }}>
+            <div className="company-leader-bio" data-reveal="true" data-reveal-delay="120" style={{ fontSize: '1.15rem', color: 'rgba(208, 208, 208, 0.75)', lineHeight: '1.8' }}>
+              <p style={{ marginBottom: '2rem' }}>
                 Nikhil Choudhary is the Founder and CEO of Trialshopy, bringing a wealth of expertise from a distinguished career in industrial automation spanning over six years. A proud alumnus of NIT Patna, he holds a B.Tech in Computer Science and Engineering and an M.Tech in Data Science.
               </p>
-              <p style={{ marginBottom: '1.5rem' }}>
+              <p style={{ marginBottom: '2rem' }}>
                 Throughout his career, Nikhil has made significant contributions while working with leading organizations such as Altorum Leren, Repido, Msol Technology, and Walmart. His experience includes delivering over 30 successful projects, showcasing his ability to drive innovation and deliver impactful solutions.
               </p>
-              <p>
+              <p style={{ margin: 0 }}>
                 At Trialshopy, Nikhil is committed to redefining the technological landscape, utilizing data-driven insights to enhance operational efficiency and create exceptional value for clients.
               </p>
             </div>
