@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import nikhilChoudharyPhoto from '../../assets/images/nikhil-choudhary.jpg';
+const nikhilChoudharyPhoto = '/assets/images/nikhil-choudhary.jpg';
 
 interface TeamViewProps {
   onBackToCompany: () => void;

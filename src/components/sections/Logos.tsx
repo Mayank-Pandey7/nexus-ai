@@ -1,13 +1,13 @@
 import React from 'react';
-import amazonSpn from '../../assets/images/partners/amazon-spn.png';
-import myntra from '../../assets/images/partners/myntra.png';
-import flipkart from '../../assets/images/partners/flipkart.png';
-import zivame from '../../assets/images/partners/zivame.png';
-import rakuten from '../../assets/images/partners/rakuten.png';
-import peterEngland from '../../assets/images/partners/peter-england.png';
-import vanHeusen from '../../assets/images/partners/van-heusen.png';
-import allenSolly from '../../assets/images/partners/allen-solly.png';
-import afrl from '../../assets/images/partners/afrl.png';
+const amazonSpn = '/assets/images/partners/amazon-spn.png';
+const myntra = '/assets/images/partners/myntra.png';
+const flipkart = '/assets/images/partners/flipkart.png';
+const zivame = '/assets/images/partners/zivame.png';
+const rakuten = '/assets/images/partners/rakuten.png';
+const peterEngland = '/assets/images/partners/peter-england.png';
+const vanHeusen = '/assets/images/partners/van-heusen.png';
+const allenSolly = '/assets/images/partners/allen-solly.png';
+const afrl = '/assets/images/partners/afrl.png';
 
 const Logos: React.FC = () => {
   return (

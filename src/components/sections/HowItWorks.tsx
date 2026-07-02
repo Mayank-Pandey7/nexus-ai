@@ -1,5 +1,5 @@
 import React from 'react';
-import automobileBanner from '../../assets/images/automobile-banner.jpg';
+const automobileBanner = '/assets/images/automobile-banner.jpg';
 
 const HowItWorks: React.FC = () => {
   return (

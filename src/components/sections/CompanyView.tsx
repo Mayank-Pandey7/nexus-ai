@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { createPortal } from 'react-dom';
-import nexusaiLogoWhiteSparkle from '../../assets/images/nexusai-logo-white-sparkle.png';
-import nikhilChoudharyPhoto from '../../assets/images/nikhil-choudhary.jpg';
+const nexusaiLogoWhiteSparkle = '/assets/images/nexusai-logo-white-sparkle.png';
+const nikhilChoudharyPhoto = '/assets/images/nikhil-choudhary.jpg';
 
 interface CompanyViewProps {
   onBackToHome: () => void;
