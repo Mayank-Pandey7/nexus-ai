@@ -68,7 +68,7 @@ const SmartAssistantsView: React.FC<SmartAssistantsViewProps> = ({ onBackToHome 
   const tabContent = {
     assistant: {
       title: "Conversational Styling",
-      copy: "Serve personal shoppers to every customer. PointAI understands style queries, builds complete outfits, and visualizes garments instantly inside a unified chat interface.",
+      copy: "Serve personal shoppers to every customer. Nexus AI understands style queries, builds complete outfits, and visualizes garments instantly inside a unified chat interface.",
       source1: "https://stagingmedia.pointai.com/assets/images/input-3-1.jpg",
       source2: "https://stagingmedia.pointai.com/assets/images/input-3-2.jpg",
       output: "https://stagingmedia.pointai.com/assets/images/p1.jpg"
@@ -323,7 +323,7 @@ const SmartAssistantsView: React.FC<SmartAssistantsViewProps> = ({ onBackToHome 
               10 Times <em className="assistants-compare-title-accent">Faster</em>
             </h2>
             <p className="assistants-compare-body">
-              PointAI’s simulation engine renders a brand-ready try-on in about 4 seconds — roughly 10× quicker than general-purpose models that take a full minute on the same input.
+              Nexus AI’s simulation engine renders a brand-ready try-on in about 4 seconds — roughly 10× quicker than general-purpose models that take a full minute on the same input.
             </p>
             <div className="assistants-compare-input">
               <span className="assistants-compare-input-label">Input Cloth and Model</span>
@@ -342,10 +342,10 @@ const SmartAssistantsView: React.FC<SmartAssistantsViewProps> = ({ onBackToHome 
           <div className="assistants-compare-results">
             <article className="assistants-compare-result-card">
               <span className="assistants-compare-result-image">
-                <img src="https://stagingmedia.pointai.com/assets/images/pointai-model.png" alt="PointAI try-on result" className="assistants-compare-result-img" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
+                <img src="https://stagingmedia.pointai.com/assets/images/nexusai-model.png" alt="Nexus AI try-on result" className="assistants-compare-result-img" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
               </span>
               <div className="assistants-compare-result-body">
-                <h3 className="assistants-compare-result-title">PointAI — 4 Seconds</h3>
+                <h3 className="assistants-compare-result-title">Nexus AI — 4 Seconds</h3>
                 <p className="assistants-compare-result-copy">The power of simulation AI. Awarded for “The most advanced virtual try-on room.”</p>
               </div>
             </article>
@@ -373,7 +373,7 @@ const SmartAssistantsView: React.FC<SmartAssistantsViewProps> = ({ onBackToHome 
               10 Times <em className="assistants-compare-title-accent">Cost Efficient</em>
             </h2>
             <p className="assistants-compare-body assistants-compare-body--centered">
-              Skip the per-call meter. PointAI delivers production-grade try-ons for a fraction of what OpenAI or Gemini charge — about 10× less for the same 30,000 generations.
+              Skip the per-call meter. Nexus AI delivers production-grade try-ons for a fraction of what OpenAI or Gemini charge — about 10× less for the same 30,000 generations.
             </p>
           </header>
 
@@ -422,16 +422,16 @@ const SmartAssistantsView: React.FC<SmartAssistantsViewProps> = ({ onBackToHome 
             <article className="assistants-cost-card assistants-cost-card--highlight">
               <header className="assistants-cost-card-head">
                 <span className="assistants-cost-card-logo" style={{ background: '#ffa600' }}>
-                  <img src="https://stagingmedia.pointai.com/assets/images/pointai-logo-black-icon.png" alt="" className="assistants-cost-card-logo-img" style={{ filter: 'brightness(0) invert(1)' }} />
+                  <img src="https://stagingmedia.pointai.com/assets/images/nexusai-logo-black-icon.png" alt="" className="assistants-cost-card-logo-img" style={{ filter: 'brightness(0) invert(1)' }} />
                 </span>
                 <span className="assistants-cost-card-price">
                   <span className="assistants-cost-card-amount" style={{ color: 'var(--secondary-color)' }}>$11</span>
                   <span className="assistants-cost-card-cadence">for 30k Try-ons</span>
                 </span>
               </header>
-              <h3 className="assistants-cost-card-name">PointAI</h3>
+              <h3 className="assistants-cost-card-name">Nexus AI</h3>
               <p className="assistants-cost-card-meta">One Time Cost</p>
-              <p className="assistants-cost-card-copy">PointAI charges a flat $11 for the first 30k try-ons.</p>
+              <p className="assistants-cost-card-copy">Nexus AI charges a flat $11 for the first 30k try-ons.</p>
             </article>
           </div>
           <p className="assistants-compare-footer assistants-compare-footer--centered">Results based on comparison done in December 2025 with publicly available models.</p>
@@ -465,10 +465,10 @@ const SmartAssistantsView: React.FC<SmartAssistantsViewProps> = ({ onBackToHome 
             </article>
             <article className="assistants-accuracy-card">
               <span className="assistants-accuracy-image">
-                <img src="https://stagingmedia.pointai.com/assets/images/accuracy-pointai.png" alt="PointAI Result" className="assistants-accuracy-img" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
+                <img src="https://stagingmedia.pointai.com/assets/images/accuracy-nexusai.png" alt="Nexus AI Result" className="assistants-accuracy-img" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
               </span>
               <div className="assistants-accuracy-body">
-                <h3 className="assistants-accuracy-title">PointAI</h3>
+                <h3 className="assistants-accuracy-title">Nexus AI</h3>
                 <p className="assistants-accuracy-copy">The power of simulation AI. Awarded for "The most advanced virtual try-on room."</p>
               </div>
             </article>
@@ -493,7 +493,7 @@ const SmartAssistantsView: React.FC<SmartAssistantsViewProps> = ({ onBackToHome 
               Shopify app <span className="assistants-accent">integration</span>
             </h2>
             <p className="assistants-process-body">
-              From Shopify catalog sync to live shopper experiences, we deploy PointAI across your store — integrated with your theme, optimized for conversion, and ready in days.
+              From Shopify catalog sync to live shopper experiences, we deploy Nexus AI across your store — integrated with your theme, optimized for conversion, and ready in days.
             </p>
           </div>
 
@@ -507,7 +507,7 @@ const SmartAssistantsView: React.FC<SmartAssistantsViewProps> = ({ onBackToHome 
               </span>
               <h3 className="assistants-process-card-title">Store Assessment</h3>
               <p className="assistants-process-card-copy">
-                We review your Shopify setup, catalog structure, theme requirements, and customer journeys to identify the best PointAI experiences for your store.
+                We review your Shopify setup, catalog structure, theme requirements, and customer journeys to identify the best Nexus AI experiences for your store.
               </p>
               <footer className="assistants-process-card-footer">
                 <span className="assistants-process-card-index">01</span>

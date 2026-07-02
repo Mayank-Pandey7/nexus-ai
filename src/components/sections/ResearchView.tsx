@@ -199,7 +199,7 @@ const ResearchView: React.FC<ResearchViewProps> = ({ onBackToHome }) => {
                       Built for Enterprise Economics
                     </h3>
                     <p className="research-simulative-card-text" style={{ color: '#55555d' }}>
-                      PointAI’s Simulation AI requires one-time product modeling, eliminating the recurring token costs of GenAI and delivering dramatically lower operating costs at enterprise scale.
+                      Nexus AI’s Simulation AI requires one-time product modeling, eliminating the recurring token costs of GenAI and delivering dramatically lower operating costs at enterprise scale.
                     </p>
                   </div>
                 </article>

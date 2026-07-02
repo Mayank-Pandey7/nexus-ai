@@ -11,7 +11,7 @@ const Features: React.FC = () => {
       <div className="modelling-viewer-wrap" data-reveal-item="true">
         <iframe 
           className="modelling-viewer-frame" 
-          src="https://i3d.pointai.in/website-3d-assets/hikeys-piano/index.html" 
+          src="https://i3d.nexusai.in/website-3d-assets/hikeys-piano/index.html" 
           title="HiKeys Piano 3D experience" 
           loading="lazy" 
           allow="autoplay"

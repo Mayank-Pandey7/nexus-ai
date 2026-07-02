@@ -48,7 +48,7 @@ const CompanyView: React.FC<CompanyViewProps> = ({ onBackToHome }) => {
   const news = [
     {
       date: "November 12, 2022",
-      title: "We wanted to change the way people buy clothes online — digital twin does that with just a selfie, says Aarav Sharma of PointAI",
+      title: "We wanted to change the way people buy clothes online — digital twin does that with just a selfie, says Aarav Sharma of Nexus AI",
       image: "https://stagingmedia.pointai.com/assets/images/news/times-now.png",
       url: "https://www.timesnownews.com/technology-science/we-wanted-to-change-the-way-people-buy-clothes-online-digital-twin-does-that-with-just-a-selfie-says-nitin-vats-of-tryndbuy-article-95473161"
     },
@@ -102,7 +102,7 @@ const CompanyView: React.FC<CompanyViewProps> = ({ onBackToHome }) => {
         <div className="company-hero-bg" aria-hidden="true">
           <img 
             src="https://stagingmedia.pointai.com/assets/images/company.jpg" 
-            alt="PointAI company hero background" 
+            alt="Nexus AI company hero background" 
             className="company-hero-image" 
             style={{ opacity: 1 }}
           />
@@ -151,7 +151,7 @@ const CompanyView: React.FC<CompanyViewProps> = ({ onBackToHome }) => {
             Our <span className="company-hero-title-accent">Story</span>
           </h1>
           <p className="company-hero-caption">
-            At PointAI, we're more than just a technology company. We're a team of visionaries, creators, and problem-solvers dedicated to transforming the way brands and customers connect in the digital age.
+            At Nexus AI, we're more than just a technology company. We're a team of visionaries, creators, and problem-solvers dedicated to transforming the way brands and customers connect in the digital age.
           </p>
         </div>
 
@@ -210,7 +210,7 @@ const CompanyView: React.FC<CompanyViewProps> = ({ onBackToHome }) => {
               Visionary <span className="company-accent">Leader</span>
             </h2>
             <p className="company-leader-bio" data-reveal="true" data-reveal-delay="120">
-              Aarav Sharma is the Founder &amp; CEO of PointAI, an AI-driven technology company focused on building intelligent digital experiences through Artificial Intelligence, computer vision, and immersive technologies.
+              Aarav Sharma is the Founder &amp; CEO of Nexus AI, an AI-driven technology company focused on building intelligent digital experiences through Artificial Intelligence, computer vision, and immersive technologies.
               <br /><br />
               His vision is centered on creating scalable AI solutions that transform how businesses engage with users and interact in digital environments. He believes technologies like Digital Twins, AI-powered Virtual Assistants, and immersive experiences represent the future of e-commerce. His focus is on enabling more personalized, interactive, and intelligent user journeys that can reshape the future of fashion and digital commerce.
             </p>
