@@ -3008,9 +3008,9 @@ textarea {
   transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
 }
 .company-team-card:hover {
-  border-color: rgba(255, 255, 255, 0.15);
-  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.5), inset 0 1px rgba(255, 255, 255, 0.08);
-  transform: translateY(-2px);
+  border-color: rgba(255, 166, 0, 0.25);
+  box-shadow: 0 12px 24px rgba(255, 166, 0, 0.15), inset 0 1px rgba(255, 255, 255, 0.08);
+  transform: translateY(-4px);
 }
 .company-team-card-top {
   justify-content: space-between;
