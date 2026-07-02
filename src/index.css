@@ -2872,36 +2872,40 @@ textarea {
   position: relative;
 }
 .company-leader {
-  background: var(--company-dark);
-  padding: clamp(3.5rem, 8vw, 5.5rem) 0;
+  background: #000000;
+  padding: clamp(5rem, 9vw, 7.5rem) 0;
 }
 .company-leader-inner {
-  align-items: center;
-  gap: clamp(2rem, 5vw, 3.5rem);
   display: grid;
+  grid-template-columns: 1fr;
+  gap: 3.5rem;
+  align-items: stretch;
 }
 .company-leader-card {
-  background: linear-gradient(0deg, var(--neutral-900, #18181b), var(--neutral-900, #18181b)), radial-gradient(62.56% 62.56% at 28.14% -10.42%, #ffffff1a 0%, #fff0 100%);
-  border: 1px solid #ffffff0f;
+  background: #141414;
+  border: 1px solid #2a2a2a;
   border-radius: 24px;
-  max-width: 22rem;
-  padding: clamp(1.25rem, 3vw, 1.75rem);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35), inset 0 -8px #111, inset 0 4px #ffffff1a;
+  max-width: 100%;
+  width: 100%;
+  padding: 1.25rem 1.25rem 2.25rem 1.25rem;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
   transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.4s ease, border-color 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
 }
 .company-leader-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 16px 36px rgba(255, 122, 0, 0.15), inset 0 -8px #111, inset 0 4px #ffffff1a;
-  border-color: rgba(255, 122, 0, 0.25);
+  box-shadow: 0 20px 45px rgba(255, 122, 0, 0.2);
+  border-color: #ff8a00;
 }
 .company-leader-photo-wrap {
   aspect-ratio: 1;
-  border: 1px solid #ffffff0f;
   border-radius: 16px;
   width: 100%;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 2.77px 2.21px #0000001f, 0 6.65px 5.32px #00000021, 0 12.52px 10.02px #0002, 0 22.34px 17.87px #00000024, 0 41.78px 33.42px #00000026, 0 100px 80px #00000026;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
 }
 .company-leader-photo {
   object-fit: cover;
@@ -2912,7 +2916,7 @@ textarea {
   transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
 }
 .company-leader-card:hover .company-leader-photo {
-  transform: scale(1.05);
+  transform: scale(1.03);
 }
 .company-leader-name-wrap {
   margin: 1rem 0 .25rem;
@@ -2993,9 +2997,16 @@ textarea {
   line-height: 1.6;
 }
 
-@media (min-width: 900px) {
+@media (min-width: 768px) {
   .company-leader-inner {
-    grid-template-columns: minmax(0, 22rem) 1fr;
+    grid-template-columns: 45fr 55fr;
+    gap: 4rem;
+  }
+}
+@media (min-width: 1024px) {
+  .company-leader-inner {
+    grid-template-columns: 40fr 60fr;
+    gap: clamp(4.5rem, 7vw, 7rem);
   }
 }
 
