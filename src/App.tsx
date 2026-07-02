@@ -24,13 +24,56 @@ import TeamView from './components/sections/TeamView';
 const App: React.FC = () => {
   const [isLoginOpen, setIsLoginOpen] = useState(false);
   const [activeView, setActiveView] = useState<'home' | 'research' | 'company' | 'blog' | 'career' | 'fashion-ecommerce-ai' | 'accessories-try-on' | 'makeup-try-on' | 'smart-assistants-ai' | 'visualization-ai' | 'team'>(() => {
+    const params = new URLSearchParams(window.location.search);
+    const urlView = params.get('view');
+    if (urlView) return urlView as any;
     const saved = localStorage.getItem('activeView');
     return (saved as any) || 'home';
   });
 
+  const triggerViewChange = (newView: typeof activeView, isPopState = false) => {
+    if (newView === activeView) return;
+    if (!isPopState) {
+      const url = new URL(window.location.href);
+      url.searchParams.set('view', newView);
+      window.history.pushState({ view: newView }, '', url.pathname + url.search);
+    }
+    setActiveView(newView);
+  };
+
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    if (!params.has('view')) {
+      const url = new URL(window.location.href);
+      url.searchParams.set('view', activeView);
+      window.history.replaceState({ view: activeView }, '', url.pathname + url.search);
+    } else {
+      window.history.replaceState({ view: activeView }, '', window.location.pathname + window.location.search);
+    }
+  }, []);
+
+  useEffect(() => {
+    const handlePopState = (event: PopStateEvent) => {
+      const stateView = event.state?.view;
+      if (stateView) {
+        triggerViewChange(stateView, true);
+      } else {
+        const params = new URLSearchParams(window.location.search);
+        const urlView = params.get('view') || 'home';
+        triggerViewChange(urlView as any, true);
+      }
+    };
+    window.addEventListener('popstate', handlePopState);
+    return () => {
+      window.removeEventListener('popstate', handlePopState);
+    };
+  }, [activeView]);
+
   useEffect(() => {
     localStorage.setItem('activeView', activeView);
-    window.scrollTo(0, 0);
+    if (activeView !== 'company' || localStorage.getItem('scrollToTeamSection') !== 'true') {
+      window.scrollTo(0, 0);
+    }
   }, [activeView]);
 
   useEffect(() => {
@@ -73,15 +116,15 @@ const App: React.FC = () => {
 
   return (
     <>
-      <Navigation onGetStarted={() => setIsLoginOpen(true)} activeView={activeView} onViewChange={setActiveView} />
+      <Navigation onGetStarted={() => setIsLoginOpen(true)} activeView={activeView} onViewChange={(v) => triggerViewChange(v)} />
       {activeView === 'home' ? (
         <div className="flex-1">
           <main className="home-page">
             <div className="home-container">
               <Hero />
-              <Products onKnowMore={() => setActiveView('fashion-ecommerce-ai')} />
+              <Products onKnowMore={() => triggerViewChange('fashion-ecommerce-ai')} />
               <HowItWorks />
-              <Benefits onKnowMore={() => setActiveView('smart-assistants-ai')} />
+              <Benefits onKnowMore={() => triggerViewChange('smart-assistants-ai')} />
               <Testimonials />
               <Pricing />
               <FAQ />
@@ -90,20 +133,20 @@ const App: React.FC = () => {
         </div>
       ) : (
         <div className="flex-1">
-          {activeView === 'research' && <ResearchView onBackToHome={() => setActiveView('home')} />}
-          {activeView === 'company' && <CompanyView onBackToHome={() => setActiveView('home')} onExploreTeam={() => setActiveView('team')} />}
-          {activeView === 'blog' && <BlogView onBackToHome={() => setActiveView('home')} />}
-          {activeView === 'career' && <CareerView onBackToHome={() => setActiveView('home')} />}
-          {activeView === 'fashion-ecommerce-ai' && <FashionEcommerceView onBackToHome={() => setActiveView('home')} />}
-          {activeView === 'accessories-try-on' && <AccessoriesTryonView onBackToHome={() => setActiveView('home')} />}
-          {activeView === 'makeup-try-on' && <MakeupTryonView onBackToHome={() => setActiveView('home')} />}
-          {activeView === 'smart-assistants-ai' && <SmartAssistantsView onBackToHome={() => setActiveView('home')} />}
-          {activeView === 'visualization-ai' && <VisualizationView onBackToHome={() => setActiveView('home')} />}
+          {activeView === 'research' && <ResearchView onBackToHome={() => triggerViewChange('home')} />}
+          {activeView === 'company' && <CompanyView onBackToHome={() => triggerViewChange('home')} onExploreTeam={() => triggerViewChange('team')} />}
+          {activeView === 'blog' && <BlogView onBackToHome={() => triggerViewChange('home')} />}
+          {activeView === 'career' && <CareerView onBackToHome={() => triggerViewChange('home')} />}
+          {activeView === 'fashion-ecommerce-ai' && <FashionEcommerceView onBackToHome={() => triggerViewChange('home')} />}
+          {activeView === 'accessories-try-on' && <AccessoriesTryonView onBackToHome={() => triggerViewChange('home')} />}
+          {activeView === 'makeup-try-on' && <MakeupTryonView onBackToHome={() => triggerViewChange('home')} />}
+          {activeView === 'smart-assistants-ai' && <SmartAssistantsView onBackToHome={() => triggerViewChange('home')} />}
+          {activeView === 'visualization-ai' && <VisualizationView onBackToHome={() => triggerViewChange('home')} />}
           {activeView === 'team' && (
             <TeamView 
               onBackToCompany={() => {
                 localStorage.setItem('scrollToTeamSection', 'true');
-                setActiveView('company');
+                triggerViewChange('company');
               }} 
             />
           )}
