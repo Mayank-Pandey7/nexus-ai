@@ -2883,10 +2883,10 @@ textarea {
 .company-leader-card {
   background: linear-gradient(0deg, var(--neutral-900, #18181b), var(--neutral-900, #18181b)), radial-gradient(62.56% 62.56% at 28.14% -10.42%, #ffffff1a 0%, #fff0 100%);
   border: 1px solid #ffffff0f;
-  border-radius: 16px;
-  max-width: 22rem;
-  padding: clamp(1.25rem, 3vw, 1.75rem);
-  box-shadow: 0 7.77px 2.21px #0000000f, 0 3px 3px #0000001a, inset 0 -8px #111, inset 0 4px #ffffff1a;
+  border-radius: 18px;
+  max-width: 26rem;
+  padding: clamp(1.5rem, 3.5vw, 2.25rem);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35), inset 0 -8px #111, inset 0 4px #ffffff1a;
 }
 .company-leader-photo-wrap {
   aspect-ratio: 1;
@@ -2912,7 +2912,7 @@ textarea {
   letter-spacing: -.02em;
   color: #fff;
   cursor: pointer;
-  font-size: 1.1rem;
+  font-size: 1.4rem;
   font-weight: 700;
   text-decoration: none;
   transition: color .25s;
@@ -2924,7 +2924,7 @@ textarea {
   font-family: var(--font-inter-tight), sans-serif;
   color: #ffffff8c;
   margin: 0;
-  font-size: .88rem;
+  font-size: 1.05rem;
 }
 .company-leader-social, .company-team-social {
   gap: .5rem;
@@ -2979,13 +2979,13 @@ textarea {
   font-family: var(--font-inter-tight), sans-serif;
   color: #ffffffb8;
   margin: 1.25rem 0 0;
-  font-size: clamp(.92rem, 1.6vw, 1.02rem);
+  font-size: clamp(1.05rem, 1.8vw, 1.15rem);
   line-height: 1.6;
 }
 
 @media (min-width: 900px) {
   .company-leader-inner {
-    grid-template-columns: minmax(0, 22rem) 1fr;
+    grid-template-columns: minmax(0, 26rem) 1fr;
   }
 }
 
