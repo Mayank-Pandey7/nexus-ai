@@ -1,6 +1,6 @@
 import React from 'react';
-import sdkAndroidIos from '../../assets/images/SDK-android-ios.png';
-import sdkBrowsers from '../../assets/images/SDK-browsers.png';
+const sdkAndroidIos = '/assets/images/SDK-android-ios.png';
+const sdkBrowsers = '/assets/images/SDK-browsers.png';
 
 const Pricing: React.FC = () => {
   return (

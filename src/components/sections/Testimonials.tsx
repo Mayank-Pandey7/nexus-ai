@@ -1,7 +1,7 @@
 import React from 'react';
-import mlElevate from '../../assets/images/mlelevate.jpeg';
-import patents from '../../assets/images/patents.jpg';
-import innovation from '../../assets/images/innovation.jpg';
+const mlElevate = '/assets/images/mlelevate.jpeg';
+const patents = '/assets/images/patents.jpg';
+const innovation = '/assets/images/innovation.jpg';
 
 const Testimonials: React.FC = () => {
   return (

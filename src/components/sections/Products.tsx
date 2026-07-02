@@ -1,7 +1,7 @@
 import React from 'react';
-import p1 from '../../assets/images/p1.jpg';
-import p2 from '../../assets/images/p2.jpg';
-import p3 from '../../assets/images/p3.jpg';
+const p1 = '/assets/images/p1.jpg';
+const p2 = '/assets/images/p2.jpg';
+const p3 = '/assets/images/p3.jpg';
 
 interface ProductsProps {
   onKnowMore: () => void;

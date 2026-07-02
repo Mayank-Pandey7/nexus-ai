@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import nexusaiLogo from '../../assets/images/nexusai-logo-black.png';
+const nexusaiLogo = '/assets/images/nexusai-logo-black.png';
 import { Link } from './Link';
 
 interface NavigationProps {

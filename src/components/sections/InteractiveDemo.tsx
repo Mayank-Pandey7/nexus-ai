@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import mixNMatch from '../../assets/images/mix-n-match.png';
-import mnmModel1 from '../../assets/images/mnm-model1.png';
-import mnmModel2 from '../../assets/images/mnm-model2.png';
-import mnmModel3 from '../../assets/images/mnm-model3.png';
+const mixNMatch = '/assets/images/mix-n-match.png';
+const mnmModel1 = '/assets/images/mnm-model1.png';
+const mnmModel2 = '/assets/images/mnm-model2.png';
+const mnmModel3 = '/assets/images/mnm-model3.png';
 
 const InteractiveDemo: React.FC = () => {
   const [currentLayer, setCurrentLayer] = useState(0);

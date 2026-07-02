@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import careerHeroBg from '../../assets/images/career-hero-bg.jpg';
+const careerHeroBg = '/assets/images/career-hero-bg.jpg';
 
 interface CareerViewProps {
   onBackToHome: () => void;

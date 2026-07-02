@@ -1,5 +1,5 @@
 import React from 'react';
-import nexusaiLogo from '../../assets/images/nexusai-logo.png';
+const nexusaiLogo = '/assets/images/nexusai-logo.png';
 
 interface BenefitsProps {
   onKnowMore?: () => void;
