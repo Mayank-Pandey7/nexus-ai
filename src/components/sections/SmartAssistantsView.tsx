@@ -108,7 +108,7 @@ const SmartAssistantsView: React.FC<SmartAssistantsViewProps> = ({ onBackToHome 
         
         <div className="assistants-hero-ui">
           {/* Navigation Bar back link */}
-          <div className="home-container" style={{ padding: '2rem 1.5rem 0', display: 'flex', justifyContent: 'flex-start' }}>
+          <div className="home-container" style={{ padding: '6.5rem 1.5rem 0', display: 'flex', justifyContent: 'flex-start', zIndex: 10 }}>
             <button 
               onClick={onBackToHome}
               className="home-cta-button"

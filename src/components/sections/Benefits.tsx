@@ -1,9 +1,11 @@
 import React from 'react';
 import nexusaiLogo from '../../assets/images/nexusai-logo.png';
 
-interface BenefitsProps {}
+interface BenefitsProps {
+  onKnowMore?: () => void;
+}
 
-const Benefits: React.FC<BenefitsProps> = () => {
+const Benefits: React.FC<BenefitsProps> = ({ onKnowMore }) => {
   return (
     <section className="assistants-section" aria-labelledby="assistants-heading">
       <div className="assistants-inner">
@@ -134,7 +136,38 @@ const Benefits: React.FC<BenefitsProps> = () => {
             <p className="assistants-card-text">Drop a single SDK into your web or app and serve pixel-true try-ons to every customer—fit, drape, and brand consistency preserved at catalog scale.</p>
           </article>
         </div>
-
+        {/* Mockup Pill-shaped 'Know More' button */}
+        {onKnowMore && (
+          <div style={{ display: 'flex', justifyContent: 'center', marginTop: '3.5rem' }}>
+            <button 
+              onClick={onKnowMore}
+              style={{
+                background: '#1a1a1a',
+                color: '#ffffff',
+                borderRadius: '9999px',
+                padding: '0.85rem 2.2rem',
+                fontWeight: 600,
+                fontSize: '0.95rem',
+                boxShadow: '0 4px 12px rgba(0,0,0,0.12)',
+                border: 'none',
+                cursor: 'pointer',
+                transition: 'transform 0.2s, background 0.2s, box-shadow 0.2s'
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.transform = 'translateY(-1px)';
+                e.currentTarget.style.background = '#2c2c2c';
+                e.currentTarget.style.boxShadow = '0 6px 16px rgba(0,0,0,0.16)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.transform = 'translateY(0)';
+                e.currentTarget.style.background = '#1a1a1a';
+                e.currentTarget.style.boxShadow = '0 4px 12px rgba(0,0,0,0.12)';
+              }}
+            >
+              Know More
+            </button>
+          </div>
+        )}
       </div>
     </section>
   );
