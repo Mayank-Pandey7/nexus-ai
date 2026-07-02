@@ -300,7 +300,14 @@ const CompanyView: React.FC<CompanyViewProps> = ({ onBackToHome }) => {
                       src={member.photo} 
                       alt={member.name} 
                       className="company-team-photo" 
-                      style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }}
+                      style={{ 
+                        position: 'absolute', 
+                        inset: 0, 
+                        width: '100%', 
+                        height: '100%', 
+                        objectFit: 'cover',
+                        objectPosition: member.name === 'Nikhil Choudhary' ? '22% center' : 'center'
+                      }}
                     />
                   </div>
                 </div>
@@ -405,7 +412,12 @@ const CompanyView: React.FC<CompanyViewProps> = ({ onBackToHome }) => {
                 <img 
                   src={selectedMember.photo} 
                   alt={selectedMember.name} 
-                  style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                  style={{ 
+                    width: '100%', 
+                    height: '100%', 
+                    objectFit: 'cover',
+                    objectPosition: selectedMember.name === 'Nikhil Choudhary' ? '22% center' : 'center'
+                  }}
                 />
               </div>
 
