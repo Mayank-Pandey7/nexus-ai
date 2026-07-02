@@ -343,7 +343,7 @@ const SmartAssistantsView: React.FC<SmartAssistantsViewProps> = ({ onBackToHome 
           <div className="assistants-compare-results">
             <article className="assistants-compare-result-card">
               <span className="assistants-compare-result-image">
-                <img src="https://stagingmedia.pointai.com/assets/images/nexusai-model.png" alt="Nexus AI try-on result" className="assistants-compare-result-img" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
+                <img src="https://stagingmedia.pointai.com/assets/images/pointai-model.png" alt="Nexus AI try-on result" className="assistants-compare-result-img" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
               </span>
               <div className="assistants-compare-result-body">
                 <h3 className="assistants-compare-result-title">Nexus AI — 4 Seconds</h3>
@@ -423,7 +423,7 @@ const SmartAssistantsView: React.FC<SmartAssistantsViewProps> = ({ onBackToHome 
             <article className="assistants-cost-card assistants-cost-card--highlight">
               <header className="assistants-cost-card-head">
                 <span className="assistants-cost-card-logo" style={{ background: '#ffa600' }}>
-                  <img src="https://stagingmedia.pointai.com/assets/images/nexusai-logo-black-icon.png" alt="" className="assistants-cost-card-logo-img" style={{ filter: 'brightness(0) invert(1)' }} />
+                  <img src="https://stagingmedia.pointai.com/assets/images/pointai-logo-black-icon.png" alt="" className="assistants-cost-card-logo-img" style={{ filter: 'brightness(0) invert(1)' }} />
                 </span>
                 <span className="assistants-cost-card-price">
                   <span className="assistants-cost-card-amount" style={{ color: 'var(--secondary-color)' }}>$11</span>
@@ -466,7 +466,7 @@ const SmartAssistantsView: React.FC<SmartAssistantsViewProps> = ({ onBackToHome 
             </article>
             <article className="assistants-accuracy-card">
               <span className="assistants-accuracy-image">
-                <img src="https://stagingmedia.pointai.com/assets/images/accuracy-nexusai.png" alt="Nexus AI Result" className="assistants-accuracy-img" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
+                <img src="https://stagingmedia.pointai.com/assets/images/accuracy-pointai.png" alt="Nexus AI Result" className="assistants-accuracy-img" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
               </span>
               <div className="assistants-accuracy-body">
                 <h3 className="assistants-accuracy-title">Nexus AI</h3>
