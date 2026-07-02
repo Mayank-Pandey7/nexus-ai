@@ -1459,18 +1459,20 @@ textarea {
 
 .assistants-card {
   background: #ffffff;
-  border: 1px solid rgba(255, 159, 0, 0.14);
+  border: 1px solid #e2e8f0;
+  border-bottom: 5px solid #cbd5e1;
   border-radius: 1.25rem;
   padding: 1.65rem 1.5rem;
   overflow: hidden;
-  box-shadow: 0 10px 30px rgba(255, 159, 0, 0.01), inset 0 1px #ffffff;
-  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.4s cubic-bezier(0.25, 1, 0.5, 1), border-color 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.04), 0 2px 4px rgba(0, 0, 0, 0.02);
+  transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), border-color 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), border-bottom-width 0.3s ease;
 }
 
 .assistants-card:hover {
-  transform: translateY(-5px) scale(1.01);
-  border-color: var(--secondary-color);
-  box-shadow: 0 20px 40px rgba(255, 159, 0, 0.1), 0 4px 12px rgba(255, 159, 0, 0.04);
+  transform: translateY(-6px);
+  border-color: rgba(255, 159, 0, 0.4);
+  border-bottom: 5px solid var(--secondary-color);
+  box-shadow: 0 16px 32px rgba(255, 159, 0, 0.12), 0 4px 10px rgba(255, 159, 0, 0.04);
 }
 
 .assistants-card-icon {

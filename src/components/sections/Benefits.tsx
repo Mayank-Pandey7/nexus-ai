@@ -25,8 +25,9 @@ const Benefits: React.FC<BenefitsProps> = ({ onKnowMore }) => {
                 padding: '1.1rem 2.2rem',
                 background: 'linear-gradient(135deg, #f04e38 0%, #e53935 100%)',
                 borderRadius: '1.25rem',
-                border: 'none',
-                boxShadow: '0 10px 35px rgba(240, 78, 56, 0.45), inset 0 1px rgba(255, 255, 255, 0.4)'
+                border: '1px solid rgba(255, 255, 255, 0.1)',
+                borderBottom: '5px solid #b71c1c',
+                boxShadow: '0 12px 35px rgba(240, 78, 56, 0.35), inset 0 1px rgba(255, 255, 255, 0.4)'
               }}
             >
               <img 
