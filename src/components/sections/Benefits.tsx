@@ -141,27 +141,28 @@ const Benefits: React.FC<BenefitsProps> = ({ onKnowMore }) => {
           <div style={{ display: 'flex', justifyContent: 'center', marginTop: '3.5rem' }}>
             <button 
               onClick={onKnowMore}
+              className="home-cta-button"
               style={{
-                background: '#1a1a1a',
+                background: 'var(--secondary-color)',
                 color: '#ffffff',
+                border: 'none',
                 borderRadius: '9999px',
                 padding: '0.85rem 2.2rem',
-                fontWeight: 600,
+                fontWeight: 700,
                 fontSize: '0.95rem',
-                boxShadow: '0 4px 12px rgba(0,0,0,0.12)',
-                border: 'none',
+                boxShadow: 'inset 0 -3px rgba(0,0,0,0.15), inset 0 1px rgba(255,255,255,0.3), 0 8px 20px rgba(255, 166, 0, 0.25)',
                 cursor: 'pointer',
-                transition: 'transform 0.2s, background 0.2s, box-shadow 0.2s'
+                transition: 'all 0.25s ease'
               }}
               onMouseEnter={(e) => {
-                e.currentTarget.style.transform = 'translateY(-1px)';
-                e.currentTarget.style.background = '#2c2c2c';
-                e.currentTarget.style.boxShadow = '0 6px 16px rgba(0,0,0,0.16)';
+                e.currentTarget.style.transform = 'translateY(-2px)';
+                e.currentTarget.style.background = '#d99100';
+                e.currentTarget.style.boxShadow = 'inset 0 -3px rgba(0,0,0,0.15), inset 0 1px rgba(255,255,255,0.3), 0 12px 28px rgba(255, 166, 0, 0.35)';
               }}
               onMouseLeave={(e) => {
                 e.currentTarget.style.transform = 'translateY(0)';
-                e.currentTarget.style.background = '#1a1a1a';
-                e.currentTarget.style.boxShadow = '0 4px 12px rgba(0,0,0,0.12)';
+                e.currentTarget.style.background = 'var(--secondary-color)';
+                e.currentTarget.style.boxShadow = 'inset 0 -3px rgba(0,0,0,0.15), inset 0 1px rgba(255,255,255,0.3), 0 8px 20px rgba(255, 166, 0, 0.25)';
               }}
             >
               Know More
