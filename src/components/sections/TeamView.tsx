@@ -34,7 +34,7 @@ const TeamView: React.FC<TeamViewProps> = ({ onBackToCompany }) => {
       name: "Shubhang Sheel",
       role: "Co-Founder & CMO",
       department: "Leadership",
-      photo: "https://stagingmedia.pointai.com/assets/images/investors/muralikrishnan-b.jpeg",
+      photo: "/assets/images/shubhangu.jpg",
       bio: "Shubhang directs the brand positioning, digital distribution channels, and growth strategies across global retail marketplaces.",
       linkedin: "https://www.linkedin.com/"
     },
@@ -42,7 +42,7 @@ const TeamView: React.FC<TeamViewProps> = ({ onBackToCompany }) => {
       name: "Suresh Choudhary",
       role: "Director",
       department: "Leadership",
-      photo: "https://stagingmedia.pointai.com/assets/images/investors/lip-bu-tan.jpg",
+      photo: "/assets/images/suresh-ch.jpg",
       bio: "Suresh manages key corporate relations, retail alliances, and strategic corporate investments.",
       linkedin: "https://www.linkedin.com/"
     },
@@ -50,7 +50,7 @@ const TeamView: React.FC<TeamViewProps> = ({ onBackToCompany }) => {
       name: "Vinamra",
       role: "SDE2",
       department: "Engineering",
-      photo: "https://stagingmedia.pointai.com/assets/images/investors/vijay-shekhar-sharma.jpeg",
+      photo: "/assets/images/vinamra.jpg",
       bio: "Vinamra is a Software Development Engineer 2 at Trialshopy, specializing in scaling system performance and backend databases.",
       linkedin: "https://www.linkedin.com/"
     },
@@ -58,7 +58,7 @@ const TeamView: React.FC<TeamViewProps> = ({ onBackToCompany }) => {
       name: "Satyam",
       role: "SDE1",
       department: "Engineering",
-      photo: "https://stagingmedia.pointai.com/assets/images/investors/vinod-sood.jpeg",
+      photo: "/assets/images/satyam.jpg",
       bio: "Satyam is a Software Development Engineer 1 at Trialshopy, focused on e-commerce microservices and database integration.",
       linkedin: "https://www.linkedin.com/"
     },
@@ -66,7 +66,7 @@ const TeamView: React.FC<TeamViewProps> = ({ onBackToCompany }) => {
       name: "Janhvi",
       role: "SDE1",
       department: "Engineering",
-      photo: "https://stagingmedia.pointai.com/assets/images/investors/ganapathy-subramaniam.jpeg",
+      photo: "/assets/images/janhvi2.png",
       bio: "Janhvi is a Software Development Engineer 1 at Trialshopy, working on frontend interfaces and low-latency digital try-on integrations.",
       linkedin: "https://www.linkedin.com/"
     },
@@ -74,7 +74,7 @@ const TeamView: React.FC<TeamViewProps> = ({ onBackToCompany }) => {
       name: "Gurprit Singh",
       role: "Senior Tester",
       department: "Engineering",
-      photo: "https://stagingmedia.pointai.com/assets/images/investors/muralikrishnan-b.jpeg",
+      photo: "/assets/images/gurpit.jpg",
       bio: "Gurprit leads quality assurance and automated testing across all platform integrations to guarantee release stability.",
       linkedin: "https://www.linkedin.com/"
     },
@@ -82,7 +82,7 @@ const TeamView: React.FC<TeamViewProps> = ({ onBackToCompany }) => {
       name: "Yashika",
       role: "Frontend Dev",
       department: "Design",
-      photo: "https://stagingmedia.pointai.com/assets/images/investors/ganapathy-subramaniam.jpeg",
+      photo: "/assets/images/yashika.jpg",
       bio: "Yashika develops premium, highly interactive client-side web layers and fluid graphics rendering loops.",
       linkedin: "https://www.linkedin.com/"
     },
@@ -90,7 +90,7 @@ const TeamView: React.FC<TeamViewProps> = ({ onBackToCompany }) => {
       name: "Ritu Singh",
       role: "UI/UX",
       department: "Design",
-      photo: "https://stagingmedia.pointai.com/assets/images/investors/ganapathy-subramaniam.jpeg",
+      photo: "/assets/images/ritu.png",
       bio: "Ritu is a UI/UX Designer, crafting intuitive human-centered wireframes and user flows for virtual fittings.",
       linkedin: "https://www.linkedin.com/"
     },
@@ -98,15 +98,15 @@ const TeamView: React.FC<TeamViewProps> = ({ onBackToCompany }) => {
       name: "Dipti",
       role: "COO",
       department: "HR & Operations",
-      photo: "https://stagingmedia.pointai.com/assets/images/investors/ganapathy-subramaniam.jpeg",
+      photo: "/assets/images/dipti.jpg",
       bio: "Dipti leads operations at Trialshopy, coordinating daily operational execution and cross-functional corporate planning.",
       linkedin: "https://www.linkedin.com/"
     },
     {
-      name: "Janhvi",
-      role: "HR Executive",
+      name: "Mahi Nigam",
+      role: "HR Intern",
       department: "HR & Operations",
-      photo: "https://stagingmedia.pointai.com/assets/images/investors/ganapathy-subramaniam.jpeg",
+      photo: "/assets/images/mahi.jpg",
       bio: "Janhvi is an HR Executive, driving talent acquisition, onboarding workflows, and community building programs.",
       linkedin: "https://www.linkedin.com/"
     }

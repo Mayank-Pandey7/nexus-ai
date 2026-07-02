@@ -19,25 +19,25 @@ const CompanyView: React.FC<CompanyViewProps> = ({ onBackToHome, onExploreTeam }
       company: "Trialshopy",
       experience: "5+ Years",
       bio: "Shubhang Sheel is the Co-Founder & CMO at Trialshopy. He directs brand architecture, digital distribution channels, and retail marketplace user growth strategies globally.",
-      photo: "https://stagingmedia.pointai.com/assets/images/investors/muralikrishnan-b.jpeg",
+      photo: "/assets/images/shubhangu.jpg",
       linkedin: "https://www.linkedin.com/"
     },
     {
       name: "Suresh Choudhary",
       designation: "Director",
       company: "Trialshopy",
-      experience: "10+ Years",
+      experience: "20+ Years",
       bio: "Suresh Choudhary directs corporate investments, retail distribution pipelines, and strategic brand partnerships at Trialshopy.",
-      photo: "https://stagingmedia.pointai.com/assets/images/investors/lip-bu-tan.jpg",
+      photo: "/assets/images/suresh-ch.jpg",
       linkedin: "https://www.linkedin.com/"
     },
     {
       name: "Vivek",
       designation: "CTO",
       company: "Trialshopy",
-      experience: "7+ Years",
+      experience: "5+ Years",
       bio: "Vivek leads product engineering at Trialshopy, managing advanced 3D render pipelines and low-latency computer vision backend models.",
-      photo: "https://stagingmedia.pointai.com/assets/images/investors/vijay-shekhar-sharma.jpeg",
+      photo: "/assets/images/vivek.jpg",
       linkedin: "https://www.linkedin.com/"
     },
     {
@@ -46,7 +46,7 @@ const CompanyView: React.FC<CompanyViewProps> = ({ onBackToHome, onExploreTeam }
       company: "Trialshopy",
       experience: "6+ Years",
       bio: "Dipti coordinates day-to-day operations, strategic planning, cross-functional HR tasks, and corporate governance protocols.",
-      photo: "https://stagingmedia.pointai.com/assets/images/investors/ganapathy-subramaniam.jpeg",
+      photo: "/assets/images/dipti.jpg",
       linkedin: "https://www.linkedin.com/"
     },
     {
@@ -55,16 +55,16 @@ const CompanyView: React.FC<CompanyViewProps> = ({ onBackToHome, onExploreTeam }
       company: "Trialshopy",
       experience: "3+ Years",
       bio: "Yashika builds responsive, high-performance web applications and sleek interactive design frameworks for Trialshopy Marketplace.",
-      photo: "https://stagingmedia.pointai.com/assets/images/investors/ganapathy-subramaniam.jpeg", // Placeholder
+      photo: "/assets/images/yashika.jpg",
       linkedin: "https://www.linkedin.com/"
     },
     {
       name: "Satyam",
       designation: "SDE1",
       company: "Trialshopy",
-      experience: "2+ Years",
+      experience: "3+ Years",
       bio: "Satyam works on our backend services, merchant api interfaces, database indexing, and performance optimization layers.",
-      photo: "https://stagingmedia.pointai.com/assets/images/investors/vinod-sood.jpeg",
+      photo: "/assets/images/satyam.jpg",
       linkedin: "https://www.linkedin.com/"
     }
   ];
@@ -116,12 +116,6 @@ const CompanyView: React.FC<CompanyViewProps> = ({ onBackToHome, onExploreTeam }
   };
 
   const news = [
-    {
-      date: "November 12, 2022",
-      title: "We wanted to change the way people buy clothes online — digital twin does that with just a selfie, says Aarav Sharma of Nexus AI",
-      image: "https://stagingmedia.pointai.com/assets/images/news/times-now.png",
-      url: "https://www.timesnownews.com/technology-science/we-wanted-to-change-the-way-people-buy-clothes-online-digital-twin-does-that-with-just-a-selfie-says-nitin-vats-of-tryndbuy-article-95473161"
-    },
     {
       date: "December 07, 2020",
       title: "Fashion AI gets a booster shot from pandemic — Indian startups TryNDBuy and AskSid help global fashion brands pivot as buyers shift from bricks to clicks",
