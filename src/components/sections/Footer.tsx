@@ -1,7 +1,7 @@
 import React from 'react';
-const nexusaiLogoWhiteSparkle = '/assets/images/nexusai-logo-white-sparkle.png';
+const trialshopyLogoWhite = '/assets/images/nexusai-logo-white-sparkle.png';
 
-// Import partner logos for the partners section
+// Partner logos marquee
 const amazonSpn = '/assets/images/partners/amazon-spn.png';
 const myntra = '/assets/images/partners/myntra.png';
 const flipkart = '/assets/images/partners/flipkart.png';
@@ -88,19 +88,26 @@ const Footer: React.FC = () => {
           <div className="site-footer-columns" data-reveal-stagger="true">
             <div className="site-footer-brand" data-reveal-item="true">
               <div style={{ display: 'inline-flex', alignItems: 'center', gap: '0.6rem', marginBottom: '1.25rem' }}>
-                <img src={nexusaiLogoWhiteSparkle} alt="Nexus AI logo" style={{ width: '2.25rem', height: '2.25rem', objectFit: 'contain' }} />
-                <span className="logo-text-bold" style={{ fontFamily: 'var(--font-inter-tight), sans-serif', fontWeight: 700, fontSize: '1.35rem', color: '#ffffff', letterSpacing: '-0.02em' }}>Nexus AI</span>
+                <img src={trialshopyLogoWhite} alt="Trialshopy logo" style={{ width: '2.25rem', height: '2.25rem', objectFit: 'contain' }} />
+                <span className="logo-text-bold" style={{ fontFamily: 'var(--font-inter-tight), sans-serif', fontWeight: 700, fontSize: '1.35rem', color: '#ffffff', letterSpacing: '-0.02em' }}>Trialshopy</span>
               </div>
-              <p className="site-footer-brand-text">AI Platform for e-commerce to generate<br />media, try-on and AI services.</p>
+              <p className="site-footer-brand-text">AI-powered Smart AR Shopping Platform —<br />IoT, AI & AR integrations for enterprise retail.</p>
             </div>
             
             <div className="site-footer-col" data-reveal-item="true">
+              <h3>Company</h3>
+              <a href="/company">About Us</a>
+              <a href="/products">Our Services</a>
+              <a href="/career">Careers</a>
+              <a href="/blogs">Blog</a>
+            </div>
+
+            <div className="site-footer-col" data-reveal-item="true">
               <h3>Social</h3>
-              <a target="_blank" rel="noopener noreferrer" href="https://x.com/maynkio">X</a>
-              <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/mynkdev/">LinkedIn</a>
-              <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/mayank__pandeyy/">Instagram</a>
-              <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/mayank__pandeyy/">Facebook</a>
-              <a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/@Nomad.Mayank">YouTube</a>
+              <a target="_blank" rel="noopener noreferrer" href="https://x.com/trialshopy">X / Twitter</a>
+              <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/company/trialshopy">LinkedIn</a>
+              <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/trialshopy">Instagram</a>
+              <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/trialshopy">Facebook</a>
             </div>
             
             <div className="site-footer-col" data-reveal-item="true">
@@ -111,11 +118,12 @@ const Footer: React.FC = () => {
             
             <div className="site-footer-col site-footer-contact-col" data-reveal-item="true">
               <h3>Contact</h3>
-              <p>1614 A-B, Bhagwanpur,<br />Block, Haldwani<br />Uttarakhand, India 201309</p>
-              <a href="mailto:mayankpandey0717@gmail.com">mayankpandey0717@gmail.com</a>
+              <p>NIT Patna Incubation Centre,<br />Ashok Rajpath, Patna<br />Bihar, India 800005</p>
+              <a href="mailto:support@trialshoppy.com">support@trialshoppy.com</a>
+              <a href="tel:9801159223">+91 9801159223</a>
             </div>
           </div>
-          <div className="site-footer-bottom">© 2026 Nexus AI. All rights reserved.</div>
+          <div className="site-footer-bottom">© 2026 Trialshopy Marketplace Pvt. Ltd. All rights reserved.</div>
         </div>
       </section>
     </footer>

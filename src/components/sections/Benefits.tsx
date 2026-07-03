@@ -10,7 +10,7 @@ const Benefits: React.FC<BenefitsProps> = ({ onKnowMore }) => {
     <section className="assistants-section" aria-labelledby="assistants-heading">
       <div className="assistants-inner">
         <h2 id="assistants-heading" className="assistants-title" data-reveal="true">
-          AI for <span className="fashion-heading-highlight">Smart Assistance</span>
+          AI for <span className="fashion-heading-highlight">Smart Enterprise</span>
         </h2>
         
         <div className="assistants-hub" data-reveal-stagger="true">
@@ -32,7 +32,7 @@ const Benefits: React.FC<BenefitsProps> = ({ onKnowMore }) => {
             >
               <img 
                 src={nexusaiLogo} 
-                alt="NexusAI logo" 
+                alt="Trialshopy logo" 
                 style={{ width: '1.4rem', height: '1.4rem', objectFit: 'contain', filter: 'invert(1)' }} 
               />
               <span 
@@ -45,7 +45,7 @@ const Benefits: React.FC<BenefitsProps> = ({ onKnowMore }) => {
                   letterSpacing: '-0.02em'
                 }}
               >
-                Nexus AI
+                Trialshopy
               </span>
             </div>
           </div>
@@ -57,8 +57,8 @@ const Benefits: React.FC<BenefitsProps> = ({ onKnowMore }) => {
                 <path fill="none" stroke="#1a1a1a" strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round" d="M9 3h6v2H9V3zm3 17v2m4-13a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h10zm-9 10h14M8 21h8"></path>
               </svg>
             </div>
-            <h3 className="assistants-card-title">Always-on Virtual Assistant</h3>
-            <p className="assistants-card-text">A conversational concierge grounded in your catalog, brand book, and policies—answering questions, styling looks, and converting customers across web, app, and in-store.</p>
+            <h3 className="assistants-card-title">AI Shopping Assistant</h3>
+            <p className="assistants-card-text">A conversational AI assistant powered by cutting-edge NLP — helping customers discover products, compare options, and make confident purchases through natural dialogue across web and mobile.</p>
           </article>
           
           <div className="assistants-hub-spine assistants-hub-spine-left" aria-hidden="true">
@@ -90,8 +90,8 @@ const Benefits: React.FC<BenefitsProps> = ({ onKnowMore }) => {
                 <path fill="none" stroke="#1a1a1a" strokeWidth={1.25} strokeLinecap="round" strokeLinejoin="round" d="M17.25 17.25v-.75l.53-.53a3 3 0 0 0 0-4.24l-.53-.53V11l-.75-.06a3 3 0 0 0-4.06-3.93L12 8l-.44-.93A3 3 0 0 0 7.5 11h-.06l-.75.53"></path>
               </svg>
             </div>
-            <h3 className="assistants-card-title">FashionGPT Workspace</h3>
-            <p className="assistants-card-text">A purpose-built creative workspace where merchandisers turn one prompt into a full campaign—moodboards, lookbooks, and PDP shots shipped in hours, not weeks.</p>
+            <h3 className="assistants-card-title">Predictive Analytics</h3>
+            <p className="assistants-card-text">A purpose-built intelligence workspace where merchandisers and enterprises access AI-driven insights, demand forecasting, customer behavior analysis, and real-time dashboards for data-driven decisions.</p>
           </article>
           
           <article className="assistants-card assistants-hub-card assistants-hub-card-l2 reveal-hover-lift" data-reveal-item="true">
@@ -101,8 +101,8 @@ const Benefits: React.FC<BenefitsProps> = ({ onKnowMore }) => {
                 <path fill="none" stroke="#1a1a1a" strokeWidth={1.5} strokeLinecap="round" d="m10 18 2 2 4-4"></path>
               </svg>
             </div>
-            <h3 className="assistants-card-title">Catalogue Generation</h3>
-            <p className="assistants-card-text">Spin up on-model, flat-lay, and lifestyle imagery for every SKU—auto-sized, cropped, and tagged so it slots straight into your PIM.</p>
+            <h3 className="assistants-card-title">Smart Product Discovery</h3>
+            <p className="assistants-card-text">AI-powered search and catalogue intelligence that understands intent, not just keywords — auto-tagging, visual search, and smart filters help customers find exactly what they need at catalog scale.</p>
           </article>
           
           <article className="assistants-card assistants-hub-card assistants-hub-card-r2 reveal-hover-lift" data-reveal-item="true">
@@ -111,8 +111,8 @@ const Benefits: React.FC<BenefitsProps> = ({ onKnowMore }) => {
                 <path fill="none" stroke="#1a1a1a" strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round" d="M12 3 5 6v6c0 4.52 5.82 9 7 9s7-4.48 7-9V6l-7-3z"></path>
               </svg>
             </div>
-            <h3 className="assistants-card-title">100% Accurate Try-on</h3>
-            <p className="assistants-card-text">Garment fit, fabric drape, and on-model proportions stay pixel-true to your input—every seam and fold preserved across skin tones and body types.</p>
+            <h3 className="assistants-card-title">AR Virtual Try-On</h3>
+            <p className="assistants-card-text">Pixel-accurate augmented reality try-on technology — garment fit, product visualization, and on-model experiences preserved across all body types and skin tones for maximum customer confidence.</p>
           </article>
           
           <article className="assistants-card assistants-hub-card assistants-hub-card-l3 reveal-hover-lift" data-reveal-item="true">
@@ -122,8 +122,8 @@ const Benefits: React.FC<BenefitsProps> = ({ onKnowMore }) => {
                 <path fill="none" stroke="#1a1a1a" strokeWidth={1.5} strokeLinecap="round" d="M14 2v6h6M9 13h6M9 17h6"></path>
               </svg>
             </div>
-            <h3 className="assistants-card-title">10× Faster Renders</h3>
-            <p className="assistants-card-text">Our simulative engine renders a brand-ready try-on in about 4 seconds—roughly 10× quicker than general-purpose models that take a full minute on the same input.</p>
+            <h3 className="assistants-card-title">IoT & Real-Time Monitoring</h3>
+            <p className="assistants-card-text">Enterprise-grade IoT integration for retail — custom hardware sensor connectivity, plant machinery monitoring, and cloud data processing for comprehensive SCADA and industrial automation.</p>
           </article>
           
           <article className="assistants-card assistants-hub-card assistants-hub-card-r3 reveal-hover-lift" data-reveal-item="true">
@@ -132,8 +132,8 @@ const Benefits: React.FC<BenefitsProps> = ({ onKnowMore }) => {
                 <path fill="none" stroke="#1a1a1a" strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round" d="M8 21h8v-7a8 8 0 1 0-8 0v7zm4 0v-7M9 13h6M11 10V7M13 10V7"></path>
               </svg>
             </div>
-            <h3 className="assistants-card-title">Plug-and-play Try-on SDK</h3>
-            <p className="assistants-card-text">Drop a single SDK into your web or app and serve pixel-true try-ons to every customer—fit, drape, and brand consistency preserved at catalog scale.</p>
+            <h3 className="assistants-card-title">Enterprise SDK & API</h3>
+            <p className="assistants-card-text">Drop our SDK into your web or mobile app to instantly unlock AR try-on, AI recommendations, and IoT dashboards — fully documented, cross-platform, and enterprise-ready.</p>
           </article>
         </div>
         {/* Mockup Pill-shaped 'Know More' button */}
@@ -165,7 +165,7 @@ const Benefits: React.FC<BenefitsProps> = ({ onKnowMore }) => {
                 e.currentTarget.style.boxShadow = 'inset 0 -3px rgba(0,0,0,0.15), inset 0 1px rgba(255,255,255,0.3), 0 8px 20px rgba(255, 166, 0, 0.25)';
               }}
             >
-              Know More
+              Explore Services
             </button>
           </div>
         )}

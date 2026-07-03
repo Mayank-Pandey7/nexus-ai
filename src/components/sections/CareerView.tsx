@@ -10,33 +10,38 @@ const CareerView: React.FC<CareerViewProps> = ({ onBackToHome }) => {
 
   const jobs = [
     {
-      title: "Senior Machine Learning Engineer",
-      summary: "Design and ship models for virtual try-on, size recommendation, and personalization. You will work across data pipelines, evaluation, and production APIs.",
-      applyUrl: "mailto:careers@nexusai.com?subject=Application for Senior Machine Learning Engineer"
+      title: "Full Stack Developer (React / Node.js)",
+      summary: "Build and maintain scalable web applications and enterprise portals. You'll work on e-commerce platforms, real estate portals, and digital storefronts using modern React and Node.js frameworks.",
+      applyUrl: "mailto:support@trialshoppy.com?subject=Application for Full Stack Developer"
     },
     {
-      title: "Frontend Engineer (React / WebGL)",
-      summary: "Build polished, performant experiences for try-on, 3D viewers, and merchant dashboards using modern React and real-time graphics.",
-      applyUrl: "mailto:careers@nexusai.com?subject=Application for Frontend Engineer (React / WebGL)"
+      title: "AR / Computer Vision Engineer",
+      summary: "Develop cutting-edge augmented reality features and virtual try-on technology. Strong experience with WebGL, Three.js, and computer vision algorithms required. Full-time, Bangalore.",
+      applyUrl: "mailto:support@trialshoppy.com?subject=Application for AR Computer Vision Engineer"
+    },
+    {
+      title: "Sales & Partnerships Manager",
+      summary: "Drive business growth by acquiring new enterprise partners, managing client relationships, and scaling our Smart AR displays and IoT solutions across new industry verticals. Full-time, Mumbai.",
+      applyUrl: "mailto:support@trialshoppy.com?subject=Application for Sales and Partnerships Manager"
     }
   ];
 
   const benefits = [
     {
-      title: "Think Big, Build Bigger.",
-      body: "We tackle ambitious problems in AI and commerce—shipping products that scale from prototype to production with clarity and craft."
+      title: "Build for Bharat, Scale Globally.",
+      body: "We solve real enterprise problems using IoT, AI, and AR technology that will define the next decade of retail and industry automation."
     },
     {
-      title: "Passionately Driven, Fearlessly Proud.",
-      body: "Our team brings energy to every release. We celebrate wins, learn from setbacks, and keep raising the bar together."
+      title: "Move Fast, Build With Pride.",
+      body: "We ship products that matter. Every feature reaches enterprise clients and real customers. At Trialshopy, your work has direct, visible impact from day one."
     },
     {
-      title: "Own it. Deliver it.",
-      body: "You will own outcomes end to end—from design through deployment—with the support of mentors and a culture that values accountability."
+      title: "Own Your Domain.",
+      body: "You will lead your own projects end-to-end — from ideation to production. We trust our team members to make decisions, take ownership, and deliver outcomes."
     },
     {
-      title: "Freedom with Integrity.",
-      body: "We trust people to do great work with flexibility, transparency, and respect for customers, partners, and each other."
+      title: "Grow Relentlessly.",
+      body: "We invest in our people through mentorship, learning budgets, and a culture of continuous feedback. Every challenge here is an opportunity to grow faster than anywhere else."
     }
   ];
 
@@ -51,13 +56,13 @@ const CareerView: React.FC<CareerViewProps> = ({ onBackToHome }) => {
         <div className="career-hero-bg" aria-hidden="true">
           <img 
             src={careerHeroBg} 
-            alt="Nexus AI career hero background" 
+            alt="Trialshopy career hero background" 
             className="career-hero-image career-hero-image--desktop" 
             style={{ opacity: 1 }}
           />
           <img 
             src={careerHeroBg} 
-            alt="Nexus AI career hero background mobile" 
+            alt="Trialshopy career hero background mobile" 
             className="career-hero-image career-hero-image--mobile" 
             style={{ opacity: 1 }}
           />
@@ -102,10 +107,10 @@ const CareerView: React.FC<CareerViewProps> = ({ onBackToHome }) => {
 
         <div className="career-hero-content home-container" style={{ marginTop: 'auto', marginBottom: 'auto' }}>
           <h1 id="career-hero-heading" className="career-hero-title">
-            Virtual is the <span className="career-hero-title-accent">new Real</span>
+            Build the <span className="career-hero-title-accent">Future of Tech</span>
           </h1>
           <p className="career-hero-subtitle">
-            Come build the future with us. Engineered so that it looks good.
+            Join Trialshopy and help shape the future of enterprise technology through AI, IoT, and Augmented Reality. We're looking for passionate individuals to build the future of retail.
           </p>
           <a className="home-cta-button career-hero-cta" href="#open-positions">
             View Open Roles
@@ -117,10 +122,10 @@ const CareerView: React.FC<CareerViewProps> = ({ onBackToHome }) => {
       <section className="career-why" aria-labelledby="career-why-heading">
         <div className="career-why-inner">
           <h2 id="career-why-heading" className="career-section-title">
-            Why <span className="career-section-title-accent">Nexus AI?</span>
+            Why <span className="career-section-title-accent">Trialshopy?</span>
           </h2>
           <p className="career-section-lead career-why-lead">
-            We are redefining how people shop online through AI—virtual try-on, size intelligence, and immersive 3D experiences that feel real.
+            We are revolutionizing industries by integrating IoT, AI, and augmented reality into enterprise retail — from SCADA deployments to AR try-on, Trialshopy transforms how businesses operate and grow.
           </p>
           <div className="career-why-grid">
             {benefits.map((benefit, index) => (
@@ -145,7 +150,7 @@ const CareerView: React.FC<CareerViewProps> = ({ onBackToHome }) => {
             Open <span className="career-section-title-accent">Positions</span>
           </h2>
           <p className="career-section-lead">
-            Explore open roles across teams at Nexus AI.
+            Explore open roles across teams at Trialshopy.
           </p>
           <div className="career-positions-list">
             {jobs.map((job, index) => {
