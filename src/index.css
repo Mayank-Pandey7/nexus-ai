@@ -1428,7 +1428,7 @@ textarea {
 }
 
 .assistants-badge {
-  background: #1a1a1a !important;
+  background: #ffa600 !important;
   border-radius: 0.85rem;
   flex-shrink: 0;
   justify-content: center;
