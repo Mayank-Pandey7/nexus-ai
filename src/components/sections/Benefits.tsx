@@ -1,5 +1,5 @@
 import React from 'react';
-const trialshopylogo = '/assets/images/trialshopy-logo.png';
+const nexusaiLogoWhiteSparkle = '/assets/images/nexusai-logo-white-sparkle.png';
 
 interface BenefitsProps {
   onKnowMore?: () => void;
@@ -31,7 +31,7 @@ const Benefits: React.FC<BenefitsProps> = ({ onKnowMore }) => {
               }}
             >
               <img 
-                src={trialshopylogo} 
+                src={nexusaiLogoWhiteSparkle} 
                 alt="Trialshopy logo" 
                 style={{ width: '1.4rem', height: '1.4rem', objectFit: 'contain' }} 
               />
@@ -41,7 +41,7 @@ const Benefits: React.FC<BenefitsProps> = ({ onKnowMore }) => {
                   fontFamily: 'var(--font-inter-tight), sans-serif', 
                   fontWeight: 700, 
                   fontSize: '1.1rem', 
-                  color: '#00000', 
+                  color: '#fff', 
                   letterSpacing: '-0.02em'
                 }}
               >
