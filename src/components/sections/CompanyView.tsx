@@ -18,7 +18,7 @@ const CompanyView: React.FC<CompanyViewProps> = ({ onBackToHome, onExploreTeam }
       designation: "Co-Founder & CMO",
       company: "TrialShopy",
       experience: "5+ Years",
-      bio: "Shubhang Sheel is the Co-Founder & CMO at Nexus AI. He directs brand architecture, digital distribution channels, and retail marketplace user growth strategies globally.",
+      bio: "Shubhang Sheel is the Co-Founder & CMO at Trialshopy. He directs brand architecture, digital distribution channels, and retail marketplace user growth strategies globally.",
       photo: "/assets/images/shubhangu.jpg",
       linkedin: "https://www.linkedin.com/"
     },
@@ -27,7 +27,7 @@ const CompanyView: React.FC<CompanyViewProps> = ({ onBackToHome, onExploreTeam }
       designation: "Director",
       company: "TrialShopy",
       experience: "20+ Years",
-      bio: "Suresh Choudhary directs corporate investments, retail distribution pipelines, and strategic brand partnerships at Nexus AI.",
+      bio: "Suresh Choudhary directs corporate investments, retail distribution pipelines, and strategic brand partnerships at Trialshopy.",
       photo: "/assets/images/suresh-ch.jpg",
       linkedin: "https://www.linkedin.com/"
     },
@@ -36,7 +36,7 @@ const CompanyView: React.FC<CompanyViewProps> = ({ onBackToHome, onExploreTeam }
       designation: "CTO",
       company: "TrialShopy",
       experience: "5+ Years",
-      bio: "Vivek leads product engineering at Nexus AI, managing advanced 3D render pipelines and low-latency computer vision backend models.",
+      bio: "Vivek leads product engineering at Trialshopy, managing advanced 3D render pipelines and low-latency computer vision backend models.",
       photo: "/assets/images/vivek.jpg",
       linkedin: "https://www.linkedin.com/"
     },
@@ -54,7 +54,7 @@ const CompanyView: React.FC<CompanyViewProps> = ({ onBackToHome, onExploreTeam }
       designation: "Frontend Developer",
       company: "TrialShopy",
       experience: "3+ Years",
-      bio: "Yashika builds responsive, high-performance web applications and sleek interactive design frameworks for Nexus AI Marketplace.",
+      bio: "Yashika builds responsive, high-performance web applications and sleek interactive design frameworks for Trialshopy Marketplace.",
       photo: "/assets/images/yashika.jpg",
       linkedin: "https://www.linkedin.com/"
     },
@@ -166,7 +166,7 @@ const CompanyView: React.FC<CompanyViewProps> = ({ onBackToHome, onExploreTeam }
         <div className="company-hero-bg" aria-hidden="true">
           <img 
             src="https://stagingmedia.pointai.com/assets/images/company.jpg" 
-            alt="Nexus AI company hero background" 
+            alt="Trialshopy company hero background" 
             className="company-hero-image" 
             style={{ opacity: 1 }}
           />
@@ -215,7 +215,7 @@ const CompanyView: React.FC<CompanyViewProps> = ({ onBackToHome, onExploreTeam }
             Our <span className="company-hero-title-accent">Story</span>
           </h1>
           <p className="company-hero-caption">
-            At Nexus AI, we are revolutionizing industries by integrating IoT, AI, and augmented reality into enterprise retail and commerce. Built by a passionate team incubated at NIT Patna, we are transforming how businesses connect with customers in the digital age.
+            At Trialshopy, we are revolutionizing industries by integrating IoT, AI, and augmented reality into enterprise retail and commerce. Built by a passionate team incubated at NIT Patna, we are transforming how businesses connect with customers in the digital age.
           </p>
         </div>
 
@@ -226,7 +226,7 @@ const CompanyView: React.FC<CompanyViewProps> = ({ onBackToHome, onExploreTeam }
         </div>
       </section>
 
-      {/* Founder Nikhil/Nexus AI Section */}
+      {/* Founder Nikhil/Trialshopy Section */}
       <section className="company-leader" aria-labelledby="company-leader-heading" style={{ background: '#000', padding: 'clamp(6rem, 10vw, 8rem) 0' }}>
         <div className="company-inner company-leader-inner" style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 2rem' }}>
           <article className="company-leader-card reveal-hover-lift" data-reveal="left" style={{ margin: '0 auto' }}>
@@ -321,7 +321,7 @@ const CompanyView: React.FC<CompanyViewProps> = ({ onBackToHome, onExploreTeam }
             Meet the <span className="company-accent">Team</span>
           </h2>
           <p className="company-section-lead company-section-lead--light" data-reveal="true" style={{ textAlign: 'center' }}>
-            The innovators, creators, and leaders driving the future of immersive AI technology at Nexus AI.
+            The innovators, creators, and leaders driving the future of immersive AI technology at Trialshopy.
           </p>
 
           <div className="company-team-grid" data-reveal-stagger="true">
@@ -609,7 +609,7 @@ const CompanyView: React.FC<CompanyViewProps> = ({ onBackToHome, onExploreTeam }
         <div className="company-connected-watermark" aria-hidden="true">
           <img 
             src={nexusaiLogoWhiteSparkle} 
-            alt="Nexus AI watermark logo" 
+            alt="Trialshopy watermark logo" 
             className="company-connected-watermark-img" 
             style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'contain', opacity: 0.12 }}
           />
@@ -619,7 +619,7 @@ const CompanyView: React.FC<CompanyViewProps> = ({ onBackToHome, onExploreTeam }
           <span className="company-connected-icon" aria-hidden="true">
             <img 
               src={nexusaiLogoWhiteSparkle} 
-              alt="Nexus AI icon" 
+              alt="Trialshopy icon" 
               className="company-connected-icon-img" 
               width="36" 
               height="36" 
@@ -629,10 +629,10 @@ const CompanyView: React.FC<CompanyViewProps> = ({ onBackToHome, onExploreTeam }
           <h2 id="company-connected-heading" className="company-connected-title" data-reveal="true">
             Stay <span className="company-accent">Connected</span>
           </h2>
-          <p className="company-connected-lead" data-reveal="true">Follow Nexus AI for platform updates, enterprise insights, and AR commerce trends.</p>
+          <p className="company-connected-lead" data-reveal="true">Follow Trialshopy for platform updates, enterprise insights, and AR commerce trends.</p>
 
           <div className="company-social-row" data-reveal-stagger="true">
-            <a target="_blank" rel="noopener noreferrer" className="company-social-pill" data-reveal-item="true" href="https://x.com/nexusai">
+            <a target="_blank" rel="noopener noreferrer" className="company-social-pill" data-reveal-item="true" href="https://x.com/trialshopy">
               <span className="company-social-pill-label">Twitter / X</span>
               <span className="company-social-pill-icon-wrap" aria-hidden="true">
                 <svg className="company-social-pill-icon" viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
@@ -641,7 +641,7 @@ const CompanyView: React.FC<CompanyViewProps> = ({ onBackToHome, onExploreTeam }
               </span>
             </a>
 
-            <a target="_blank" rel="noopener noreferrer" className="company-social-pill" data-reveal-item="true" href="https://www.facebook.com/nexusai">
+            <a target="_blank" rel="noopener noreferrer" className="company-social-pill" data-reveal-item="true" href="https://www.facebook.com/trialshopy">
               <span className="company-social-pill-label">Facebook</span>
               <span className="company-social-pill-icon-wrap" aria-hidden="true">
                 <svg className="company-social-pill-icon" viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
@@ -650,7 +650,7 @@ const CompanyView: React.FC<CompanyViewProps> = ({ onBackToHome, onExploreTeam }
               </span>
             </a>
 
-            <a target="_blank" rel="noopener noreferrer" className="company-social-pill" data-reveal-item="true" href="https://www.instagram.com/nexusai">
+            <a target="_blank" rel="noopener noreferrer" className="company-social-pill" data-reveal-item="true" href="https://www.instagram.com/trialshopy">
               <span className="company-social-pill-label">Instagram</span>
               <span className="company-social-pill-icon-wrap" aria-hidden="true">
                 <svg className="company-social-pill-icon" viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
@@ -659,7 +659,7 @@ const CompanyView: React.FC<CompanyViewProps> = ({ onBackToHome, onExploreTeam }
               </span>
             </a>
 
-            <a target="_blank" rel="noopener noreferrer" className="company-social-pill" data-reveal-item="true" href="https://www.linkedin.com/company/nexusai">
+            <a target="_blank" rel="noopener noreferrer" className="company-social-pill" data-reveal-item="true" href="https://www.linkedin.com/company/trialshopy">
               <span className="company-social-pill-label">LinkedIn</span>
               <span className="company-social-pill-icon-wrap" aria-hidden="true" style={{ padding: '0.45rem' }}>
                 <img 

@@ -12,17 +12,17 @@ const CareerView: React.FC<CareerViewProps> = ({ onBackToHome }) => {
     {
       title: "Full Stack Developer (React / Node.js)",
       summary: "Build and maintain scalable web applications and enterprise portals. You'll work on e-commerce platforms, real estate portals, and digital storefronts using modern React and Node.js frameworks.",
-      applyUrl: "mailto:support@nexusai.com?subject=Application for Full Stack Developer"
+      applyUrl: "mailto:support@trialshoppy.com?subject=Application for Full Stack Developer"
     },
     {
       title: "AR / Computer Vision Engineer",
       summary: "Develop cutting-edge augmented reality features and virtual try-on technology. Strong experience with WebGL, Three.js, and computer vision algorithms required. Full-time, Bangalore.",
-      applyUrl: "mailto:support@nexusai.com?subject=Application for AR Computer Vision Engineer"
+      applyUrl: "mailto:support@trialshoppy.com?subject=Application for AR Computer Vision Engineer"
     },
     {
       title: "Sales & Partnerships Manager",
       summary: "Drive business growth by acquiring new enterprise partners, managing client relationships, and scaling our Smart AR displays and IoT solutions across new industry verticals. Full-time, Mumbai.",
-      applyUrl: "mailto:support@nexusai.com?subject=Application for Sales and Partnerships Manager"
+      applyUrl: "mailto:support@trialshoppy.com?subject=Application for Sales and Partnerships Manager"
     }
   ];
 
@@ -33,7 +33,7 @@ const CareerView: React.FC<CareerViewProps> = ({ onBackToHome }) => {
     },
     {
       title: "Move Fast, Build With Pride.",
-      body: "We ship products that matter. Every feature reaches enterprise clients and real customers. At Nexus AI, your work has direct, visible impact from day one."
+      body: "We ship products that matter. Every feature reaches enterprise clients and real customers. At Trialshopy, your work has direct, visible impact from day one."
     },
     {
       title: "Own Your Domain.",
@@ -56,13 +56,13 @@ const CareerView: React.FC<CareerViewProps> = ({ onBackToHome }) => {
         <div className="career-hero-bg" aria-hidden="true">
           <img 
             src={careerHeroBg} 
-            alt="Nexus AI career hero background" 
+            alt="Trialshopy career hero background" 
             className="career-hero-image career-hero-image--desktop" 
             style={{ opacity: 1 }}
           />
           <img 
             src={careerHeroBg} 
-            alt="Nexus AI career hero background mobile" 
+            alt="Trialshopy career hero background mobile" 
             className="career-hero-image career-hero-image--mobile" 
             style={{ opacity: 1 }}
           />
@@ -110,7 +110,7 @@ const CareerView: React.FC<CareerViewProps> = ({ onBackToHome }) => {
             Build the <span className="career-hero-title-accent">Future of Tech</span>
           </h1>
           <p className="career-hero-subtitle">
-            Join Nexus AI and help shape the future of enterprise technology through AI, IoT, and Augmented Reality. We're looking for passionate individuals to build the future of retail.
+            Join Trialshopy and help shape the future of enterprise technology through AI, IoT, and Augmented Reality. We're looking for passionate individuals to build the future of retail.
           </p>
           <a className="home-cta-button career-hero-cta" href="#open-positions">
             View Open Roles
@@ -118,14 +118,14 @@ const CareerView: React.FC<CareerViewProps> = ({ onBackToHome }) => {
         </div>
       </section>
 
-      {/* Why Nexus AI Section */}
+      {/* Why Trialshopy Section */}
       <section className="career-why" aria-labelledby="career-why-heading">
         <div className="career-why-inner">
           <h2 id="career-why-heading" className="career-section-title">
-            Why <span className="career-section-title-accent">Nexus AI?</span>
+            Why <span className="career-section-title-accent">Trialshopy?</span>
           </h2>
           <p className="career-section-lead career-why-lead">
-            We are revolutionizing industries by integrating IoT, AI, and augmented reality into enterprise retail — from SCADA deployments to AR try-on, Nexus AI transforms how businesses operate and grow.
+            We are revolutionizing industries by integrating IoT, AI, and augmented reality into enterprise retail — from SCADA deployments to AR try-on, Trialshopy transforms how businesses operate and grow.
           </p>
           <div className="career-why-grid">
             {benefits.map((benefit, index) => (
@@ -150,7 +150,7 @@ const CareerView: React.FC<CareerViewProps> = ({ onBackToHome }) => {
             Open <span className="career-section-title-accent">Positions</span>
           </h2>
           <p className="career-section-lead">
-            Explore open roles across teams at Nexus AI.
+            Explore open roles across teams at Trialshopy.
           </p>
           <div className="career-positions-list">
             {jobs.map((job, index) => {

@@ -2,7 +2,7 @@
 @import "tailwindcss";
 
 /* 
-  Nexus AI Consolidated Stylesheet
+  Trialshopy Consolidated Stylesheet
   Contains styles from Next.js CSS chunks:
   - 16f6l2w.3tten.css (Reset, animations, reveal triggers, scroll cue)
   - 0-~6jpi.25xgj.css (Header, navigation, mega dropdown, mobile menu)
@@ -2173,7 +2173,7 @@ textarea {
   }
 }
 
-/* Nexus AI Decorative Line-and-Dot style on main headings */
+/* Trialshopy Decorative Line-and-Dot style on main headings */
 .fashion-heading,
 .overview-heading,
 .assistants-title,
