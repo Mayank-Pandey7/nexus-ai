@@ -104,10 +104,10 @@ const Footer: React.FC = () => {
 
             <div className="site-footer-col" data-reveal-item="true">
               <h3>Social</h3>
-              <a target="_blank" rel="noopener noreferrer" href="https://x.com/nexusai">X / Twitter</a>
-              <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/company/nexusai">LinkedIn</a>
-              <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/nexusai">Instagram</a>
-              <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/nexusai">Facebook</a>
+              <a target="_blank" rel="noopener noreferrer" href="https://x.com/maynkio">X / Twitter</a>
+              <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/company/trialshopy/">LinkedIn</a>
+              <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/trialshopy">Instagram</a>
+              <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/">Facebook</a>
             </div>
             
             <div className="site-footer-col" data-reveal-item="true">
@@ -123,7 +123,7 @@ const Footer: React.FC = () => {
               <a href="tel:9801159223">+91 9801159223</a>
             </div>
           </div>
-          <div className="site-footer-bottom">© 2026 Nexus AI Marketplace Pvt. Ltd. All rights reserved.</div>
+          <div className="site-footer-bottom">©2026 Nexus AI. All rights reserved.</div>
         </div>
       </section>
     </footer>

@@ -16,7 +16,7 @@ const CompanyView: React.FC<CompanyViewProps> = ({ onBackToHome, onExploreTeam }
     {
       name: "Shubhang Sheel",
       designation: "Co-Founder & CMO",
-      company: "Nexus AI",
+      company: "TrialShopy",
       experience: "5+ Years",
       bio: "Shubhang Sheel is the Co-Founder & CMO at Nexus AI. He directs brand architecture, digital distribution channels, and retail marketplace user growth strategies globally.",
       photo: "/assets/images/shubhangu.jpg",
@@ -25,7 +25,7 @@ const CompanyView: React.FC<CompanyViewProps> = ({ onBackToHome, onExploreTeam }
     {
       name: "Suresh Choudhary",
       designation: "Director",
-      company: "Nexus AI",
+      company: "TrialShopy",
       experience: "20+ Years",
       bio: "Suresh Choudhary directs corporate investments, retail distribution pipelines, and strategic brand partnerships at Nexus AI.",
       photo: "/assets/images/suresh-ch.jpg",
@@ -34,7 +34,7 @@ const CompanyView: React.FC<CompanyViewProps> = ({ onBackToHome, onExploreTeam }
     {
       name: "Vivek",
       designation: "CTO",
-      company: "Nexus AI",
+      company: "TrialShopy",
       experience: "5+ Years",
       bio: "Vivek leads product engineering at Nexus AI, managing advanced 3D render pipelines and low-latency computer vision backend models.",
       photo: "/assets/images/vivek.jpg",
@@ -43,7 +43,7 @@ const CompanyView: React.FC<CompanyViewProps> = ({ onBackToHome, onExploreTeam }
     {
       name: "Dipti",
       designation: "COO",
-      company: "Nexus AI",
+      company: "Trialshopy",
       experience: "6+ Years",
       bio: "Dipti coordinates day-to-day operations, strategic planning, cross-functional HR tasks, and corporate governance protocols.",
       photo: "/assets/images/dipti.jpg",
@@ -52,7 +52,7 @@ const CompanyView: React.FC<CompanyViewProps> = ({ onBackToHome, onExploreTeam }
     {
       name: "Yashika",
       designation: "Frontend Developer",
-      company: "Nexus AI",
+      company: "TrialShopy",
       experience: "3+ Years",
       bio: "Yashika builds responsive, high-performance web applications and sleek interactive design frameworks for Nexus AI Marketplace.",
       photo: "/assets/images/yashika.jpg",
@@ -61,7 +61,7 @@ const CompanyView: React.FC<CompanyViewProps> = ({ onBackToHome, onExploreTeam }
     {
       name: "Satyam",
       designation: "SDE1",
-      company: "Nexus AI",
+      company: "TrialShopy",
       experience: "3+ Years",
       bio: "Satyam works on our backend services, merchant api interfaces, database indexing, and performance optimization layers.",
       photo: "/assets/images/satyam.jpg",
@@ -118,19 +118,19 @@ const CompanyView: React.FC<CompanyViewProps> = ({ onBackToHome, onExploreTeam }
   const news = [
     {
       date: "March 15, 2024",
-      title: "Nexus AI launches AI-powered AR try-on platform for enterprise retail and e-commerce in India",
+      title: "TrialShopy launches AI-powered AR try-on platform for enterprise retail and e-commerce in India",
       image: "https://stagingmedia.pointai.com/assets/images/news/livemint.png",
       url: "#"
     },
     {
       date: "August 10, 2023",
-      title: "NIT Patna incubated startup Nexus AI raises seed funding to expand Smart AR Shopping Platform",
+      title: "NIT Patna incubated startup Trailshopy raises seed funding to expand Smart AR Shopping Platform",
       image: "https://stagingmedia.pointai.com/assets/images/news/yourstory.jpg",
       url: "#"
     },
     {
       date: "November 22, 2023",
-      title: "How Nexus AI is empowering enterprises through IoT, AI and augmented reality integrations",
+      title: "How TrialShopy is empowering enterprises through IoT, AI and augmented reality integrations",
       image: "https://stagingmedia.pointai.com/assets/images/news/china-speakers.png",
       url: "#"
     }
@@ -256,7 +256,7 @@ const CompanyView: React.FC<CompanyViewProps> = ({ onBackToHome, onExploreTeam }
                   Founder &amp; CEO
                 </p>
                 <p style={{ color: 'rgba(255, 255, 255, 0.5)', fontSize: '0.88rem', fontWeight: 500, margin: 0 }}>
-                  Nexus AI Marketplace Pvt. Ltd.
+                  TrialShopy Marketplace Pvt. Ltd.
                 </p>
               </div>
               
@@ -304,7 +304,7 @@ const CompanyView: React.FC<CompanyViewProps> = ({ onBackToHome, onExploreTeam }
             </h2>
             <div className="company-leader-bio" data-reveal="true" data-reveal-delay="120" style={{ fontSize: '1rem', color: 'rgba(208, 208, 208, 0.75)', lineHeight: '1.8' }}>
               <p style={{ marginBottom: '2rem' }}>
-                Nikhil Choudhary is the Founder and CEO of Nexus AI, bringing a wealth of expertise from a distinguished career in industrial automation spanning over six years. A proud alumnus of NIT Patna, he holds a B.Tech in Computer Science and Engineering and an M.Tech in Data Science.
+                Nikhil Choudhary is the Founder and CEO of TrialShopy, bringing a wealth of expertise from a distinguished career in industrial automation spanning over six years. A proud alumnus of NIT Patna, he holds a B.Tech in Computer Science and Engineering and an M.Tech in Data Science.
               </p>
               <p style={{ marginBottom: '2rem' }}>
                 Throughout his career, Nikhil has made significant contributions while working with leading organizations such as Altorum Leren, Repido, Msol Technology, and Walmart. His experience includes delivering over 30 successful projects, showcasing his ability to drive innovation and deliver impactful solutions.
