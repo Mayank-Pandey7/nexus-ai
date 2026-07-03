@@ -117,44 +117,44 @@ const CompanyView: React.FC<CompanyViewProps> = ({ onBackToHome, onExploreTeam }
 
   const news = [
     {
-      date: "December 07, 2020",
-      title: "Fashion AI gets a booster shot from pandemic — Indian startups TryNDBuy and AskSid help global fashion brands pivot as buyers shift from bricks to clicks",
+      date: "March 15, 2024",
+      title: "Trialshopy launches AI-powered AR try-on platform for enterprise retail and e-commerce in India",
       image: "https://stagingmedia.pointai.com/assets/images/news/livemint.png",
-      url: "https://www.livemint.com/news/business-of-life/fashion-ai-gets-a-booster-shot-from-pandemic-11607260509374.html"
+      url: "#"
     },
     {
-      date: "February 24, 2020",
-      title: "Why an Indian virtual fitting room has a fit in China — William Bao Bean on TryNdBuy and the Chinaccelerator",
-      image: "https://stagingmedia.pointai.com/assets/images/news/china-speakers.png",
-      url: "https://www.china-speakers-bureau.com/2020/02/24/why-an-indian-virtual-fitting-room-has-a-fit-in-china-william-bao-bean/"
-    },
-    {
-      date: "January 03, 2019",
-      title: "Step into this virtual trial room to TryNDBuy that perfect dress or pair of denims",
+      date: "August 10, 2023",
+      title: "NIT Patna incubated startup Trialshopy raises seed funding to expand Smart AR Shopping Platform",
       image: "https://stagingmedia.pointai.com/assets/images/news/yourstory.jpg",
-      url: "https://yourstory.com/2019/01/virtual-trial-room-tryndbuy-fashion"
+      url: "#"
+    },
+    {
+      date: "November 22, 2023",
+      title: "How Trialshopy is empowering enterprises through IoT, AI and augmented reality integrations",
+      image: "https://stagingmedia.pointai.com/assets/images/news/china-speakers.png",
+      url: "#"
     }
   ];
 
   const offices = [
     {
-      city: "New Delhi",
-      address: "1614A-B, The Iconic Correnthum Tower, Sector 62, Opp. Electronic City Metro Station, Noida, INDIA 201309",
+      city: "Patna, Bihar",
+      address: "NIT Patna Incubation Centre, Ashok Rajpath, Patna, Bihar, India – 800005",
       icon: "https://stagingmedia.pointai.com/assets/images/new-delhi.png"
     },
     {
-      city: "San Francisco",
-      address: "5746, Corsa Avenue, Suite 110, Westlake, San Francisco, CA-91362, USA",
+      city: "New Delhi",
+      address: "Delhi NCR Operations, Connaught Place, New Delhi, India – 110001",
       icon: "https://stagingmedia.pointai.com/assets/images/san-francisco.png"
     },
     {
-      city: "London",
-      address: "1, Wilde House, 10, Gloucester Terrace, W2 3DL, London, U.K.",
+      city: "Mumbai",
+      address: "West India Hub, Bandra Kurla Complex, Mumbai, Maharashtra – 400051",
       icon: "https://stagingmedia.pointai.com/assets/images/london.png"
     },
     {
-      city: "Shanghai",
-      address: "Hero Center, Level 1, Building 3, West Entrance N.28, Yuyuan East Rd, Jing'An District, Shanghai 200040.",
+      city: "Bengaluru",
+      address: "Tech Centre, Koramangala, Bengaluru, Karnataka – 560034",
       icon: "https://stagingmedia.pointai.com/assets/images/shanghai.png"
     }
   ];
@@ -215,7 +215,7 @@ const CompanyView: React.FC<CompanyViewProps> = ({ onBackToHome, onExploreTeam }
             Our <span className="company-hero-title-accent">Story</span>
           </h1>
           <p className="company-hero-caption">
-            At Nexus AI, we're more than just a technology company. We're a team of visionaries, creators, and problem-solvers dedicated to transforming the way brands and customers connect in the digital age.
+            At Trialshopy, we are revolutionizing industries by integrating IoT, AI, and augmented reality into enterprise retail and commerce. Built by a passionate team incubated at NIT Patna, we are transforming how businesses connect with customers in the digital age.
           </p>
         </div>
 
@@ -629,10 +629,10 @@ const CompanyView: React.FC<CompanyViewProps> = ({ onBackToHome, onExploreTeam }
           <h2 id="company-connected-heading" className="company-connected-title" data-reveal="true">
             Stay <span className="company-accent">Connected</span>
           </h2>
-          <p className="company-connected-lead" data-reveal="true">Don't miss on our updates</p>
+          <p className="company-connected-lead" data-reveal="true">Follow Trialshopy for platform updates, enterprise insights, and AR commerce trends.</p>
 
           <div className="company-social-row" data-reveal-stagger="true">
-            <a target="_blank" rel="noopener noreferrer" className="company-social-pill" data-reveal-item="true" href="https://x.com/maynkio">
+            <a target="_blank" rel="noopener noreferrer" className="company-social-pill" data-reveal-item="true" href="https://x.com/trialshopy">
               <span className="company-social-pill-label">Twitter / X</span>
               <span className="company-social-pill-icon-wrap" aria-hidden="true">
                 <svg className="company-social-pill-icon" viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
@@ -641,7 +641,7 @@ const CompanyView: React.FC<CompanyViewProps> = ({ onBackToHome, onExploreTeam }
               </span>
             </a>
 
-            <a target="_blank" rel="noopener noreferrer" className="company-social-pill" data-reveal-item="true" href="https://www.facebook.com/mayank__pandeyy/">
+            <a target="_blank" rel="noopener noreferrer" className="company-social-pill" data-reveal-item="true" href="https://www.facebook.com/trialshopy">
               <span className="company-social-pill-label">Facebook</span>
               <span className="company-social-pill-icon-wrap" aria-hidden="true">
                 <svg className="company-social-pill-icon" viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
@@ -650,7 +650,7 @@ const CompanyView: React.FC<CompanyViewProps> = ({ onBackToHome, onExploreTeam }
               </span>
             </a>
 
-            <a target="_blank" rel="noopener noreferrer" className="company-social-pill" data-reveal-item="true" href="https://www.instagram.com/mayank__pandeyy/">
+            <a target="_blank" rel="noopener noreferrer" className="company-social-pill" data-reveal-item="true" href="https://www.instagram.com/trialshopy">
               <span className="company-social-pill-label">Instagram</span>
               <span className="company-social-pill-icon-wrap" aria-hidden="true">
                 <svg className="company-social-pill-icon" viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
@@ -659,7 +659,7 @@ const CompanyView: React.FC<CompanyViewProps> = ({ onBackToHome, onExploreTeam }
               </span>
             </a>
 
-            <a target="_blank" rel="noopener noreferrer" className="company-social-pill" data-reveal-item="true" href="https://www.linkedin.com/in/mynkdev/">
+            <a target="_blank" rel="noopener noreferrer" className="company-social-pill" data-reveal-item="true" href="https://www.linkedin.com/company/trialshopy">
               <span className="company-social-pill-label">LinkedIn</span>
               <span className="company-social-pill-icon-wrap" aria-hidden="true" style={{ padding: '0.45rem' }}>
                 <img 
@@ -680,7 +680,7 @@ const CompanyView: React.FC<CompanyViewProps> = ({ onBackToHome, onExploreTeam }
       <section className="company-values" aria-labelledby="company-values-heading">
         <div className="company-inner">
           <h2 id="company-values-heading" className="company-section-title" data-reveal="true">
-            Our <span className="company-accent">Global Presence</span>
+            Our <span className="company-accent">Presence</span>
           </h2>
 
           <div className="company-values-grid" data-reveal-stagger="true">

@@ -10,35 +10,35 @@ interface ProductsProps {
 const Products: React.FC<ProductsProps> = ({ onKnowMore }) => {
   return (
     <section className="fashion-section">
-      <h2 className="fashion-heading" data-reveal="true">AI for <span className="fashion-heading-highlight">Fashion eCommerce</span></h2>
+      <h2 className="fashion-heading" data-reveal="true">AI for <span className="fashion-heading-highlight">Smart Commerce</span></h2>
       <div className="fashion-grid" data-reveal-stagger="true">
-        <a className="fashion-item-link" aria-label="Virtual Try-on — AI for Fashion eCommerce" data-reveal-item="true" href="#">
+        <a className="fashion-item-link" aria-label="AR Virtual Try-On — Trialshopy" data-reveal-item="true" href="#">
           <article className="fashion-item reveal-hover-lift">
             <div className="fashion-image-frame">
-              <img src={p1} alt="Virtual Try-on" className="fashion-image" loading="lazy" />
+              <img src={p1} alt="AR Virtual Try-On" className="fashion-image" loading="lazy" />
             </div>
-            <h3 className="fashion-item-title">Virtual Try-on</h3>
-            <p className="fashion-item-text">Transform product discovery into personal experience. Let customers visualize garments on themselves with realistic fit, drape, and styling across body types, skin tones, and sizes.</p>
+            <h3 className="fashion-item-title">AR Virtual Try-On</h3>
+            <p className="fashion-item-text">Experience products before you buy. Our augmented reality try-on lets customers visualize fashion, accessories, and more on themselves in real time — reducing returns and boosting purchase confidence.</p>
           </article>
         </a>
         
-        <a className="fashion-item-link" aria-label="Makeup Try-on — AI for Fashion eCommerce" data-reveal-item="true" href="#">
+        <a className="fashion-item-link" aria-label="AI-Powered Recommendations — Trialshopy" data-reveal-item="true" href="#">
           <article className="fashion-item reveal-hover-lift">
             <div className="fashion-image-frame">
-              <img src={p2} alt="Makeup Try-on" className="fashion-image" loading="lazy" />
+              <img src={p2} alt="AI Recommendations" className="fashion-image" loading="lazy" />
             </div>
-            <h3 className="fashion-item-title">Makeup Try-on</h3>
-            <p className="fashion-item-text">Empower customers to find their ideal shade instantly with accurate virtual testing that enhances confidence, accelerates decision-making, and drives product discovery.</p>
+            <h3 className="fashion-item-title">AI-Powered Recommendations</h3>
+            <p className="fashion-item-text">Our intelligent engine learns your preferences to surface products you'll love. Predictive analytics and machine learning drive personalized shopping experiences tailored to every individual customer.</p>
           </article>
         </a>
         
-        <a className="fashion-item-link" aria-label="AI Catalogue Generation — AI for Fashion eCommerce" data-reveal-item="true" href="#">
+        <a className="fashion-item-link" aria-label="Enterprise IoT & Analytics — Trialshopy" data-reveal-item="true" href="#">
           <article className="fashion-item reveal-hover-lift">
             <div className="fashion-image-frame">
-              <img src={p3} alt="AI Catalogue Generation" className="fashion-image" loading="lazy" />
+              <img src={p3} alt="Enterprise IoT Analytics" className="fashion-image" loading="lazy" />
             </div>
-            <h3 className="fashion-item-title">AI Catalogue Generation</h3>
-            <p className="fashion-item-text">Create on-model, lifestyle, flat-lay, and campaign visuals for every SKU at unprecedented speed and scale.</p>
+            <h3 className="fashion-item-title">Enterprise IoT & Analytics</h3>
+            <p className="fashion-item-text">Real-time monitoring, predictive analytics, and intelligent automation for enterprise retail operations. From in-store IoT deployments to cloud data processing — powered by Trialshopy's smart tech integrations.</p>
           </article>
         </a>
       </div>
@@ -51,7 +51,7 @@ const Products: React.FC<ProductsProps> = ({ onKnowMore }) => {
             onKnowMore();
           }}
         >
-          Know More
+          Explore Our Services
         </a>
       </div>
     </section>

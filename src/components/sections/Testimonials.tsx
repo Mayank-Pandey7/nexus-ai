@@ -10,8 +10,8 @@ const Testimonials: React.FC = () => {
         <video className="showcase-video showcase-video-right" src="/assets/media/awards.mp4" autoPlay muted loop playsInline preload="auto" disablePictureInPicture controlsList="nodownload nofullscreen noplaybackrate"></video>
         <div className="awards-sparkles" aria-hidden="true"></div>
         <div className="showcase-content" data-reveal="true">
-          <h2 id="awards-heading" className="showcase-heading awards-showcase-heading">What makes us the <span className="showcase-highlight">Best?</span></h2>
-          <p className="showcase-subtext awards-showcase-subtext">Our innovative, patented technology has received global acclaim and is trusted by partners around the world.</p>
+          <h2 id="awards-heading" className="showcase-heading awards-showcase-heading">What makes us <span className="showcase-highlight">Different?</span></h2>
+          <p className="showcase-subtext awards-showcase-subtext">Trialshopy is breaking boundaries by integrating IoT, AI, and AR to transform core retail and enterprise operations — moving from reactive to proactive, data-driven, and intelligent systems.</p>
         </div>
       </div>
       
@@ -24,9 +24,9 @@ const Testimonials: React.FC = () => {
                   <img src={mlElevate} alt="AWS ML Elevate 2023: Generative AI Edition" className="awards-icon-mlelevate" />
                 </div>
               </div>
-              <h3 className="awards-card-title">MLelevate Generative AI</h3>
-              <p className="awards-card-meta">Version 2023</p>
-              <p className="awards-card-text">Top AI company from India &amp; Korea.</p>
+              <h3 className="awards-card-title">AR Try-On Technology</h3>
+              <p className="awards-card-meta">Computer Vision + AI</p>
+              <p className="awards-card-text">Pixel-accurate augmented reality try-on for fashion, accessories, and retail products. Customers see before they buy — reducing returns and boosting confidence.</p>
             </article>
             
             <article className="awards-card reveal-hover-lift" data-reveal-item="true">
@@ -35,9 +35,9 @@ const Testimonials: React.FC = () => {
                   <img src={patents} alt="70+ Granted Patents Globally" className="awards-icon-mlelevate" />
                 </div>
               </div>
-              <h3 className="awards-card-title">70+ Granted Patents Globally</h3>
-              <p className="awards-card-meta">US, China, Korea &amp; India.</p>
-              <p className="awards-card-text">Coverage spans virtual try-on, generative cataloging, and spatial commerce—giving you room to innovate while our IP backs the roadmap.</p>
+              <h3 className="awards-card-title">Enterprise IoT Integration</h3>
+              <p className="awards-card-meta">5,000+ IoT Deployments</p>
+              <p className="awards-card-text">Custom hardware sensor connectivity, plant monitoring, and cloud data processing for SCADA and industrial automation — 5K+ deployments and counting.</p>
             </article>
             
             <article className="awards-card reveal-hover-lift" data-reveal-item="true">
@@ -46,8 +46,8 @@ const Testimonials: React.FC = () => {
                   <img src={innovation} alt="Innovation of the Year 2020" className="awards-icon-mlelevate" />
                 </div>
               </div>
-              <h3 className="awards-card-title">Innovation of the Year 2020</h3>
-              <p className="awards-card-text awards-card-text-single">Awarded for “the most advanced virtual try-on room in the world” by <strong className="awards-card-em">Amazon</strong>.</p>
+              <h3 className="awards-card-title">AI-Driven Analytics</h3>
+              <p className="awards-card-text awards-card-text-single">Predictive analytics, demand forecasting, and real-time intelligence dashboards — trusted by <strong className="awards-card-em">40+ Happy Clients</strong> across industries.</p>
             </article>
           </div>
         </div>
