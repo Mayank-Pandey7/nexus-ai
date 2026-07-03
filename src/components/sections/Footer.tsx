@@ -1,5 +1,5 @@
 import React from 'react';
-const trialshopyLogoWhite = '/assets/images/nexusai-logo-white-sparkle.png';
+const nexusaiLogoWhite = '/assets/images/nexusai-logo-white-sparkle.png';
 
 // Partner logos marquee
 const amazonSpn = '/assets/images/partners/amazon-spn.png';
@@ -88,8 +88,8 @@ const Footer: React.FC = () => {
           <div className="site-footer-columns" data-reveal-stagger="true">
             <div className="site-footer-brand" data-reveal-item="true">
               <div style={{ display: 'inline-flex', alignItems: 'center', gap: '0.6rem', marginBottom: '1.25rem' }}>
-                <img src={trialshopyLogoWhite} alt="Trialshopy logo" style={{ width: '2.25rem', height: '2.25rem', objectFit: 'contain' }} />
-                <span className="logo-text-bold" style={{ fontFamily: 'var(--font-inter-tight), sans-serif', fontWeight: 700, fontSize: '1.35rem', color: '#ffffff', letterSpacing: '-0.02em' }}>Trialshopy</span>
+                <img src={nexusaiLogoWhite} alt="Nexus AI logo" style={{ width: '2.25rem', height: '2.25rem', objectFit: 'contain' }} />
+                <span className="logo-text-bold" style={{ fontFamily: 'var(--font-inter-tight), sans-serif', fontWeight: 700, fontSize: '1.35rem', color: '#ffffff', letterSpacing: '-0.02em' }}>Nexus AI</span>
               </div>
               <p className="site-footer-brand-text">AI-powered Smart AR Shopping Platform —<br />IoT, AI & AR integrations for enterprise retail.</p>
             </div>
@@ -104,10 +104,10 @@ const Footer: React.FC = () => {
 
             <div className="site-footer-col" data-reveal-item="true">
               <h3>Social</h3>
-              <a target="_blank" rel="noopener noreferrer" href="https://x.com/trialshopy">X / Twitter</a>
-              <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/company/trialshopy">LinkedIn</a>
-              <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/trialshopy">Instagram</a>
-              <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/trialshopy">Facebook</a>
+              <a target="_blank" rel="noopener noreferrer" href="https://x.com/nexusai">X / Twitter</a>
+              <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/company/nexusai">LinkedIn</a>
+              <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/nexusai">Instagram</a>
+              <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/nexusai">Facebook</a>
             </div>
             
             <div className="site-footer-col" data-reveal-item="true">
@@ -119,11 +119,11 @@ const Footer: React.FC = () => {
             <div className="site-footer-col site-footer-contact-col" data-reveal-item="true">
               <h3>Contact</h3>
               <p>NIT Patna Incubation Centre,<br />Ashok Rajpath, Patna<br />Bihar, India 800005</p>
-              <a href="mailto:support@trialshoppy.com">support@trialshoppy.com</a>
+              <a href="mailto:support@nexusai.com">support@nexusai.com</a>
               <a href="tel:9801159223">+91 9801159223</a>
             </div>
           </div>
-          <div className="site-footer-bottom">© 2026 Trialshopy Marketplace Pvt. Ltd. All rights reserved.</div>
+          <div className="site-footer-bottom">© 2026 Nexus AI Marketplace Pvt. Ltd. All rights reserved.</div>
         </div>
       </section>
     </footer>

@@ -12,7 +12,7 @@ const Products: React.FC<ProductsProps> = ({ onKnowMore }) => {
     <section className="fashion-section">
       <h2 className="fashion-heading" data-reveal="true">AI for <span className="fashion-heading-highlight">Smart Commerce</span></h2>
       <div className="fashion-grid" data-reveal-stagger="true">
-        <a className="fashion-item-link" aria-label="AR Virtual Try-On — Trialshopy" data-reveal-item="true" href="#">
+        <a className="fashion-item-link" aria-label="AR Virtual Try-On — Nexus AI" data-reveal-item="true" href="#">
           <article className="fashion-item reveal-hover-lift">
             <div className="fashion-image-frame">
               <img src={p1} alt="AR Virtual Try-On" className="fashion-image" loading="lazy" />
@@ -22,7 +22,7 @@ const Products: React.FC<ProductsProps> = ({ onKnowMore }) => {
           </article>
         </a>
         
-        <a className="fashion-item-link" aria-label="AI-Powered Recommendations — Trialshopy" data-reveal-item="true" href="#">
+        <a className="fashion-item-link" aria-label="AI-Powered Recommendations — Nexus AI" data-reveal-item="true" href="#">
           <article className="fashion-item reveal-hover-lift">
             <div className="fashion-image-frame">
               <img src={p2} alt="AI Recommendations" className="fashion-image" loading="lazy" />
@@ -32,13 +32,13 @@ const Products: React.FC<ProductsProps> = ({ onKnowMore }) => {
           </article>
         </a>
         
-        <a className="fashion-item-link" aria-label="Enterprise IoT & Analytics — Trialshopy" data-reveal-item="true" href="#">
+        <a className="fashion-item-link" aria-label="Enterprise IoT & Analytics — Nexus AI" data-reveal-item="true" href="#">
           <article className="fashion-item reveal-hover-lift">
             <div className="fashion-image-frame">
               <img src={p3} alt="Enterprise IoT Analytics" className="fashion-image" loading="lazy" />
             </div>
             <h3 className="fashion-item-title">Enterprise IoT & Analytics</h3>
-            <p className="fashion-item-text">Real-time monitoring, predictive analytics, and intelligent automation for enterprise retail operations. From in-store IoT deployments to cloud data processing — powered by Trialshopy's smart tech integrations.</p>
+            <p className="fashion-item-text">Real-time monitoring, predictive analytics, and intelligent automation for enterprise retail operations. From in-store IoT deployments to cloud data processing — powered by Nexus AI's smart tech integrations.</p>
           </article>
         </a>
       </div>
