@@ -59,7 +59,7 @@ const LoginModal: React.FC<LoginModalProps> = ({ isOpen, onClose }) => {
         <div className="login-modal-header">
           <div className="login-modal-logo" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', justifyContent: 'center' }}>
             <img src={nexusaiLogo} alt="Nexus AI logo" style={{ width: '2rem', height: '2rem', objectFit: 'contain' }} />
-            <span className="logo-text-bold" style={{ fontFamily: 'var(--font-inter-tight), sans-serif', fontWeight: 700, fontSize: '1.25rem', color: 'var(--primary-color)', letterSpacing: '-0.02em' }}>Nexus AI</span>
+            <span className="logo-text-bold" style={{ fontFamily: 'var(--font-inter-tight), sans-serif', fontWeight: 700, fontSize: '1.25rem', color: '#1d1d1f', letterSpacing: '-0.02em' }}>Nexus AI</span>
           </div>
           <h2 className="login-modal-title">
             {isSignUp ? 'Create Account' : 'Welcome Back'}
@@ -71,7 +71,7 @@ const LoginModal: React.FC<LoginModalProps> = ({ isOpen, onClose }) => {
 
         <form className="login-modal-form" onSubmit={handleSubmit}>
           {isSignUp && (
-            <label className="site-footer-field">
+            <label className="login-modal-field">
               <span>Full Name</span>
               <input 
                 type="text" 
@@ -83,7 +83,7 @@ const LoginModal: React.FC<LoginModalProps> = ({ isOpen, onClose }) => {
             </label>
           )}
 
-          <label className="site-footer-field">
+          <label className="login-modal-field">
             <span>Email Address</span>
             <input 
               type="email" 
@@ -94,7 +94,7 @@ const LoginModal: React.FC<LoginModalProps> = ({ isOpen, onClose }) => {
             />
           </label>
 
-          <label className="site-footer-field">
+          <label className="login-modal-field">
             <span>Password</span>
             <input 
               type="password" 
@@ -105,7 +105,7 @@ const LoginModal: React.FC<LoginModalProps> = ({ isOpen, onClose }) => {
             />
           </label>
 
-          <button type="submit" className="site-footer-submit" style={{ marginTop: '1.5rem' }}>
+          <button type="submit" className="login-modal-submit">
             {isSignUp ? 'Create Account' : 'Sign In'}
           </button>
         </form>
