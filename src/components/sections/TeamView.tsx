@@ -27,7 +27,7 @@ const TeamView: React.FC<TeamViewProps> = ({ onBackToCompany }) => {
       role: "Founder & CEO",
       department: "Leadership",
       photo: nikhilChoudharyPhoto,
-      bio: "Nikhil is the visionary leading Nexus AI Marketplace, bringing 6+ years of engineering leadership from NIT Patna to shape the future of digital retail.",
+      bio: "Nikhil is the visionary leading TrialShopy Marketplace, bringing 6+ years of engineering leadership from NIT Patna to shape the future of digital retail.",
       linkedin: "https://www.linkedin.com/in/nikhil-choudhary-1st-27b4621b8/"
     },
     {
@@ -158,7 +158,7 @@ const TeamView: React.FC<TeamViewProps> = ({ onBackToCompany }) => {
           Meet the <span className="company-accent" style={{ color: '#ff8a00' }}>Innovators</span>
         </h1>
         <p data-reveal="true" data-reveal-delay="100" style={{ fontSize: 'clamp(1rem, 2vw, 1.2rem)', color: 'rgba(255, 255, 255, 0.6)', maxWidth: '750px', margin: '0 auto', lineHeight: 1.6 }}>
-          Discover the complete leadership and engineering team driving advanced 3D &amp; immersive AR retail technology at Nexus AI.
+          Discover the complete leadership and engineering team driving advanced 3D &amp; immersive AR retail technology at TrialShopy.
         </p>
       </div>
 
