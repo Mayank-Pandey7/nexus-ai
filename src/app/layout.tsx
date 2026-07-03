@@ -74,6 +74,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Nexus AI</title>
+        <link rel="icon" href="/favicon.png" />
       </head>
       <body style={{ margin: 0, padding: 0, backgroundColor: '#000000', color: '#ffffff' }}>
         <Navigation 
