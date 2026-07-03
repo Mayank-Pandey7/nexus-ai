@@ -11,7 +11,7 @@ const Testimonials: React.FC = () => {
         <div className="awards-sparkles" aria-hidden="true"></div>
         <div className="showcase-content" data-reveal="true">
           <h2 id="awards-heading" className="showcase-heading awards-showcase-heading">What makes us <span className="showcase-highlight">Different?</span></h2>
-          <p className="showcase-subtext awards-showcase-subtext">Nexus AI is breaking boundaries by integrating IoT, AI, and AR to transform core retail and enterprise operations — moving from reactive to proactive, data-driven, and intelligent systems.</p>
+          <p className="showcase-subtext awards-showcase-subtext">Trialshopy is breaking boundaries by integrating IoT, AI, and AR to transform core retail and enterprise operations — moving from reactive to proactive, data-driven, and intelligent systems.</p>
         </div>
       </div>
       

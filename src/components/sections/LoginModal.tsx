@@ -29,9 +29,9 @@ const LoginModal: React.FC<LoginModalProps> = ({ isOpen, onClose }) => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (isSignUp) {
-      alert(`Welcome, ${name}! Your Nexus AI account has been created successfully.`);
+      alert(`Welcome, ${name}! Your Trialshopy account has been created successfully.`);
     } else {
-      alert(`Successfully signed in as ${email}. Welcome back to Nexus AI!`);
+      alert(`Successfully signed in as ${email}. Welcome back to Trialshopy!`);
     }
     // Reset forms and close modal
     setEmail('');
@@ -58,14 +58,14 @@ const LoginModal: React.FC<LoginModalProps> = ({ isOpen, onClose }) => {
 
         <div className="login-modal-header">
           <div className="login-modal-logo" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', justifyContent: 'center' }}>
-            <img src={nexusaiLogo} alt="Nexus AI logo" style={{ width: '2rem', height: '2rem', objectFit: 'contain' }} />
-            <span className="logo-text-bold" style={{ fontFamily: 'var(--font-inter-tight), sans-serif', fontWeight: 700, fontSize: '1.25rem', color: '#1d1d1f', letterSpacing: '-0.02em' }}>Nexus AI</span>
+            <img src={nexusaiLogo} alt="Trialshopy logo" style={{ width: '2rem', height: '2rem', objectFit: 'contain' }} />
+            <span className="logo-text-bold" style={{ fontFamily: 'var(--font-inter-tight), sans-serif', fontWeight: 700, fontSize: '1.25rem', color: '#1d1d1f', letterSpacing: '-0.02em' }}>Trialshopy</span>
           </div>
           <h2 className="login-modal-title">
             {isSignUp ? 'Create Account' : 'Welcome Back'}
           </h2>
           <p className="login-modal-subtitle">
-            {isSignUp ? 'Sign up to build virtual try-ons and 3D scenes' : 'Sign in to access your Nexus AI workspace'}
+            {isSignUp ? 'Sign up to build virtual try-ons and 3D scenes' : 'Sign in to access your Trialshopy workspace'}
           </p>
         </div>
 

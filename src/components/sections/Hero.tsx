@@ -14,8 +14,8 @@ const Hero: React.FC = () => {
         style={{ animation: 'gentle-fade-in 1.5s cubic-bezier(0.16, 1, 0.3, 1) both' }}
       >
         <div className="hero-main-logo">
-          <img src={nexusaiLogo} alt="Nexus AI logo" style={{ width: '12.5rem', height: '11.5rem', objectFit: 'contain', animation: 'logo-float 3s ease-in-out infinite' }} />
-          <span className="logo-text-bold" style={{ fontFamily: 'var(--font-inter-tight), sans-serif', fontWeight: 700, fontSize: '2.5rem', color: 'var(--primary-color)', letterSpacing: '-0.02em' }}>Nexus AI</span>
+          <img src={nexusaiLogo} alt="Trialshopy logo" style={{ width: '12.5rem', height: '11.5rem', objectFit: 'contain', animation: 'logo-float 3s ease-in-out infinite' }} />
+          <span className="logo-text-bold" style={{ fontFamily: 'var(--font-inter-tight), sans-serif', fontWeight: 700, fontSize: '2.5rem', color: 'var(--primary-color)', letterSpacing: '-0.02em' }}>Trialshopy</span>
         </div>
         <p className="hero-tagline">
           <span className="hero-tagline-accent">Smart AR Shopping Platform — Innovate. Transform. Grow.</span>
@@ -29,7 +29,7 @@ const Hero: React.FC = () => {
           animation: 'gentle-fade-in 1.5s cubic-bezier(0.16, 1, 0.3, 1) 0.18s both'
         }}
       >
-        <img src={heroBanner} alt="Nexus AI AR shopping experience" className="hero-image" loading="eager" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'contain' }} />
+        <img src={heroBanner} alt="Trialshopy AR shopping experience" className="hero-image" loading="eager" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'contain' }} />
       </div>
     </section>
   );

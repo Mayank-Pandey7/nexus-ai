@@ -51,7 +51,7 @@ const TeamView: React.FC<TeamViewProps> = ({ onBackToCompany }) => {
       role: "SDE2",
       department: "Engineering",
       photo: "/assets/images/vinamra.jpg",
-      bio: "Vinamra is a Software Development Engineer 2 at Nexus AI, specializing in scaling system performance and backend databases.",
+      bio: "Vinamra is a Software Development Engineer 2 at Trialshopy, specializing in scaling system performance and backend databases.",
       linkedin: "https://www.linkedin.com/"
     },
     {
@@ -59,7 +59,7 @@ const TeamView: React.FC<TeamViewProps> = ({ onBackToCompany }) => {
       role: "SDE1",
       department: "Engineering",
       photo: "/assets/images/satyam.jpg",
-      bio: "Satyam is a Software Development Engineer 1 at Nexus AI, focused on e-commerce microservices and database integration.",
+      bio: "Satyam is a Software Development Engineer 1 at Trialshopy, focused on e-commerce microservices and database integration.",
       linkedin: "https://www.linkedin.com/"
     },
     {
@@ -67,7 +67,7 @@ const TeamView: React.FC<TeamViewProps> = ({ onBackToCompany }) => {
       role: "SDE1",
       department: "Engineering",
       photo: "/assets/images/janhvi2.png",
-      bio: "Janhvi is a Software Development Engineer 1 at Nexus AI, working on frontend interfaces and low-latency digital try-on integrations.",
+      bio: "Janhvi is a Software Development Engineer 1 at Trialshopy, working on frontend interfaces and low-latency digital try-on integrations.",
       linkedin: "https://www.linkedin.com/"
     },
     {
@@ -99,7 +99,7 @@ const TeamView: React.FC<TeamViewProps> = ({ onBackToCompany }) => {
       role: "COO",
       department: "HR & Operations",
       photo: "/assets/images/dipti.jpg",
-      bio: "Dipti leads operations at Nexus AI, coordinating daily operational execution and cross-functional corporate planning.",
+      bio: "Dipti leads operations at Trialshopy, coordinating daily operational execution and cross-functional corporate planning.",
       linkedin: "https://www.linkedin.com/"
     },
     {
