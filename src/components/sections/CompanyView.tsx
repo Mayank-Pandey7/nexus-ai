@@ -16,34 +16,34 @@ const CompanyView: React.FC<CompanyViewProps> = ({ onBackToHome, onExploreTeam }
     {
       name: "Shubhang Sheel",
       designation: "Co-Founder & CMO",
-      company: "Trialshopy",
+      company: "Nexus AI",
       experience: "5+ Years",
-      bio: "Shubhang Sheel is the Co-Founder & CMO at Trialshopy. He directs brand architecture, digital distribution channels, and retail marketplace user growth strategies globally.",
+      bio: "Shubhang Sheel is the Co-Founder & CMO at Nexus AI. He directs brand architecture, digital distribution channels, and retail marketplace user growth strategies globally.",
       photo: "/assets/images/shubhangu.jpg",
       linkedin: "https://www.linkedin.com/"
     },
     {
       name: "Suresh Choudhary",
       designation: "Director",
-      company: "Trialshopy",
+      company: "Nexus AI",
       experience: "20+ Years",
-      bio: "Suresh Choudhary directs corporate investments, retail distribution pipelines, and strategic brand partnerships at Trialshopy.",
+      bio: "Suresh Choudhary directs corporate investments, retail distribution pipelines, and strategic brand partnerships at Nexus AI.",
       photo: "/assets/images/suresh-ch.jpg",
       linkedin: "https://www.linkedin.com/"
     },
     {
       name: "Vivek",
       designation: "CTO",
-      company: "Trialshopy",
+      company: "Nexus AI",
       experience: "5+ Years",
-      bio: "Vivek leads product engineering at Trialshopy, managing advanced 3D render pipelines and low-latency computer vision backend models.",
+      bio: "Vivek leads product engineering at Nexus AI, managing advanced 3D render pipelines and low-latency computer vision backend models.",
       photo: "/assets/images/vivek.jpg",
       linkedin: "https://www.linkedin.com/"
     },
     {
       name: "Dipti",
       designation: "COO",
-      company: "Trialshopy",
+      company: "Nexus AI",
       experience: "6+ Years",
       bio: "Dipti coordinates day-to-day operations, strategic planning, cross-functional HR tasks, and corporate governance protocols.",
       photo: "/assets/images/dipti.jpg",
@@ -52,16 +52,16 @@ const CompanyView: React.FC<CompanyViewProps> = ({ onBackToHome, onExploreTeam }
     {
       name: "Yashika",
       designation: "Frontend Developer",
-      company: "Trialshopy",
+      company: "Nexus AI",
       experience: "3+ Years",
-      bio: "Yashika builds responsive, high-performance web applications and sleek interactive design frameworks for Trialshopy Marketplace.",
+      bio: "Yashika builds responsive, high-performance web applications and sleek interactive design frameworks for Nexus AI Marketplace.",
       photo: "/assets/images/yashika.jpg",
       linkedin: "https://www.linkedin.com/"
     },
     {
       name: "Satyam",
       designation: "SDE1",
-      company: "Trialshopy",
+      company: "Nexus AI",
       experience: "3+ Years",
       bio: "Satyam works on our backend services, merchant api interfaces, database indexing, and performance optimization layers.",
       photo: "/assets/images/satyam.jpg",
@@ -118,19 +118,19 @@ const CompanyView: React.FC<CompanyViewProps> = ({ onBackToHome, onExploreTeam }
   const news = [
     {
       date: "March 15, 2024",
-      title: "Trialshopy launches AI-powered AR try-on platform for enterprise retail and e-commerce in India",
+      title: "Nexus AI launches AI-powered AR try-on platform for enterprise retail and e-commerce in India",
       image: "https://stagingmedia.pointai.com/assets/images/news/livemint.png",
       url: "#"
     },
     {
       date: "August 10, 2023",
-      title: "NIT Patna incubated startup Trialshopy raises seed funding to expand Smart AR Shopping Platform",
+      title: "NIT Patna incubated startup Nexus AI raises seed funding to expand Smart AR Shopping Platform",
       image: "https://stagingmedia.pointai.com/assets/images/news/yourstory.jpg",
       url: "#"
     },
     {
       date: "November 22, 2023",
-      title: "How Trialshopy is empowering enterprises through IoT, AI and augmented reality integrations",
+      title: "How Nexus AI is empowering enterprises through IoT, AI and augmented reality integrations",
       image: "https://stagingmedia.pointai.com/assets/images/news/china-speakers.png",
       url: "#"
     }
@@ -215,7 +215,7 @@ const CompanyView: React.FC<CompanyViewProps> = ({ onBackToHome, onExploreTeam }
             Our <span className="company-hero-title-accent">Story</span>
           </h1>
           <p className="company-hero-caption">
-            At Trialshopy, we are revolutionizing industries by integrating IoT, AI, and augmented reality into enterprise retail and commerce. Built by a passionate team incubated at NIT Patna, we are transforming how businesses connect with customers in the digital age.
+            At Nexus AI, we are revolutionizing industries by integrating IoT, AI, and augmented reality into enterprise retail and commerce. Built by a passionate team incubated at NIT Patna, we are transforming how businesses connect with customers in the digital age.
           </p>
         </div>
 
@@ -226,7 +226,7 @@ const CompanyView: React.FC<CompanyViewProps> = ({ onBackToHome, onExploreTeam }
         </div>
       </section>
 
-      {/* Founder Nikhil/Trialshopy Section */}
+      {/* Founder Nikhil/Nexus AI Section */}
       <section className="company-leader" aria-labelledby="company-leader-heading" style={{ background: '#000', padding: 'clamp(6rem, 10vw, 8rem) 0' }}>
         <div className="company-inner company-leader-inner" style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 2rem' }}>
           <article className="company-leader-card reveal-hover-lift" data-reveal="left" style={{ margin: '0 auto' }}>
@@ -256,7 +256,7 @@ const CompanyView: React.FC<CompanyViewProps> = ({ onBackToHome, onExploreTeam }
                   Founder &amp; CEO
                 </p>
                 <p style={{ color: 'rgba(255, 255, 255, 0.5)', fontSize: '0.88rem', fontWeight: 500, margin: 0 }}>
-                  Trialshopy Marketplace Pvt. Ltd.
+                  Nexus AI Marketplace Pvt. Ltd.
                 </p>
               </div>
               
@@ -304,7 +304,7 @@ const CompanyView: React.FC<CompanyViewProps> = ({ onBackToHome, onExploreTeam }
             </h2>
             <div className="company-leader-bio" data-reveal="true" data-reveal-delay="120" style={{ fontSize: '1rem', color: 'rgba(208, 208, 208, 0.75)', lineHeight: '1.8' }}>
               <p style={{ marginBottom: '2rem' }}>
-                Nikhil Choudhary is the Founder and CEO of Trialshopy, bringing a wealth of expertise from a distinguished career in industrial automation spanning over six years. A proud alumnus of NIT Patna, he holds a B.Tech in Computer Science and Engineering and an M.Tech in Data Science.
+                Nikhil Choudhary is the Founder and CEO of Nexus AI, bringing a wealth of expertise from a distinguished career in industrial automation spanning over six years. A proud alumnus of NIT Patna, he holds a B.Tech in Computer Science and Engineering and an M.Tech in Data Science.
               </p>
               <p style={{ marginBottom: '2rem' }}>
                 Throughout his career, Nikhil has made significant contributions while working with leading organizations such as Altorum Leren, Repido, Msol Technology, and Walmart. His experience includes delivering over 30 successful projects, showcasing his ability to drive innovation and deliver impactful solutions.
@@ -321,7 +321,7 @@ const CompanyView: React.FC<CompanyViewProps> = ({ onBackToHome, onExploreTeam }
             Meet the <span className="company-accent">Team</span>
           </h2>
           <p className="company-section-lead company-section-lead--light" data-reveal="true" style={{ textAlign: 'center' }}>
-            The innovators, creators, and leaders driving the future of immersive AI technology at Trialshopy.
+            The innovators, creators, and leaders driving the future of immersive AI technology at Nexus AI.
           </p>
 
           <div className="company-team-grid" data-reveal-stagger="true">
@@ -629,10 +629,10 @@ const CompanyView: React.FC<CompanyViewProps> = ({ onBackToHome, onExploreTeam }
           <h2 id="company-connected-heading" className="company-connected-title" data-reveal="true">
             Stay <span className="company-accent">Connected</span>
           </h2>
-          <p className="company-connected-lead" data-reveal="true">Follow Trialshopy for platform updates, enterprise insights, and AR commerce trends.</p>
+          <p className="company-connected-lead" data-reveal="true">Follow Nexus AI for platform updates, enterprise insights, and AR commerce trends.</p>
 
           <div className="company-social-row" data-reveal-stagger="true">
-            <a target="_blank" rel="noopener noreferrer" className="company-social-pill" data-reveal-item="true" href="https://x.com/trialshopy">
+            <a target="_blank" rel="noopener noreferrer" className="company-social-pill" data-reveal-item="true" href="https://x.com/nexusai">
               <span className="company-social-pill-label">Twitter / X</span>
               <span className="company-social-pill-icon-wrap" aria-hidden="true">
                 <svg className="company-social-pill-icon" viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
@@ -641,7 +641,7 @@ const CompanyView: React.FC<CompanyViewProps> = ({ onBackToHome, onExploreTeam }
               </span>
             </a>
 
-            <a target="_blank" rel="noopener noreferrer" className="company-social-pill" data-reveal-item="true" href="https://www.facebook.com/trialshopy">
+            <a target="_blank" rel="noopener noreferrer" className="company-social-pill" data-reveal-item="true" href="https://www.facebook.com/nexusai">
               <span className="company-social-pill-label">Facebook</span>
               <span className="company-social-pill-icon-wrap" aria-hidden="true">
                 <svg className="company-social-pill-icon" viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
@@ -650,7 +650,7 @@ const CompanyView: React.FC<CompanyViewProps> = ({ onBackToHome, onExploreTeam }
               </span>
             </a>
 
-            <a target="_blank" rel="noopener noreferrer" className="company-social-pill" data-reveal-item="true" href="https://www.instagram.com/trialshopy">
+            <a target="_blank" rel="noopener noreferrer" className="company-social-pill" data-reveal-item="true" href="https://www.instagram.com/nexusai">
               <span className="company-social-pill-label">Instagram</span>
               <span className="company-social-pill-icon-wrap" aria-hidden="true">
                 <svg className="company-social-pill-icon" viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
@@ -659,7 +659,7 @@ const CompanyView: React.FC<CompanyViewProps> = ({ onBackToHome, onExploreTeam }
               </span>
             </a>
 
-            <a target="_blank" rel="noopener noreferrer" className="company-social-pill" data-reveal-item="true" href="https://www.linkedin.com/company/trialshopy">
+            <a target="_blank" rel="noopener noreferrer" className="company-social-pill" data-reveal-item="true" href="https://www.linkedin.com/company/nexusai">
               <span className="company-social-pill-label">LinkedIn</span>
               <span className="company-social-pill-icon-wrap" aria-hidden="true" style={{ padding: '0.45rem' }}>
                 <img 

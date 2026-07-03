@@ -27,7 +27,7 @@ const TeamView: React.FC<TeamViewProps> = ({ onBackToCompany }) => {
       role: "Founder & CEO",
       department: "Leadership",
       photo: nikhilChoudharyPhoto,
-      bio: "Nikhil is the visionary leading Trialshopy Marketplace, bringing 6+ years of engineering leadership from NIT Patna to shape the future of digital retail.",
+      bio: "Nikhil is the visionary leading Nexus AI Marketplace, bringing 6+ years of engineering leadership from NIT Patna to shape the future of digital retail.",
       linkedin: "https://www.linkedin.com/in/nikhil-choudhary-1st-27b4621b8/"
     },
     {
@@ -51,7 +51,7 @@ const TeamView: React.FC<TeamViewProps> = ({ onBackToCompany }) => {
       role: "SDE2",
       department: "Engineering",
       photo: "/assets/images/vinamra.jpg",
-      bio: "Vinamra is a Software Development Engineer 2 at Trialshopy, specializing in scaling system performance and backend databases.",
+      bio: "Vinamra is a Software Development Engineer 2 at Nexus AI, specializing in scaling system performance and backend databases.",
       linkedin: "https://www.linkedin.com/"
     },
     {
@@ -59,7 +59,7 @@ const TeamView: React.FC<TeamViewProps> = ({ onBackToCompany }) => {
       role: "SDE1",
       department: "Engineering",
       photo: "/assets/images/satyam.jpg",
-      bio: "Satyam is a Software Development Engineer 1 at Trialshopy, focused on e-commerce microservices and database integration.",
+      bio: "Satyam is a Software Development Engineer 1 at Nexus AI, focused on e-commerce microservices and database integration.",
       linkedin: "https://www.linkedin.com/"
     },
     {
@@ -67,7 +67,7 @@ const TeamView: React.FC<TeamViewProps> = ({ onBackToCompany }) => {
       role: "SDE1",
       department: "Engineering",
       photo: "/assets/images/janhvi2.png",
-      bio: "Janhvi is a Software Development Engineer 1 at Trialshopy, working on frontend interfaces and low-latency digital try-on integrations.",
+      bio: "Janhvi is a Software Development Engineer 1 at Nexus AI, working on frontend interfaces and low-latency digital try-on integrations.",
       linkedin: "https://www.linkedin.com/"
     },
     {
@@ -99,7 +99,7 @@ const TeamView: React.FC<TeamViewProps> = ({ onBackToCompany }) => {
       role: "COO",
       department: "HR & Operations",
       photo: "/assets/images/dipti.jpg",
-      bio: "Dipti leads operations at Trialshopy, coordinating daily operational execution and cross-functional corporate planning.",
+      bio: "Dipti leads operations at Nexus AI, coordinating daily operational execution and cross-functional corporate planning.",
       linkedin: "https://www.linkedin.com/"
     },
     {
@@ -158,7 +158,7 @@ const TeamView: React.FC<TeamViewProps> = ({ onBackToCompany }) => {
           Meet the <span className="company-accent" style={{ color: '#ff8a00' }}>Innovators</span>
         </h1>
         <p data-reveal="true" data-reveal-delay="100" style={{ fontSize: 'clamp(1rem, 2vw, 1.2rem)', color: 'rgba(255, 255, 255, 0.6)', maxWidth: '750px', margin: '0 auto', lineHeight: 1.6 }}>
-          Discover the complete leadership and engineering team driving advanced 3D &amp; immersive AR retail technology at Trialshopy.
+          Discover the complete leadership and engineering team driving advanced 3D &amp; immersive AR retail technology at Nexus AI.
         </p>
       </div>
 

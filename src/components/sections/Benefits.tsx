@@ -32,7 +32,7 @@ const Benefits: React.FC<BenefitsProps> = ({ onKnowMore }) => {
             >
               <img 
                 src={nexusaiLogo} 
-                alt="Trialshopy logo" 
+                alt="Nexus AI logo" 
                 style={{ width: '1.4rem', height: '1.4rem', objectFit: 'contain', filter: 'invert(1)' }} 
               />
               <span 
@@ -45,7 +45,7 @@ const Benefits: React.FC<BenefitsProps> = ({ onKnowMore }) => {
                   letterSpacing: '-0.02em'
                 }}
               >
-                Trialshopy
+                Nexus AI
               </span>
             </div>
           </div>

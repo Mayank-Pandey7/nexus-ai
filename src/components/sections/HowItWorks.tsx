@@ -7,7 +7,7 @@ const HowItWorks: React.FC = () => {
       <div className="automobile-banner-visual">
         <img 
           src={automobileBanner} 
-          alt="Trialshopy smart enterprise technology platform" 
+          alt="Nexus AI smart enterprise technology platform" 
           className="automobile-banner-image" 
           loading="lazy" 
           style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }} 
@@ -21,7 +21,7 @@ const HowItWorks: React.FC = () => {
         <div className="automobile-banner-bottom modelling-bottom">
           <h3 className="modelling-headline">Revolutionizing Industries with Smart Tech.</h3>
           <p className="modelling-body">
-            Trialshopy breaks boundaries by moving from traditional, reactive approaches to proactive, data-driven, and intelligent systems. We integrate IoT, AI, and AR to transform your core retail and enterprise operations.
+            Nexus AI breaks boundaries by moving from traditional, reactive approaches to proactive, data-driven, and intelligent systems. We integrate IoT, AI, and AR to transform your core retail and enterprise operations.
           </p>
           <div className="home-section-cta-wrap">
             <a className="home-cta-button automobile-cta-button" href="#">Learn More</a>
