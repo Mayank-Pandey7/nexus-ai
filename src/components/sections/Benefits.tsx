@@ -33,7 +33,7 @@ const Benefits: React.FC<BenefitsProps> = ({ onKnowMore }) => {
               <img 
                 src={trialshopylogo} 
                 alt="Trialshopy logo" 
-                style={{ width: '1.4rem', height: '1.4rem', objectFit: 'contain', filter: 'invert(1)' }} 
+                style={{ width: '1.4rem', height: '1.4rem', objectFit: 'contain' }} 
               />
               <span 
                 className="logo-text-bold" 
@@ -41,7 +41,7 @@ const Benefits: React.FC<BenefitsProps> = ({ onKnowMore }) => {
                   fontFamily: 'var(--font-inter-tight), sans-serif', 
                   fontWeight: 700, 
                   fontSize: '1.1rem', 
-                  color: '#fff', 
+                  color: '#00000', 
                   letterSpacing: '-0.02em'
                 }}
               >
