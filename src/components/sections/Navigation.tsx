@@ -67,7 +67,7 @@ const Navigation: React.FC<NavigationProps> = ({ onGetStarted, activeView, onVie
         <div className="home-header-inner">
           <Link className="home-header-logo" href="/" onClick={() => onViewChange('home')} style={{ display: 'inline-flex', alignItems: 'center', gap: '0.6rem', textDecoration: 'none' }}>
             <img src={nexusaiLogo} alt="NexusAI logo" style={{ width: '2.25rem', height: '2.25rem', objectFit: 'contain' }} />
-            <span className="logo-text-bold" style={{ fontFamily: 'var(--font-inter-tight), sans-serif', fontWeight: 700, fontSize: '1.35rem', color: 'var(--primary-color)', letterSpacing: '-0.02em' }}>Trialshopy</span>
+            <span className="logo-text-bold" style={{ fontFamily: 'var(--font-inter-tight), sans-serif', fontWeight: 700, fontSize: '1.35rem', color: 'var(--primary-color)', letterSpacing: '-0.02em' }}>Nexus AI</span>
           </Link>
           
           <nav className="home-nav" aria-label="Primary">
