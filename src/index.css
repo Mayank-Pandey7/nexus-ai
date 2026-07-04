@@ -1260,14 +1260,17 @@ textarea {
   font-family: var(--font-inter-tight), sans-serif;
   letter-spacing: -0.02em;
   margin: 0;
+  color: #ffffff;
+  text-shadow: 0 1px 6px rgba(0,0,0,0.55), 0 2px 16px rgba(0,0,0,0.35);
 }
 
 .modelling-body {
-  color: #000000bf;
+  color: rgba(255,255,255,0.90);
   font-size: 1rem;
   line-height: 1.55;
   font-family: var(--font-inter-tight), sans-serif;
   margin: 1rem 0 0;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 2px 12px rgba(0,0,0,0.3);
 }
 
 @media (max-width: 767px) {
@@ -1323,7 +1326,7 @@ textarea {
 
 .automobile-banner-vignette {
   pointer-events: none;
-  background: linear-gradient(#00000059 0%, #0000000f 22%, #0000 45%, rgba(37, 37, 37, 0.549) 88%, #000000d9 100%);
+  background: linear-gradient(rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.25) 22%, rgba(0,0,0,0.30) 45%, rgba(0,0,0,0.70) 88%, rgba(0,0,0,0.88) 100%);
   position: absolute;
   inset: 0;
 }
@@ -1358,7 +1361,7 @@ textarea {
   line-height: 1.2;
   margin: 0;
   flex-shrink: 0;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+  text-shadow: 0 2px 8px rgb(255, 255, 255);
   position: relative;
   z-index: 1;
   display: inline-block;
@@ -1383,7 +1386,7 @@ textarea {
 .automobile-kicker-highlight {
   color: var(--color-automobile-gold);
   font-weight: 800;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6), 0 0 20px color-mix(in srgb, var(--color-automobile-gold) 60%, transparent);
+  text-shadow: 0 2px 8px rgb(255, 255, 255), 0 0 20px color-mix(in srgb, var(--color-automobile-gold) 60%, transparent);
 }
 
 @media (max-width: 767px) {
