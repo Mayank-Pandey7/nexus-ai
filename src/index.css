@@ -1326,7 +1326,13 @@ textarea {
 
 .automobile-banner-vignette {
   pointer-events: none;
-  background: linear-gradient(rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.25) 22%, rgba(0,0,0,0.30) 45%, rgba(0,0,0,0.70) 88%, rgba(0,0,0,0.88) 100%);
+  background: linear-gradient(
+    rgba(0,0,0,0.60) 0%,
+    rgba(0,0,0,0.45) 20%,
+    rgba(0,0,0,0.50) 50%,
+    rgba(0,0,0,0.75) 88%,
+    rgba(0,0,0,0.90) 100%
+  );
   position: absolute;
   inset: 0;
 }
@@ -1350,6 +1356,17 @@ textarea {
   align-items: center;
   width: 100%;
   display: flex;
+  color: #ffffff;
+}
+
+.automobile-banner-bottom .modelling-headline {
+  color: #ffffff !important;
+  text-shadow: 0 1px 6px rgba(0,0,0,0.7), 0 3px 18px rgba(0,0,0,0.5);
+}
+
+.automobile-banner-bottom .modelling-body {
+  color: rgba(255,255,255,0.92) !important;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.65), 0 2px 12px rgba(0,0,0,0.45);
 }
 
 .automobile-kicker {
