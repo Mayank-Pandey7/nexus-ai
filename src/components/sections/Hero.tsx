@@ -1,6 +1,6 @@
 import React from 'react';
 const heroBanner = '/assets/images/hero-banner-models.png';
-const nexusaiLogo = '/assets/images/nexusai-logo-black.png';
+const nexusaiLogo = '/assets/images/nexusai-logo-white-sparkle.png';
 
 const Hero: React.FC = () => {
   return (

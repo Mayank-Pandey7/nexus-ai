@@ -1,5 +1,5 @@
 import React from 'react';
-const nexusaiLogoWhiteSparkle = '/assets/images/nexusai-logo-white-sparkle.png';
+const nexusaiLogoWhiteSparkle = '/assets/images/nexusai-logo-black.png';
 
 interface BenefitsProps {
   onKnowMore?: () => void;
