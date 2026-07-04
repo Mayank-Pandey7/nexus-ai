@@ -1323,7 +1323,7 @@ textarea {
 
 .automobile-banner-vignette {
   pointer-events: none;
-  background: linear-gradient(#000000a6 0%, #00000059 22%, #0000001a 45%, #00000059 75%, #000000b3 100%);
+  background: linear-gradient(#00000059 0%, #0000000f 22%, #0000 45%, rgba(37, 37, 37, 0.549) 88%, #000000d9 100%);
   position: absolute;
   inset: 0;
 }
