@@ -19,7 +19,7 @@ const HowItWorks: React.FC = () => {
           AI for <span className="automobile-kicker-highlight">Enterprise Retail</span>
         </h2>
         <div className="automobile-banner-bottom modelling-bottom">
-          <h3 className="modelling-headline">Revolutionizing Industries with Smart Tech.</h3>
+          <h3 className="modelling-headline" style={{ color: '#ffffff', textShadow: '0 1px 6px rgba(0,0,0,0.75), 0 3px 20px rgba(0,0,0,0.55)' }}>Revolutionizing Industries with Smart Tech.</h3>
           <p className="modelling-body">
             TrialShopy is breaking boundaries by moving from traditional, reactive approaches to proactive, data-driven, and intelligent systems. We integrate IoT, AI, and AR to transform your core operations.
           </p>
