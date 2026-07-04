@@ -21,10 +21,10 @@ const HowItWorks: React.FC = () => {
         <div className="automobile-banner-bottom modelling-bottom">
           <h3 className="modelling-headline">Revolutionizing Industries with Smart Tech.</h3>
           <p className="modelling-body">
-            Trialshopy breaks boundaries by moving from traditional, reactive approaches to proactive, data-driven, and intelligent systems. We integrate IoT, AI, and AR to transform your core retail and enterprise operations.
+            TrialShopy is breaking boundaries by moving from traditional, reactive approaches to proactive, data-driven, and intelligent systems. We integrate IoT, AI, and AR to transform your core operations.
           </p>
           <div className="home-section-cta-wrap">
-            <a className="home-cta-button automobile-cta-button" href="#">Learn More</a>
+            <a className="home-cta-button automobile-cta-button" href="https://nexus-ai-mayank.vercel.app/fashion-ecommerce-ai">Explore</a>
           </div>
         </div>
       </div>
@@ -33,3 +33,5 @@ const HowItWorks: React.FC = () => {
 };
 
 export default HowItWorks;
+
+
