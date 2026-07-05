@@ -15,7 +15,6 @@ import BlogView from './components/sections/BlogView';
 import CareerView from './components/sections/CareerView';
 import FashionEcommerceView from './components/sections/FashionEcommerceView';
 import AccessoriesTryonView from './components/sections/AccessoriesTryonView';
-import MakeupTryonView from './components/sections/MakeupTryonView';
 import SmartAssistantsView from './components/sections/SmartAssistantsView';
 import VisualizationView from './components/sections/VisualizationView';
 import TeamView from './components/sections/TeamView';
@@ -23,7 +22,7 @@ import TeamView from './components/sections/TeamView';
 
 const App: React.FC = () => {
   const [isLoginOpen, setIsLoginOpen] = useState(false);
-  const getViewFromPath = (path: string): 'home' | 'research' | 'company' | 'blog' | 'career' | 'fashion-ecommerce-ai' | 'accessories-try-on' | 'makeup-try-on' | 'smart-assistants-ai' | 'visualization-ai' | 'team' => {
+  const getViewFromPath = (path: string): 'home' | 'research' | 'company' | 'blog' | 'career' | 'fashion-ecommerce-ai' | 'accessories-try-on' | 'smart-assistants-ai' | 'visualization-ai' | 'team' => {
     switch (path) {
       case '/products': return 'home';
       case '/research': return 'research';
@@ -33,14 +32,13 @@ const App: React.FC = () => {
       case '/team': return 'team';
       case '/fashion-ecommerce-ai': return 'fashion-ecommerce-ai';
       case '/accessories-try-on': return 'accessories-try-on';
-      case '/makeup-try-on': return 'makeup-try-on';
       case '/smart-assistants-ai': return 'smart-assistants-ai';
       case '/visualization-ai': return 'visualization-ai';
       default: return 'home';
     }
   };
 
-  const [activeView, setActiveView] = useState<'home' | 'research' | 'company' | 'blog' | 'career' | 'fashion-ecommerce-ai' | 'accessories-try-on' | 'makeup-try-on' | 'smart-assistants-ai' | 'visualization-ai' | 'team'>(() => {
+  const [activeView, setActiveView] = useState<'home' | 'research' | 'company' | 'blog' | 'career' | 'fashion-ecommerce-ai' | 'accessories-try-on' | 'smart-assistants-ai' | 'visualization-ai' | 'team'>(() => {
     return getViewFromPath(window.location.pathname);
   });
 
@@ -150,7 +148,6 @@ const App: React.FC = () => {
           {activeView === 'career' && <CareerView onBackToHome={() => triggerViewChange('home')} />}
           {activeView === 'fashion-ecommerce-ai' && <FashionEcommerceView onBackToHome={() => triggerViewChange('home')} />}
           {activeView === 'accessories-try-on' && <AccessoriesTryonView onBackToHome={() => triggerViewChange('home')} />}
-          {activeView === 'makeup-try-on' && <MakeupTryonView onBackToHome={() => triggerViewChange('home')} />}
           {activeView === 'smart-assistants-ai' && <SmartAssistantsView onBackToHome={() => triggerViewChange('home')} />}
           {activeView === 'visualization-ai' && <VisualizationView onBackToHome={() => triggerViewChange('home')} />}
           {activeView === 'team' && (
