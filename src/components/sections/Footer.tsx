@@ -88,7 +88,7 @@ const Footer: React.FC = () => {
           <div className="site-footer-columns" data-reveal-stagger="true">
             <div className="site-footer-brand" data-reveal-item="true">
               <div style={{ display: 'inline-flex', alignItems: 'center', gap: '0.6rem', marginBottom: '1.25rem' }}>
-                <img src={nexusaiLogoWhite} alt="Trialshopy logo" style={{ width: '2.25rem', height: '2.25rem', objectFit: 'contain' }} />
+                <img src={nexusaiLogoWhite} alt="Nexus AI logo" style={{ width: '2.25rem', height: '2.25rem', objectFit: 'contain' }} />
                 <span className="logo-text-bold" style={{ fontFamily: 'var(--font-inter-tight), sans-serif', fontWeight: 700, fontSize: '1.35rem', color: '#ffffff', letterSpacing: '-0.02em' }}>Trialshopy</span>
               </div>
               <p className="site-footer-brand-text">AI-powered Smart AR Shopping Platform —<br />IoT, AI & AR integrations for enterprise retail.</p>
@@ -119,11 +119,11 @@ const Footer: React.FC = () => {
             <div className="site-footer-col site-footer-contact-col" data-reveal-item="true">
               <h3>Contact</h3>
               <p>NIT Patna Incubation Centre,<br />Ashok Rajpath, Patna<br />Bihar, India 800005</p>
-              <a href="mailto:support@trialshoppy.com">support@trialshoppy.com</a>
+              <a href="mailto:support@nexusai.com">support@nexusai.com</a>
               <a href="tel:9801159223">+91 9801159223</a>
             </div>
           </div>
-          <div className="site-footer-bottom">©2026 Trialshopy. All rights reserved.</div>
+          <div className="site-footer-bottom">©2026 Nexus AI. All rights reserved.</div>
         </div>
       </section>
     </footer>
