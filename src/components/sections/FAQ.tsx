@@ -10,16 +10,16 @@ const FAQ: React.FC = () => {
 
   const faqData: FAQItem[] = [
     {
-      question: "What is Nexus AI's Virtual Try-on technology?",
-      answer: "Nexus AI's Virtual Try-on uses advanced Generative AI to model clothing fit, fabric drape, and proportions instantly and pixel-truely across different body types and skin tones in under 4 seconds."
+      question: "What is Trialshopy's Virtual Try-on technology?",
+      answer: "Trialshopy's Virtual Try-on uses advanced Generative AI to model clothing fit, fabric drape, and proportions instantly and pixel-truely across different body types and skin tones in under 4 seconds."
     },
     {
-      question: "How fast does Nexus AI render virtual catalogue models?",
+      question: "How fast does Trialshopy render virtual catalogue models?",
       answer: "Our rendering pipeline processes and delivers high-fidelity on-model visual campaigns in about 4 seconds—roughly 10 times quicker than general-purpose diffusion models."
     },
     {
-      question: "Can Nexus AI integrate with native mobile applications?",
-      answer: "Yes. Nexus AI provides cross-platform mobile SDKs (iOS and Android) and web plugins designed to drop into modern frontend stacks seamlessly."
+      question: "Can Trailshopy integrate with native mobile applications?",
+      answer: "Yes. Trialshopy provides cross-platform mobile SDKs (iOS and Android) and web plugins designed to drop into modern frontend stacks seamlessly."
     },
     {
       question: "Does the 3D visualizer support real-time interactions?",
