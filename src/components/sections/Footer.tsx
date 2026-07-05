@@ -123,7 +123,7 @@ const Footer: React.FC = () => {
               <a href="tel:9801159223">+91 9801159223</a>
             </div>
           </div>
-          <div className="site-footer-bottom">©2026 Nexus AI. All rights reserved.</div>
+          <div className="site-footer-bottom">©2026 Trailshopy. All rights reserved.</div>
         </div>
       </section>
     </footer>
