@@ -28,13 +28,13 @@ const FAQ: React.FC = () => {
   ];
 
   return (
-    <section className="assistants-section" style={{ background: 'var(--color-background)' }}>
+    <section className="assistants-section" style={{ background: '#0f1115' }}>
       <div className="assistants-inner" style={{ maxWidth: '44rem' }}>
-        <h2 className="overview-heading" style={{ color: 'var(--primary-color)', marginBottom: '2.5rem' }} data-reveal="true">
+        <h2 className="overview-heading" style={{ color: 'white', marginBottom: '2.5rem' }} data-reveal="true">
           Frequently Asked <span className="overview-heading-highlight">Questions</span>
         </h2>
         
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '0.8rem' }}>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '0.9rem' }}>
           {faqData.map((item, idx) => {
             const isOpen = activeIndex === idx;
             return (
@@ -51,13 +51,13 @@ const FAQ: React.FC = () => {
                 onClick={() => setActiveIndex(isOpen ? null : idx)}
               >
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                  <h3 className="assistants-card-title" style={{ fontSize: '1.05rem', fontWeight: 600, color: 'var(--primary-color)' }}>
+                  <h3 className="assistants-card-title" style={{ fontSize: '1.05rem', fontWeight: 600, color: 'white' }}>
                     {item.question}
                   </h3>
                   <span style={{ 
                     fontSize: '1.25rem', 
                     fontWeight: 300, 
-                    color: 'var(--primary-color)',
+                    color: 'white',
                     transform: isOpen ? 'rotate(45deg)' : 'none',
                     transition: 'transform 0.3s cubic-bezier(0.25, 1, 0.5, 1)',
                     display: 'inline-block'
@@ -73,7 +73,7 @@ const FAQ: React.FC = () => {
                   transition: 'all 0.3s cubic-bezier(0.25, 1, 0.5, 1)',
                   marginTop: isOpen ? '0.75rem' : '0'
                 }}>
-                  <p className="assistants-card-text" style={{ margin: 0, fontSize: '0.9rem', color: 'var(--color-secondary-text)', lineHeight: '1.5' }}>
+                  <p className="assistants-card-text" style={{ margin: 0, fontSize: '0.9rem', color: 'white', lineHeight: '1.5' }}>
                     {item.answer}
                   </p>
                 </div>

@@ -15,7 +15,7 @@ const Hero: React.FC = () => {
       >
         <div className="hero-main-logo">
           <img src={nexusaiLogo} alt="Trialshopy logo" style={{ width: '12.5rem', height: '11.5rem', objectFit: 'contain', animation: 'logo-float 3s ease-in-out infinite' }} />
-          <span className="logo-text-bold" style={{ fontFamily: 'var(--font-inter-tight), sans-serif', fontWeight: 700, fontSize: '2.5rem', color: 'var(--primary-color)', letterSpacing: '-0.02em' }}>Trialshopy</span>
+          <span className="logo-text-bold" style={{ fontFamily: 'var(--font-inter-tight), sans-serif', fontWeight: 700, fontSize: '2.5rem', color: 'black', letterSpacing: '-0.02em' }}>Trialshopy</span>
         </div>
         <p className="hero-tagline">
           <span className="hero-tagline-accent">Smart AR Shopping Platform — Innovate. Transform. Grow.</span>
