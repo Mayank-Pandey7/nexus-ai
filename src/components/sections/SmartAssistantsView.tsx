@@ -324,7 +324,7 @@ const SmartAssistantsView: React.FC<SmartAssistantsViewProps> = ({ onBackToHome 
               10 Times <em className="assistants-compare-title-accent">Faster</em>
             </h2>
             <p className="assistants-compare-body">
-              Nexus AI’s simulation engine renders a brand-ready try-on in about 4 seconds — roughly 10× quicker than general-purpose models that take a full minute on the same input.
+              Trialshopy’s simulation engine renders a brand-ready try-on in about 4 seconds — roughly 10× quicker than general-purpose models that take a full minute on the same input.
             </p>
             <div className="assistants-compare-input">
               <span className="assistants-compare-input-label">Input Cloth and Model</span>
@@ -346,7 +346,7 @@ const SmartAssistantsView: React.FC<SmartAssistantsViewProps> = ({ onBackToHome 
                 <img src="https://stagingmedia.pointai.com/assets/images/pointai-model.png" alt="Nexus AI try-on result" className="assistants-compare-result-img" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
               </span>
               <div className="assistants-compare-result-body">
-                <h3 className="assistants-compare-result-title">Nexus AI — 4 Seconds</h3>
+                <h3 className="assistants-compare-result-title">Trailshopy — 10 Seconds</h3>
                 <p className="assistants-compare-result-copy">The power of simulation AI. Awarded for “The most advanced virtual try-on room.”</p>
               </div>
             </article>
@@ -355,7 +355,7 @@ const SmartAssistantsView: React.FC<SmartAssistantsViewProps> = ({ onBackToHome 
                 <img src="https://stagingmedia.pointai.com/assets/images/gemini-model.png" alt="Gemini try-on result" className="assistants-compare-result-img" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
               </span>
               <div className="assistants-compare-result-body">
-                <h3 className="assistants-compare-result-title">Gemini — 63 Seconds</h3>
+                <h3 className="assistants-compare-result-title">Gemini — 40 Seconds</h3>
                 <p className="assistants-compare-result-copy">The power of simulation AI. Awarded for “The most advanced virtual try-on room.”</p>
               </div>
             </article>
@@ -374,7 +374,7 @@ const SmartAssistantsView: React.FC<SmartAssistantsViewProps> = ({ onBackToHome 
               10 Times <em className="assistants-compare-title-accent">Cost Efficient</em>
             </h2>
             <p className="assistants-compare-body assistants-compare-body--centered">
-              Skip the per-call meter. Nexus AI delivers production-grade try-ons for a fraction of what OpenAI or Gemini charge — about 10× less for the same 30,000 generations.
+              Skip the per-call meter. Trailshopy delivers production-grade try-ons for a fraction of what OpenAI or Gemini charge — about 10× less for the same 30,000 generations.
             </p>
           </header>
 
@@ -423,16 +423,16 @@ const SmartAssistantsView: React.FC<SmartAssistantsViewProps> = ({ onBackToHome 
             <article className="assistants-cost-card assistants-cost-card--highlight">
               <header className="assistants-cost-card-head">
                 <span className="assistants-cost-card-logo" style={{ background: '#ffa600' }}>
-                  <img src="https://stagingmedia.pointai.com/assets/images/pointai-logo-black-icon.png" alt="" className="assistants-cost-card-logo-img" style={{ filter: 'brightness(0) invert(1)' }} />
+                  <img src="\assets\images\nexusai-logo-white-sparkle.png" alt="" className="assistants-cost-card-logo-img" style={{ filter: 'brightness(0) invert(1)' }} />
                 </span>
                 <span className="assistants-cost-card-price">
-                  <span className="assistants-cost-card-amount" style={{ color: 'var(--secondary-color)' }}>$11</span>
-                  <span className="assistants-cost-card-cadence">for 30k Try-ons</span>
+                  <span className="assistants-cost-card-amount" style={{ color: 'var(--secondary-color)' }}>$0</span>
+                  <span className="assistants-cost-card-cadence">for 3k Try-ons</span>
                 </span>
               </header>
-              <h3 className="assistants-cost-card-name">Nexus AI</h3>
+              <h3 className="assistants-cost-card-name">Trailshopy</h3>
               <p className="assistants-cost-card-meta">One Time Cost</p>
-              <p className="assistants-cost-card-copy">Nexus AI charges a flat $11 for the first 30k try-ons.</p>
+              <p className="assistants-cost-card-copy">Trialshopy charges a flat $0 for the first 3k try-ons.</p>
             </article>
           </div>
           <p className="assistants-compare-footer assistants-compare-footer--centered">Results based on comparison done in December 2025 with publicly available models.</p>
@@ -469,7 +469,7 @@ const SmartAssistantsView: React.FC<SmartAssistantsViewProps> = ({ onBackToHome 
                 <img src="https://stagingmedia.pointai.com/assets/images/accuracy-pointai.png" alt="Nexus AI Result" className="assistants-accuracy-img" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
               </span>
               <div className="assistants-accuracy-body">
-                <h3 className="assistants-accuracy-title">Nexus AI</h3>
+                <h3 className="assistants-accuracy-title">Trialshopy</h3>
                 <p className="assistants-accuracy-copy">The power of simulation AI. Awarded for "The most advanced virtual try-on room."</p>
               </div>
             </article>
@@ -494,7 +494,7 @@ const SmartAssistantsView: React.FC<SmartAssistantsViewProps> = ({ onBackToHome 
               Shopify app <span className="assistants-accent">integration</span>
             </h2>
             <p className="assistants-process-body">
-              From Shopify catalog sync to live shopper experiences, we deploy Nexus AI across your store — integrated with your theme, optimized for conversion, and ready in days.
+              From Shopify catalog sync to live shopper experiences, we deploy Trialshopy across your store — integrated with your theme, optimized for conversion, and ready in days.
             </p>
           </div>
 
