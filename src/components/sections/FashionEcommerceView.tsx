@@ -121,7 +121,7 @@ const FashionEcommerceView: React.FC<FashionEcommerceViewProps> = ({ onBackToHom
     },
     {
       title: "Customization",
-      copy: "Configure Nexus AI features, branding, recommendations, and analytics to match your ecommerce experience.",
+      copy: "Configure Trialshopy features, branding, recommendations, and analytics to match your ecommerce experience.",
       index: "02/03"
     },
     {
