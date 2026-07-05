@@ -4605,7 +4605,26 @@ textarea {
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
   padding: clamp(2.5rem, 6vw, 6rem) clamp(1.25rem, 4vw, 2.75rem);
+  position: relative;
+  isolation: isolate;
 }
+
+.fashion-size-rec-section::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 8rem;
+  pointer-events: none;
+  z-index: 0;
+  background: linear-gradient(
+    to top,
+    #ffffff 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
 .fashion-size-rec-inner {
   max-width: min(74rem, 100%);
   min-height: var(--fashion-post-hero-section-height);
@@ -4751,9 +4770,29 @@ textarea {
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
   padding: clamp(2.5rem, 6vw, 6rem) clamp(1.25rem, 4vw, 2.75rem);
+  position: relative;
+  isolation: isolate;
 }
+
+.fashion-digital-twin-section::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 12rem;
+  pointer-events: none;
+  z-index: 0;
+  background: linear-gradient(
+    to bottom,
+    #ffffff 0%,
+    #ffffff 25%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
 .fashion-digital-twin-inner {
-  max-width: min(74rem, 100%);
+  max-width: min(74rem, 99%);
   min-height: var(--fashion-post-hero-section-height);
   justify-content: flex-start;
   align-items: center;
@@ -4807,16 +4846,58 @@ textarea {
     margin-right: auto;
   }
 }
-.fashion-mix-match-section {
+.fashion-digital-twin-section {
   box-sizing: border-box;
-  background: #fff;
+  background-image: var(--asset-bg-blue);
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
   width: 100vw;
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
   padding: clamp(2.5rem, 6vw, 6rem) clamp(1.25rem, 4vw, 2.75rem);
+  position: relative;
+  isolation: isolate;
+}
+
+.fashion-digital-twin-section::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 4.5rem;
+  pointer-events: none;
+  z-index: 0;
+  background: linear-gradient(
+    to bottom,
+    #ffffff 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
+.fashion-digital-twin-section::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 4.5rem;
+  pointer-events: none;
+  z-index: 0;
+  background: linear-gradient(
+    to top,
+    #ffffff 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
+.fashion-digital-twin-copy {
+  position: relative;
+  z-index: 1;
 }
 .fashion-mix-match-inner {
-  max-width: min(74rem, 100%);
+  max-width: min(74rem, 99%);
   min-height: var(--fashion-post-hero-section-height);
   align-items: center;
   gap: clamp(1.5rem, 3vw, 3rem);
