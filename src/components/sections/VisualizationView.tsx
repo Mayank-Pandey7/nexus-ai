@@ -37,23 +37,8 @@ const VisualizationView: React.FC<VisualizationViewProps> = ({ onBackToHome }) =
 
   return (
     <div className="home-page visualization-root w-full tab-pop-in">
-      {/* Hero Section */}
+      {/* Hero Section (video background removed) */}
       <section className="visualization-hero visualization-hero--screen-top" aria-labelledby="visualization-hero-heading">
-        <div className="visualization-hero-media">
-          <video 
-            className="visualization-hero-video" 
-            src="https://stagingmedia.pointai.com/assets/media/3d-banner.mp4" 
-            autoPlay 
-            muted 
-            loop 
-            playsInline 
-            preload="auto" 
-            disablePictureInPicture 
-            controlsList="nodownload nofullscreen noplaybackrate"
-          />
-          <div className="visualization-hero-scrim" aria-hidden="true"></div>
-        </div>
-
         <div className="visualization-hero-ui">
           {/* Navigation Bar back link */}
           <div className="home-container" style={{ padding: '6.5rem 1.5rem 0', display: 'flex', justifyContent: 'flex-start', zIndex: 10 }}>
