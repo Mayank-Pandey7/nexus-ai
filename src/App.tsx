@@ -9,7 +9,7 @@ import Pricing from './components/sections/Pricing';
 import FAQ from './components/sections/FAQ';
 import Footer from './components/sections/Footer';
 import LoginModal from './components/sections/LoginModal';
-import ResearchView from './components/sections/ResearchView';
+import ProjectsView from "./components/sections/ProjectsView";
 import CompanyView from './components/sections/CompanyView';
 import BlogView from './components/sections/BlogView';
 import CareerView from './components/sections/CareerView';
@@ -22,10 +22,10 @@ import TeamView from './components/sections/TeamView';
 
 const App: React.FC = () => {
   const [isLoginOpen, setIsLoginOpen] = useState(false);
-  const getViewFromPath = (path: string): 'home' | 'research' | 'company' | 'blog' | 'career' | 'fashion-ecommerce-ai' | 'accessories-try-on' | 'smart-assistants-ai' | 'visualization-ai' | 'team' => {
+  const getViewFromPath = (path: string): 'home' | 'projects' | 'company' | 'blog' | 'career' | 'fashion-ecommerce-ai' | 'accessories-try-on' | 'smart-assistants-ai' | 'visualization-ai' | 'team' => {
     switch (path) {
       case '/products': return 'home';
-      case '/research': return 'research';
+      case '/projects': return 'projects';
       case '/company': return 'company';
       case '/blogs': return 'blog';
       case '/career': return 'career';
@@ -38,7 +38,7 @@ const App: React.FC = () => {
     }
   };
 
-  const [activeView, setActiveView] = useState<'home' | 'research' | 'company' | 'blog' | 'career' | 'fashion-ecommerce-ai' | 'accessories-try-on' | 'smart-assistants-ai' | 'visualization-ai' | 'team'>(() => {
+  const [activeView, setActiveView] = useState<'home' | 'projects' | 'company' | 'blog' | 'career' | 'fashion-ecommerce-ai' | 'accessories-try-on' | 'smart-assistants-ai' | 'visualization-ai' | 'team'>(() => {
     return getViewFromPath(window.location.pathname);
   });
 
@@ -142,7 +142,7 @@ const App: React.FC = () => {
         </div>
       ) : (
         <div className="flex-1">
-          {activeView === 'research' && <ResearchView onBackToHome={() => triggerViewChange('home')} />}
+          {activeView === 'projects' && (<ProjectsView onBackToHome={() => triggerViewChange('home')} />)}
           {activeView === 'company' && <CompanyView onBackToHome={() => triggerViewChange('home')} onExploreTeam={() => triggerViewChange('team')} />}
           {activeView === 'blog' && <BlogView onBackToHome={() => triggerViewChange('home')} />}
           {activeView === 'career' && <CareerView onBackToHome={() => triggerViewChange('home')} />}

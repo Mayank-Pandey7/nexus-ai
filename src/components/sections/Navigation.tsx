@@ -94,7 +94,7 @@ const Navigation: React.FC<NavigationProps> = ({ onGetStarted, activeView, onVie
                 </svg>
               </button>
             </div>
-            <Link className={`home-nav-link ${activeView === 'research' ? 'active' : ''}`} href="/research" onClick={() => onViewChange('research')}>Research</Link>
+            <Link className={`home-nav-link ${activeView === 'projects' ? 'active' : ''}`} href="/projects" onClick={() => onViewChange('projects')} > Projects</Link>
             <Link className={`home-nav-link ${activeView === 'company' ? 'active' : ''}`} href="/company" onClick={() => onViewChange('company')}>Company</Link>
             <Link className={`home-nav-link ${activeView === 'blog' ? 'active' : ''}`} href="/blogs" onClick={() => onViewChange('blog')}>Blogs</Link>
             <Link className={`home-nav-link ${activeView === 'career' ? 'active' : ''}`} href="/career" onClick={() => onViewChange('career')}>Career</Link>
@@ -204,7 +204,7 @@ const Navigation: React.FC<NavigationProps> = ({ onGetStarted, activeView, onVie
             <button type="button" className="home-mobile-menu-link" id="mobile-menu-products-trigger" onClick={() => setIsMobileProductsPanel(true)}>
               Products
             </button>
-            <Link className="home-mobile-menu-link" href="/research" onClick={() => { setIsMobileMenuOpen(false); onViewChange('research'); }}>Research</Link>
+            <Link className="home-mobile-menu-link" href="/projects" onClick={() => { setIsMobileMenuOpen(false); onViewChange('research'); }}>Projects</Link>
             <Link className="home-mobile-menu-link" href="/company" onClick={() => { setIsMobileMenuOpen(false); onViewChange('company'); }}>Company</Link>
             <Link className="home-mobile-menu-link" href="/blogs" onClick={() => { setIsMobileMenuOpen(false); onViewChange('blog'); }}>Blogs</Link>
             <Link className="home-mobile-menu-link" href="/career" onClick={() => { setIsMobileMenuOpen(false); onViewChange('career'); }}>Career</Link>

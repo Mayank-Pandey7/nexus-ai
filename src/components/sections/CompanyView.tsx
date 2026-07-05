@@ -118,7 +118,7 @@ const CompanyView: React.FC<CompanyViewProps> = ({ onBackToHome, onExploreTeam }
   const news = [
     {
       date: "March 15, 2024",
-      title: "TrialShopy launches AI-powered AR try-on platform for enterprise retail and e-commerce in India",
+      title: "How TrialShopy is empowering enterprises through IoT, AI and augmented reality integrations",
       image: "https://stagingmedia.pointai.com/assets/images/news/livemint.png",
       url: "#"
     },
@@ -130,7 +130,7 @@ const CompanyView: React.FC<CompanyViewProps> = ({ onBackToHome, onExploreTeam }
     },
     {
       date: "November 22, 2023",
-      title: "How TrialShopy is empowering enterprises through IoT, AI and augmented reality integrations",
+      title: "TrialShopy launches AI-powered AR try-on platform for enterprise retail and e-commerce in India",
       image: "https://stagingmedia.pointai.com/assets/images/news/china-speakers.png",
       url: "#"
     }
@@ -222,7 +222,7 @@ const CompanyView: React.FC<CompanyViewProps> = ({ onBackToHome, onExploreTeam }
         {/* Scroll cue at the bottom center */}
         <div className="scroll-cue" aria-hidden="true" style={{ position: 'absolute', bottom: '2rem', left: '50%', transform: 'translateX(-50%)' }}>
           <span className="scroll-cue-text">Scroll for more</span>
-          <span className="scroll-cue-line" style={{ background: 'rgba(0,0,0,0.25)' }}></span>
+          <span className="scroll-cue-line" style={{ background: '#fff' }}></span>
         </div>
       </section>
 

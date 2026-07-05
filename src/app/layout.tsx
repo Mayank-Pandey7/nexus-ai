@@ -12,7 +12,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
   // Map pathname to activeView for Navigation highlights
   let activeView: any = 'home';
-  if (pathname === '/research') activeView = 'research';
+  if (pathname === '/projects') activeView = "projects";
   else if (pathname === '/company') activeView = 'company';
   else if (pathname === '/blogs') activeView = 'blog';
   else if (pathname === '/career') activeView = 'career';

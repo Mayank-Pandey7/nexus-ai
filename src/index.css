@@ -3077,13 +3077,10 @@ textarea {
   animation: 1.35s cubic-bezier(.22, 1, .36, 1) both company-hero-image-fade, 20s cubic-bezier(.22, 1, .36, 1) both company-hero-ken-burns;
 }
 .company-hero-overlay {
-  z-index: 1;
-  pointer-events: none;
-  background: linear-gradient(#ffffffb8 0%, #ffffff59 38%, #0000 62%);
-  animation: 1.4s both company-hero-overlay-in;
-  position: absolute;
-  inset: 0;
-}
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: linear-gradient( to bottom, transparent 0%, rgba(0, 0, 0, 0.15) 40%, rgba(0, 0, 0, 0.5) 65%, rgba(0, 0, 0, 0.85) 85%, #000 100%);}
 .company-hero-header-row {
   z-index: 3;
   padding: 2rem 1.5rem 0;
@@ -3104,6 +3101,7 @@ textarea {
   padding: clamp(1.25rem, 4vw, 2rem) 1.25rem clamp(2rem, 5vw, 3rem);
   display: flex;
   position: relative;
+  top: -210px;
 }
 
 @media (max-width: 767px) {
@@ -3398,9 +3396,30 @@ textarea {
 }
 
 .company-news {
+  position: relative;
   background: #f3f3f3;
   padding: clamp(3.5rem, 8vw, 5.5rem) 0;
 }
+
+.company-news::before {
+  content: "";
+  position: absolute;
+  top: -180px;
+  left: 0;
+  width: 100%;
+  height: 180px;
+  background: linear-gradient(
+    to bottom,
+    #000000 0%,
+    #050505 15%,
+    #151515 35%,
+    #3a3a3a 55%,
+    #7a7a7a 75%,
+    #cfcfcf 92%,
+    #f3f3f3 100%
+  ); pointer-events: none;
+}
+
 .company-news-inner {
   flex-direction: column;
   display: flex;
