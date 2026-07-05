@@ -1395,6 +1395,7 @@ textarea {
   flex-direction: column;
   gap: 1.5rem;
   text-align: left;
+  order: 2;
 }
 
 .automobile-content h2.automobile-kicker {
@@ -1471,7 +1472,7 @@ textarea {
   color: color-mix(in srgb, var(--color-automobile-gold) 80%, white);
 }
 
-/* Right: contained image card */
+/* Right: contained image card (now moved to left via order) */
 .automobile-banner-visual {
   position: relative;
   width: 100%;
@@ -1480,6 +1481,7 @@ textarea {
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.1);
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  order: 1;
 }
 
 @media (min-width: 1024px) {
@@ -1540,6 +1542,8 @@ textarea {
     font-size: 0.95rem;
   }
 }
+
+/* --- ASSISTANTS SECTION --- */
 
 .assistants-section {
   box-sizing: border-box;
