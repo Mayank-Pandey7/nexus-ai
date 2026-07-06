@@ -160,20 +160,11 @@ const ProjectsView: React.FC<ResearchViewProps> = ({ onBackToHome }) => {
 
           <div className="research-simulative-overlay" style={{ background: 'transparent' }}>
             <div className="research-simulative-inner">
-              <header
-  className="project-simulative-copy"
+             <header
+  className="research-simulative-copy"
   data-reveal="true"
-  style={{
-    width: "100%",
-    maxWidth: "720px",
-    marginTop: "clamp(2.5rem, 15vw, 15rem)",
-    marginBottom: "4rem",
-    marginLeft: "auto",
-    marginRight: "2%",
-    alignSelf: "flex-end",
-    textAlign: "right"
-  }}
 >
+
                 <h2 id="research-simulative-heading" className="research-heading" style={{ fontSize: 'clamp(2.2rem, 4.5vw, 3.2rem)' }}>
                   From Content Generation to<br />
                   <span className="research-heading-highlight" style={{ textShadow: '0 0 20px rgba(232, 76, 53, 0.25)' }}>Reality Simulation</span>
