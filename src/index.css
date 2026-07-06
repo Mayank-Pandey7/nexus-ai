@@ -2894,7 +2894,7 @@ textarea {
   width: 100%;
   padding: clamp(2.25rem,5vw,3.75rem) 0 clamp(2.5rem,7vw,5rem);
   display: flex;
-  position: relative;
+  position: right;
 }
 .research-simulative-inner {
   flex-direction: column;
