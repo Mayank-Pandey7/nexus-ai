@@ -95,7 +95,7 @@ const ProjectsView: React.FC<ResearchViewProps> = ({ onBackToHome }) => {
                 
                 <article className="research-simulative-card reveal-hover-lift" data-reveal-item="true" style={{ marginBottom: '2rem' }}>
                   <img 
-                    src="https://stagingmedia.pointai.com/assets/images/Patent-Speed.jpg" 
+                    src="\assets\images\project (1).jpg" 
                     alt="10X Faster Rendering Speed" 
                     className="research-simulative-card-img" 
                   />
@@ -111,7 +111,7 @@ const ProjectsView: React.FC<ResearchViewProps> = ({ onBackToHome }) => {
 
                 <article className="research-simulative-card reveal-hover-lift" data-reveal-item="true" style={{ marginBottom: '2rem' }}>
                   <img 
-                    src="https://stagingmedia.pointai.com/assets/images/Patent-cost.jpg" 
+                    src="\assets\images\project (6).jpg" 
                     alt="Built for Enterprise Economics" 
                     className="research-simulative-card-img" 
                   />
@@ -126,7 +126,7 @@ const ProjectsView: React.FC<ResearchViewProps> = ({ onBackToHome }) => {
                 </article>
                  <article className="research-simulative-card reveal-hover-lift" data-reveal-item="true" style={{ marginBottom: '2rem' }}>
                   <img 
-                    src="https://stagingmedia.pointai.com/assets/images/Patent-cost.jpg" 
+                    src="\assets\images\project (5).jpg" 
                     alt="Built for Enterprise Economics" 
                     className="research-simulative-card-img" 
                   />
@@ -142,7 +142,7 @@ const ProjectsView: React.FC<ResearchViewProps> = ({ onBackToHome }) => {
 
                 <article className="research-simulative-card reveal-hover-lift" data-reveal-item="true" style={{ marginBottom: '2rem' }}>
                   <img 
-                    src="https://stagingmedia.pointai.com/assets/images/patent-accurate.jpg" 
+                    src="\assets\images\project (4).jpg" 
                     alt="Simulated Reality Not AI Guesswork" 
                     className="research-simulative-card-img" 
                   />
@@ -158,7 +158,7 @@ const ProjectsView: React.FC<ResearchViewProps> = ({ onBackToHome }) => {
 
                 <article className="research-simulative-card reveal-hover-lift" data-reveal-item="true" style={{ marginBottom: '2rem' }}>
                   <img 
-                    src="https://stagingmedia.pointai.com/assets/images/patent-accurate.jpg" 
+                    src="\assets\images\project (3).jpg" 
                     alt="Simulated Reality Not AI Guesswork" 
                     className="research-simulative-card-img" 
                   />
@@ -174,7 +174,7 @@ const ProjectsView: React.FC<ResearchViewProps> = ({ onBackToHome }) => {
 
                 <article className="research-simulative-card reveal-hover-lift" data-reveal-item="true" style={{ marginBottom: '2rem' }}>
                   <img 
-                    src="https://stagingmedia.pointai.com/assets/images/patent-accurate.jpg" 
+                    src="\assets\images\project (2).jpg" 
                     alt="Simulated Reality Not AI Guesswork" 
                     className="research-simulative-card-img" 
                   />
