@@ -2894,7 +2894,7 @@ textarea {
   width: 100%;
   padding: clamp(2.25rem,5vw,3.75rem) 0 clamp(2.5rem,7vw,5rem);
   display: flex;
-  position: right;
+  position: relative;
 }
 .research-simulative-inner {
   flex-direction: column;
@@ -2961,22 +2961,34 @@ textarea {
 @media (max-width:1024px){
   .research-copy{padding-right:2rem}
 }
-@media (max-width:767px){
-  .research-top-nav{padding-top:.75rem}
-  .research-copy{
-    align-self:center;
-    width:min(32rem,100%);
-    margin-top:0;
-    margin-bottom:auto;
-    padding:4rem 1rem 0;
-    transform:none;
+@media (max-width: 767px) {
+
+  .research-simulative-overlay{
+    display: block;
+    padding: 0;
   }
-  .research-text{font-size:clamp(.95rem,3.9vw,1.15rem)}
-  .research-cloud-wrap{
-    max-width:92vw;
-    height:clamp(22rem,92vw,30rem);
-    padding-top:5rem;
+
+  .research-simulative-copy{
+    position: static;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 2rem 1.5rem 3rem;
+    text-align: center;
+    background: #fff;
   }
+
+  .research-heading{
+    color: #1f2228;
+    font-size: clamp(2rem, 8vw, 2.8rem);
+  }
+
+  .research-text{
+    color: #444;
+    max-width: 100%;
+    margin: 1rem auto 0;
+  }
+
 }
 
 /* --- COMPANY PAGE STYLES --- */
