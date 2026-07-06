@@ -4,7 +4,7 @@ interface ResearchViewProps {
   onBackToHome: () => void;
 }
 
-const ResearchView: React.FC<ResearchViewProps> = ({ onBackToHome }) => {
+const ProjectsView: React.FC<ResearchViewProps> = ({ onBackToHome }) => {
   const patents = [
     { text: "Realistic Indoor Tennis Setup", className: "cloud-xl", left: "20%", top: "15%" },
     { text: "Talk to Anyone", className: "cloud-lg", left: "65%", top: "25%" },
@@ -37,7 +37,7 @@ const ResearchView: React.FC<ResearchViewProps> = ({ onBackToHome }) => {
       <section className="research-hero" aria-labelledby="research-heading" style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
         <div className="research-hero-bg" aria-hidden="true">
           <img 
-            src="https://stagingmedia.pointai.com/assets/images/patent-page-gallery.jpg" 
+            src="\assets\images\29.jpg" 
             alt="Patent documentation gallery" 
             className="research-hero-image" 
             style={{ opacity: 1 }}
@@ -88,11 +88,11 @@ const ResearchView: React.FC<ResearchViewProps> = ({ onBackToHome }) => {
 
         <div className="research-copy" style={{ zIndex: 2, alignSelf: 'flex-end', marginTop: 'auto', marginBottom: 'auto' }}>
           <h1 id="research-heading" className="research-heading" data-reveal-immediate="true" data-reveal-delay="0" style={{ fontSize: 'clamp(2.5rem, 5vw, 4.2rem)' }}>
-            <span style={{ fontFamily: '"Instrument Serif", Georgia, serif', fontStyle: 'italic', fontWeight: 400, textTransform: 'none' }}>Protected by</span><br />
-            <span className="research-heading-highlight" style={{ fontFamily: 'var(--font-inter-tight), sans-serif', fontStyle: 'normal', fontWeight: 700, textShadow: '0 0 20px rgba(232, 76, 53, 0.15)' }}>US &amp; Global Patents</span>
+            <span style={{ fontFamily: '"Instrument Serif", Georgia, serif', fontStyle: 'italic', fontWeight: 400, textTransform: 'none' }}>Our</span><br />
+            <span className="research-heading-highlight" style={{ fontFamily: 'var(--font-inter-tight), sans-serif', fontStyle: 'normal', fontWeight: 700, textShadow: '0 0 20px rgba(232, 76, 53, 0.15)' }}> Work &amp; Projects</span>
           </h1>
           <p className="research-text" data-reveal-immediate="true" data-reveal-delay="140" style={{ fontSize: '1.1rem', color: '#272930eb' }}>
-            Industry-leading innovation supported by internationally recognized patents spanning AI, virtual try-on, and digital visualization technologies.
+            Explore our extensive portfolio of AI, IoT, and software applications engineered for industry leaders.
           </p>
         </div>
 
@@ -160,12 +160,33 @@ const ResearchView: React.FC<ResearchViewProps> = ({ onBackToHome }) => {
 
           <div className="research-simulative-overlay" style={{ background: 'transparent' }}>
             <div className="research-simulative-inner">
-              <header className="research-simulative-copy" data-reveal="true" style={{ margin: 'clamp(2.5rem, 15vw, 15rem) auto 4rem', alignSelf: 'center', width: '100%', maxWidth: '720px' }}>
+              <header
+  className="project-simulative-copy"
+  data-reveal="true"
+  style={{
+    width: "100%",
+    maxWidth: "720px",
+    marginTop: "clamp(2.5rem, 15vw, 15rem)",
+    marginBottom: "4rem",
+    marginLeft: "auto",
+    marginRight: "2%",
+    alignSelf: "flex-end",
+    textAlign: "right"
+  }}
+>
                 <h2 id="research-simulative-heading" className="research-heading" style={{ fontSize: 'clamp(2.2rem, 4.5vw, 3.2rem)' }}>
                   From Content Generation to<br />
                   <span className="research-heading-highlight" style={{ textShadow: '0 0 20px rgba(232, 76, 53, 0.25)' }}>Reality Simulation</span>
                 </h2>
-                <p className="research-text" style={{ maxWidth: '60ch', margin: '1.5rem auto 0' }}>
+                <p
+  style={{
+    maxWidth: "55ch",
+    marginLeft: "auto",
+    marginRight: "0",
+    color: "#1a1c20",
+    textAlign: "right"
+  }}
+>
                   Generative AI imagines possibilities. Simulative AI understands reality. By modeling real-world behavior and interactions, it enables products, humans, and digital systems to respond, adapt, and evolve with unprecedented accuracy and contextual intelligence.
                 </p>
               </header>
@@ -229,4 +250,4 @@ const ResearchView: React.FC<ResearchViewProps> = ({ onBackToHome }) => {
   );
 };
 
-export default ResearchView;
+export default ProjectsView;
