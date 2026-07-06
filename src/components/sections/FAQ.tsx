@@ -28,21 +28,20 @@ const FAQ: React.FC = () => {
   ];
 
   return (
-    <section className="assistants-section" style={{ background: '#0f1115' }}>
+    <section className="faq-section">
       <div className="assistants-inner" style={{ maxWidth: '44rem' }}>
         <h2 className="overview-heading" style={{ color: 'white', marginBottom: '2.5rem' }} data-reveal="true">
           Frequently Asked <span className="overview-heading-highlight">Questions</span>
         </h2>
-        
+
         <div style={{ display: 'flex', flexDirection: 'column', gap: '0.9rem' }}>
           {faqData.map((item, idx) => {
             const isOpen = activeIndex === idx;
             return (
-              <div 
-                key={idx} 
-                className="reveal-hover-lift"
+              <div
+                key={idx}
+                className="faq-item reveal-hover-lift"
                 style={{
-                  background: 'var(--color-light-neutral)',
                   borderRadius: '1.25rem',
                   padding: '1.4rem 1.6rem',
                   cursor: 'pointer',
@@ -54,9 +53,9 @@ const FAQ: React.FC = () => {
                   <h3 className="assistants-card-title" style={{ fontSize: '1.05rem', fontWeight: 600, color: 'white' }}>
                     {item.question}
                   </h3>
-                  <span style={{ 
-                    fontSize: '1.25rem', 
-                    fontWeight: 300, 
+                  <span style={{
+                    fontSize: '1.25rem',
+                    fontWeight: 300,
                     color: 'white',
                     transform: isOpen ? 'rotate(45deg)' : 'none',
                     transition: 'transform 0.3s cubic-bezier(0.25, 1, 0.5, 1)',
@@ -65,7 +64,7 @@ const FAQ: React.FC = () => {
                     +
                   </span>
                 </div>
-                
+
                 <div style={{
                   maxHeight: isOpen ? '12rem' : '0',
                   opacity: isOpen ? 1 : 0,

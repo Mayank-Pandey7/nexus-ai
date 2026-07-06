@@ -1051,8 +1051,11 @@ textarea {
   font-weight: 500;
 }
 
+
 .fashion-heading-highlight {
-  color: var(--secondary-color);
+  color: #ffffff;
+  -webkit-text-fill-color: #ffffff !important;
+  background: none !important;
   text-shadow: 0 0 20px #f2a20080, 0 0 32px #f2a2004d;
 }
 
@@ -1562,7 +1565,7 @@ textarea {
   position: absolute;
   left: 0;
   right: 0;
-  height: 7rem;
+  height: 8rem;
   pointer-events: none;
   z-index: 0;
 }
@@ -9848,4 +9851,22 @@ html.automobile-snap-active {
 .premium-image-enter {
   opacity: 0;
   animation: premium-image-enter 0.9s cubic-bezier(0.25, 1, 0.5, 1) both;
+}
+
+/* --- FAQ SECTION --- */
+.faq-section {
+  box-sizing: border-box;
+  background: #0f1115;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  padding: 5rem 1.25rem;
+}
+
+.faq-item {
+  background: #1a1c22;
+}
+
+.faq-item:hover {
+  background: #22242c;
 }
