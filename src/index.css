@@ -1562,26 +1562,28 @@ textarea {
   position: absolute;
   left: 0;
   right: 0;
-  height: 8rem;
+  height: 7rem;
   pointer-events: none;
   z-index: 0;
 }
 
 .assistants-section::before {
   top: 0;
+  height: 13rem; 
   background: linear-gradient(
     to bottom,
-    #0f1115 10%,
-    rgba(15, 17, 21, 0) 100%
+    #0f1115 0%,
+    #ffffff 100%  
   );
 }
 
 .assistants-section::after {
   bottom: 0;
+  height: 14rem;
   background: linear-gradient(
     to top,
-    #000000 10%,
-    rgba(0, 0, 0, 0) 100%
+    #000000 0%,
+    #ffffff 100%   /* same fix yahan bhi */
   );
 }
 
