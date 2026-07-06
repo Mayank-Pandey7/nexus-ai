@@ -1,7 +1,28 @@
 import React, { useState } from 'react';
-const mnmModel1 = '/assets/images/mnm-model1.png';
-const mnmModel2 = '/assets/images/mnm-model2.png';
-const mnmModel3 = '/assets/images/mnm-model3.png';
+const mnmModel1 = '/assets/images/mnm/mnm-model1.png';
+const mnmModel2 = '/assets/images/mnm/mnm-model2.png';
+const mnmModel3 = '/assets/images/mnm/mnm-model3.png';
+const mnmModel4 = '/assets/images/mnm/mnm-model4.png';
+const mnmModel5 = '/assets/images/mnm/mnm-model5.png';
+const mnmModel6 = '/assets/images/mnm/mnm-model6.png';
+const mnmModel7 = '/assets/images/mnm/mnm-model7.png';
+const mnmModel8 = '/assets/images/mnm/mnm-model8.png';
+const mnmModel9 = '/assets/images/mnm/mnm-model9.png';
+const mnmMode20 = '/assets/images/mnm/mnm-mode20.png';
+const mnmMode21 = '/assets/images/mnm/mnm-mode21.png';
+const mnmMode22 = '/assets/images/mnm/mnm-mode22.png';
+const mnmMode23 = '/assets/images/mnm/mnm-mode23.png';
+const mnmMode24 = '/assets/images/mnm/mnm-mode24.png';
+const mnmMode25 = '/assets/images/mnm/mnm-mode25.png';
+const mnmMode26 = '/assets/images/mnm/mnm-mode26.png';
+const mnmMode27 = '/assets/images/mnm/mnm-mode27.png';
+const mnmMode28 = '/assets/images/mnm/mnm-mode28.png';
+const mnmMode29 = '/assets/images/mnm/mnm-mode29.png';
+const mnmMode30 = '/assets/images/mnm/mnm-mode30.png';
+const mnmMode31 = '/assets/images/mnm/mnm-mode31.png';
+const mnmMode32 = '/assets/images/mnm/mnm-mode32.png';
+const mnmMode33 = '/assets/images/mnm/mnm-mode33.png';
+const mnmMode34 = '/assets/images/mnm/mnm-mode34.png';
 
 interface FashionEcommerceViewProps {
   onBackToHome: () => void;
@@ -20,40 +41,48 @@ const FashionEcommerceView: React.FC<FashionEcommerceViewProps> = ({ onBackToHom
     { id: 1, img: "https://stagingmedia.pointai.com/assets/images/mnm/female/top/1.png", modelImg: mnmModel1, label: "Orange Knit Vest" },
     { id: 2, img: "https://stagingmedia.pointai.com/assets/images/mnm/female/top/2.png", modelImg: mnmModel2, label: "Beige Ribbed Crop" },
     { id: 3, img: "https://stagingmedia.pointai.com/assets/images/mnm/female/top/3.png", modelImg: mnmModel3, label: "Casual White Tee" },
-    { id: 4, img: "https://stagingmedia.pointai.com/assets/images/mnm/female/top/4.png", modelImg: mnmModel1, label: "Saffron Summer Top" }
+    { id: 4, img: "https://stagingmedia.pointai.com/assets/images/mnm/female/top/4.png", modelImg: mnmModel4, label: "Saffron Summer Top" }
   ];
 
   // Female Bottoms
   const femaleBottoms = [
-    { id: 1, img: "https://stagingmedia.pointai.com/assets/images/mnm/female/top/2.png", modelImg: mnmModel2, label: "Denim Straight Jeans" },
-    { id: 2, img: "https://stagingmedia.pointai.com/assets/images/mnm/female/top/3.png", modelImg: mnmModel1, label: "Tan Tailored Trousers" },
-    { id: 3, img: "https://stagingmedia.pointai.com/assets/images/mnm/female/top/4.png", modelImg: mnmModel3, label: "Wide-Leg Khakis" }
+    { id: 1, img: "/assets/images/Clothes/femalebottom1.png", modelImg: mnmModel5, label: "Denim Straight Jeans" },
+    { id: 2, img: "/assets/images/Clothes/femalebottom2.png", modelImg: mnmModel6, label: "Tan Tailored Trousers" },
+    { id: 3, img: "/assets/images/Clothes/femalebottom3.png", modelImg: mnmModel7, label: "Wide-Leg Khakis" },
+    { id: 4, img: "/assets/images/Clothes/femalebottom4.png", modelImg: mnmModel8, label: "Wide-Leg Khakis" }
   ];
 
   // Female Shoes
   const femaleShoes = [
-    { id: 1, img: "https://stagingmedia.pointai.com/assets/images/mnm/female/top/3.png", modelImg: mnmModel3, label: "Classic White Sneakers" },
-    { id: 2, img: "https://stagingmedia.pointai.com/assets/images/mnm/female/top/1.png", modelImg: mnmModel1, label: "Casual Canvas Mules" }
-  ];
+  { id: 1, img: "/assets/images/Clothes/femaleshoes1.jpeg", modelImg: mnmModel9, label: "Classic White Sneakers" },
+  { id: 2, img: "/assets/images/Clothes/femaleshoes2.jpeg", modelImg: mnmMode20, label: "Casual Canvas Mules" },
+  { id: 3, img: "/assets/images/Clothes/femaleshoes3.jpeg", modelImg: mnmMode21, label: "Casual Canvas Mules" },
+  { id: 4, img: "/assets/images/Clothes/femaleshoes4.jpeg", modelImg: mnmMode22, label: "Casual Canvas Mules" }
+];
 
   // Male Tops
   const maleTops = [
-    { id: 1, img: "https://stagingmedia.pointai.com/assets/images/mnm/female/top/1.png", modelImg: mnmModel3, label: "Orange Knit Vest" },
-    { id: 2, img: "https://stagingmedia.pointai.com/assets/images/mnm/female/top/2.png", modelImg: mnmModel2, label: "Beige Ribbed Crop" },
-    { id: 3, img: "https://stagingmedia.pointai.com/assets/images/mnm/female/top/3.png", modelImg: mnmModel1, label: "Casual White Tee" },
-    { id: 4, img: "https://stagingmedia.pointai.com/assets/images/mnm/female/top/4.png", modelImg: mnmModel3, label: "Saffron Summer Top" }
-  ];
+  { id: 1, img: "/assets/images/Clothes/maletop1.png", modelImg: mnmMode23, label: "Orange Knit Vest" },
+  { id: 2, img: "/assets/images/Clothes/maletop2.png", modelImg: mnmMode24, label: "Beige Ribbed Crop" },
+  { id: 3, img: "/assets/images/Clothes/maletop3.png", modelImg: mnmMode25, label: "Casual White Tee" },
+  { id: 4, img: "/assets/images/Clothes/maletop4.png", modelImg: mnmMode26, label: "Saffron Summer Top" }
+];
 
   // Male Bottoms
   const maleBottoms = [
-    { id: 1, img: "https://stagingmedia.pointai.com/assets/images/mnm/female/top/2.png", modelImg: mnmModel1, label: "Denim Straight Jeans" },
-    { id: 2, img: "https://stagingmedia.pointai.com/assets/images/mnm/female/top/3.png", modelImg: mnmModel3, label: "Tan Tailored Trousers" }
-  ];
+  { id: 1, img: "/assets/images/Clothes/malebottom1.png", modelImg: mnmMode27, label: "Denim Straight Jeans" },
+  { id: 2, img: "/assets/images/Clothes/malebottom2.png", modelImg: mnmMode28, label: "Tan Tailored Trousers" },
+  { id: 3, img: "/assets/images/Clothes/malebottom3.png", modelImg: mnmMode29, label: "Tan Tailored Trousers" },
+  { id: 4, img: "/assets/images/Clothes/malebottom2.png", modelImg: mnmMode30, label: "Tan Tailored Trousers" }
+];
 
   // Male Shoes
   const maleShoes = [
-    { id: 1, img: "https://stagingmedia.pointai.com/assets/images/mnm/female/top/3.png", modelImg: mnmModel2, label: "Classic White Sneakers" }
-  ];
+  { id: 1, img: "/assets/images/Clothes/maleshoes1.jpeg", modelImg: mnmMode31, label: "Classic White Sneakers" },
+  { id: 2, img: "/assets/images/Clothes/maleshoes2.jpeg", modelImg: mnmMode32, label: "Classic White Sneakers" },
+  { id: 3, img: "/assets/images/Clothes/maleshoes3.jpeg", modelImg: mnmMode33, label: "Classic White Sneakers" },
+  { id: 4, img: "/assets/images/Clothes/maleshoes4.jpeg", modelImg: mnmMode34, label: "Classic White Sneakers" }   
+];
 
   const getItemsForCategory = () => {
     if (gender === 'Female') {
