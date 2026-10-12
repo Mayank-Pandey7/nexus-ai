@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-const nexusaiLogo = '/assets/images/nexusai-logo-black.png';
 import { Link } from './Link';
 
 interface NavigationProps {
@@ -9,223 +8,259 @@ interface NavigationProps {
 }
 
 const Navigation: React.FC<NavigationProps> = ({ onGetStarted, activeView, onViewChange }) => {
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isMobileProductsPanel, setIsMobileProductsPanel] = useState(false);
-  const closeTimeout = React.useRef<any>(null);
-
-  const handleMouseEnter = () => {
-    if (closeTimeout.current) {
-      clearTimeout(closeTimeout.current);
-      closeTimeout.current = null;
-    }
-    setIsDropdownOpen(true);
-  };
-
-  const handleMouseLeave = () => {
-    closeTimeout.current = setTimeout(() => {
-      setIsDropdownOpen(false);
-    }, 150);
-  };
+  const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
-    return () => {
-      if (closeTimeout.current) {
-        clearTimeout(closeTimeout.current);
-      }
-    };
-  }, []);
-
-
-  useEffect(() => {
-    const handleOutsideClick = (e: MouseEvent) => {
-      const target = e.target as HTMLElement;
-      if (!target.closest('.home-nav-item-has-mega') && !target.closest('.home-products-dropdown')) {
-        setIsDropdownOpen(false);
+    const handleScroll = () => {
+      // Background activates once scrolled past 50px
+      if (window.scrollY > 50) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
       }
     };
 
-    document.addEventListener('click', handleOutsideClick);
-    return () => document.removeEventListener('click', handleOutsideClick);
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll(); // Initial check
+
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  useEffect(() => {
-    if (isMobileMenuOpen) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = '';
-      setIsMobileProductsPanel(false);
-    }
-    return () => {
-      document.body.style.overflow = '';
-    };
-  }, [isMobileMenuOpen]);
+  const textColor = isScrolled ? '#000000' : '#ffffff';
 
   return (
     <>
-      <header className="home-header">
-        <div className="home-header-inner">
-          <Link className="home-header-logo" href="/" onClick={() => onViewChange('home')} style={{ display: 'inline-flex', alignItems: 'center', gap: '0.6rem', textDecoration: 'none' }}>
-            <img src={nexusaiLogo} alt="Trialshopy logo" style={{ width: '2.25rem', height: '2.25rem', objectFit: 'contain' }} />
-            <span className="logo-text-bold" style={{ fontFamily: 'var(--font-inter-tight), sans-serif', fontWeight: 700, fontSize: '1.35rem', color: 'var(--primary-color)', letterSpacing: '-0.02em' }}>Trialshopy</span>
-          </Link>
-          
-          <nav className="home-nav" aria-label="Primary">
-            <div 
-              className="home-nav-item home-nav-item-has-mega"
-              onMouseEnter={handleMouseEnter}
-              onMouseLeave={handleMouseLeave}
-            >
-              <button 
-                type="button" 
-                className="home-nav-link" 
-                aria-haspopup="menu" 
-                aria-expanded={isDropdownOpen}
-                aria-controls="home-products-dropdown" 
-                id="home-products-menu-button"
-                onClick={(e) => {
-                  e.stopPropagation();
-                  setIsDropdownOpen(!isDropdownOpen);
-                }}
-              >
-                Products
-                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="dropdown-chevron-icon" style={{ transform: isDropdownOpen ? 'rotate(180deg)' : 'none' }}>
-                  <polyline points="6 9 12 15 18 9"></polyline>
-                </svg>
-              </button>
-            </div>
-            <Link className={`home-nav-link ${activeView === 'projects' ? 'active' : ''}`} href="/projects" onClick={() => onViewChange('projects')} > Projects</Link>
-            <Link className={`home-nav-link ${activeView === 'company' ? 'active' : ''}`} href="/company" onClick={() => onViewChange('company')}>Company</Link>
-            <Link className={`home-nav-link ${activeView === 'blog' ? 'active' : ''}`} href="/blogs" onClick={() => onViewChange('blog')}>Blogs</Link>
-            <Link className={`home-nav-link ${activeView === 'career' ? 'active' : ''}`} href="/career" onClick={() => onViewChange('career')}>Career</Link>
-          </nav>
-          
-          <div className="home-header-actions">
-            <button type="button" className="home-cta-button" onClick={onGetStarted}>Get Started</button>
-            <button 
-              type="button" 
-              className="home-mobile-menu-button" 
-              id="home-mobile-menu-button" 
-              aria-label="Open menu" 
-              aria-expanded={isMobileMenuOpen}
-              onClick={() => setIsMobileMenuOpen(true)}
-            >
-              <span className="home-mobile-menu-lines" aria-hidden="true"></span>
-            </button>
-          </div>
-        </div>
-        
-        {/* Products Dropdown (Mega Menu) */}
-        <div 
-          id="home-products-dropdown" 
-          className={`home-products-dropdown ${isDropdownOpen ? 'home-products-dropdown--open' : ''}`}
-          role="menu" 
-          aria-label="Products submenu" 
-          aria-hidden={!isDropdownOpen}
-          onMouseEnter={handleMouseEnter}
-          onMouseLeave={handleMouseLeave}
-        >
-          <div className="home-products-dropdown-inner">
-            <Link className="home-products-item" role="menuitem" style={{ '--item-index': 0 } as React.CSSProperties} href="/fashion-ecommerce-ai" onClick={() => { onViewChange('fashion-ecommerce-ai'); setIsDropdownOpen(false); }}>
-              <span className="home-products-item-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="1.65" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M6 8h12v11a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V8z"></path>
-                  <path d="M9 8V6a3 3 0 0 1 6 0v2"></path>
-                  <path d="M9 13h6"></path>
-                </svg>
-              </span>
-              <span className="home-products-item-content">
-                <span className="home-products-item-title">AI for Fashion Ecommerce</span>
-                <span className="home-products-item-text">One AI Engine, Endless Fashion Experiences.</span>
-              </span>
-            </Link>
-            <Link className="home-products-item" role="menuitem" style={{ '--item-index': 1 } as React.CSSProperties} href="/accessories-try-on" onClick={() => { onViewChange('accessories-try-on'); setIsDropdownOpen(false); }}>
-              <span className="home-products-item-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="1.65" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M4 12h2a4 4 0 0 1 4 4 4 4 0 0 1 8 0h2"></path>
-                  <circle cx="9" cy="14" r="2.25"></circle>
-                  <circle cx="15" cy="14" r="2.25"></circle>
-                  <path d="M11.25 14h1.5"></path>
-                </svg>
-              </span>
-              <span className="home-products-item-content">
-                <span className="home-products-item-title">Accessories Tryon</span>
-                <span className="home-products-item-text">Real-time try-on for eyewear, watches, jewelry, and more.</span>
-              </span>
-            </Link>
-            <Link className="home-products-item" role="menuitem" style={{ '--item-index': 2 } as React.CSSProperties} href="/smart-assistants-ai" onClick={() => { onViewChange('smart-assistants-ai'); setIsDropdownOpen(false); }}>
-              <span className="home-products-item-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="1.65" strokeLinecap="round" strokeLinejoin="round">
-                  <rect x="5" y="7" width="14" height="11" rx="2"></rect>
-                  <path d="M9 11v2M12 11v2M15 11v2"></path>
-                  <path d="M9 18h6"></path>
-                  <path d="M12 7V5"></path>
-                  <circle cx="12" cy="4" r="1"></circle>
-                </svg>
-              </span>
-              <span className="home-products-item-content">
-                <span className="home-products-item-title">AI for Smart Assistance</span>
-                <span className="home-products-item-text">Context-aware assistants for guided shopping and customer support.</span>
-              </span>
-            </Link>
-            <Link className="home-products-item" role="menuitem" style={{ '--item-index': 3 } as React.CSSProperties} href="/visualization-ai" onClick={() => { onViewChange('visualization-ai'); setIsDropdownOpen(false); }}>
-              <span className="home-products-item-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="1.65" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M12 3 21 8v8l-9 5-9-5V8l9-5z"></path>
-                  <path d="M12 3v10"></path>
-                  <path d="m3 8 9 5 9-5"></path>
-                  <path d="m12 13 9-5"></path>
-                </svg>
-              </span>
-              <span className="home-products-item-content">
-                <span className="home-products-item-title">AI for 3D Visualization</span>
-                <span className="home-products-item-text">High-fidelity digital twins, drag-and-drop 3D scene editing, and web-native performance.</span>
-              </span>
-            </Link>
-          </div>
-        </div>
-      </header>
-      
-      {/* Mobile Menu Overlay */}
-      <div className={`home-mobile-menu-overlay ${isMobileMenuOpen ? 'home-mobile-menu-overlay-open' : ''}`} id="home-mobile-menu-overlay">
-        <div className="home-mobile-menu-backdrop" id="home-mobile-menu-backdrop" onClick={() => setIsMobileMenuOpen(false)}></div>
-        <button type="button" className="home-mobile-menu-close" id="home-mobile-menu-close" aria-label="Close menu" onClick={() => setIsMobileMenuOpen(false)}>
-          Close
-        </button>
-        
-        {isMobileProductsPanel && (
-          <button type="button" className="home-mobile-menu-back" id="home-mobile-menu-back" aria-label="Go back" onClick={() => setIsMobileProductsPanel(false)}>
-            ←
-          </button>
-        )}
-        
-        <div className={`home-mobile-menu-panels ${isMobileProductsPanel ? 'home-mobile-menu-panels--products' : ''}`} id="home-mobile-menu-panels">
-          <div className="home-mobile-menu-panel home-mobile-menu-panel--main">
-            <button type="button" className="home-mobile-menu-link" id="mobile-menu-products-trigger" onClick={() => setIsMobileProductsPanel(true)}>
-              Products
-            </button>
-            <Link className="home-mobile-menu-link" href="/projects" onClick={() => { setIsMobileMenuOpen(false); onViewChange('research'); }}>Projects</Link>
-            <Link className="home-mobile-menu-link" href="/company" onClick={() => { setIsMobileMenuOpen(false); onViewChange('company'); }}>Company</Link>
-            <Link className="home-mobile-menu-link" href="/blogs" onClick={() => { setIsMobileMenuOpen(false); onViewChange('blog'); }}>Blogs</Link>
-            <Link className="home-mobile-menu-link" href="/career" onClick={() => { setIsMobileMenuOpen(false); onViewChange('career'); }}>Career</Link>
-            <button 
-              type="button" 
-              className="home-mobile-menu-link" 
-              onClick={() => {
-                setIsMobileMenuOpen(false);
-                onGetStarted();
+      <header 
+        className="drft-header" 
+        style={{ 
+          position: 'fixed', 
+          top: isScrolled ? '16px' : '0px', 
+          left: '50%',
+          transform: 'translateX(-50%)',
+          width: isScrolled ? 'min(980px, calc(100vw - 32px))' : '100%', 
+          height: isScrolled ? '64px' : '88px',
+          padding: isScrolled ? '0 28px' : '0 48px',
+          borderRadius: '9999px',
+          zIndex: 9999,
+          backgroundColor: isScrolled ? 'rgba(255, 255, 255, 0.42)' : 'transparent',
+          backdropFilter: isScrolled ? 'blur(32px) saturate(200%)' : 'none',
+          WebkitBackdropFilter: isScrolled ? 'blur(32px) saturate(200%)' : 'none',
+          border: isScrolled ? '1px solid rgba(255, 255, 255, 0.28)' : '1px solid transparent',
+          boxShadow: isScrolled 
+            ? '0 14px 34px -4px rgba(0, 0, 0, 0.08), 0 4px 12px -2px rgba(0, 0, 0, 0.04)' 
+            : 'none',
+          transition: 'width 0.4s cubic-bezier(0.16, 1, 0.3, 1), top 0.4s cubic-bezier(0.16, 1, 0.3, 1), height 0.4s cubic-bezier(0.16, 1, 0.3, 1), padding 0.4s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.4s cubic-bezier(0.16, 1, 0.3, 1), backdrop-filter 0.4s cubic-bezier(0.16, 1, 0.3, 1), border 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1)',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'space-between',
+          boxSizing: 'border-box'
+        }}
+      >
+        {/* Left: Brand Logo Wordmark */}
+        <div className="drft-header-left">
+          <Link className="drft-logo-link" href="/" onClick={() => onViewChange('home')}>
+            <span 
+              className="drft-logo-text"
+              style={{
+                fontSize: isScrolled ? '1.35rem' : '1.65rem',
+                fontWeight: 900,
+                letterSpacing: '0.12em',
+                color: textColor,
+                transition: 'font-size 0.3s ease, color 0.3s ease'
               }}
             >
-              Get Started
-            </button>
-          </div>
-          
-          <div className="home-mobile-menu-panel home-mobile-menu-panel--products">
-            <Link className="home-mobile-menu-link" href="/fashion-ecommerce-ai" onClick={() => { setIsMobileMenuOpen(false); onViewChange('fashion-ecommerce-ai'); }}>Fashion eCommerce</Link>
-            <Link className="home-mobile-menu-link" href="/accessories-try-on" onClick={() => { setIsMobileMenuOpen(false); onViewChange('accessories-try-on'); }}>Accessories Try-on</Link>
-            <Link className="home-mobile-menu-link" href="/smart-assistants-ai" onClick={() => { setIsMobileMenuOpen(false); onViewChange('smart-assistants-ai'); }}>Smart Assistance</Link>
-            <Link className="home-mobile-menu-link" href="/visualization-ai" onClick={() => { setIsMobileMenuOpen(false); onViewChange('visualization-ai'); }}>3D Visualization</Link>
-          </div>
+              DRFT DEON
+            </span>
+          </Link>
+        </div>
+
+        {/* Center: Minimal Streetwear Navigation */}
+        <nav 
+          className="drft-nav-links" 
+          aria-label="Main Navigation"
+          style={{
+            position: 'static',
+            transform: 'none',
+            gap: isScrolled ? '32px' : '44px',
+            transition: 'gap 0.3s ease'
+          }}
+        >
+          <Link 
+            className={`drft-nav-item ${activeView === 'fashion-ecommerce-ai' ? 'active' : ''}`}
+            href="/fashion-ecommerce-ai" 
+            onClick={() => onViewChange('fashion-ecommerce-ai')}
+            style={{ 
+              color: textColor, 
+              fontSize: '15px', 
+              fontWeight: 700, 
+              letterSpacing: '0.14em',
+              transition: 'color 0.3s ease' 
+            }}
+          >
+            SHOP
+          </Link>
+          <Link 
+            className={`drft-nav-item ${activeView === 'research' ? 'active' : ''}`}
+            href="/projects" 
+            onClick={() => onViewChange('research')}
+            style={{ 
+              color: textColor, 
+              fontSize: '15px', 
+              fontWeight: 700, 
+              letterSpacing: '0.14em',
+              transition: 'color 0.3s ease' 
+            }}
+          >
+            NEW DROPS
+          </Link>
+          <Link 
+            className={`drft-nav-item ${activeView === 'company' ? 'active' : ''}`}
+            href="/company" 
+            onClick={() => onViewChange('company')}
+            style={{ 
+              color: textColor, 
+              fontSize: '15px', 
+              fontWeight: 700, 
+              letterSpacing: '0.14em',
+              transition: 'color 0.3s ease' 
+            }}
+          >
+            ABOUT
+          </Link>
+          <Link 
+            className={`drft-nav-item ${activeView === 'career' ? 'active' : ''}`}
+            href="/career" 
+            onClick={() => onViewChange('career')}
+            style={{ 
+              color: textColor, 
+              fontSize: '15px', 
+              fontWeight: 700, 
+              letterSpacing: '0.14em',
+              transition: 'color 0.3s ease' 
+            }}
+          >
+            CONTACT
+          </Link>
+        </nav>
+
+        {/* Right: Modern Streetwear Utility Icons */}
+        <div 
+          className="drft-header-right"
+          style={{
+            gap: isScrolled ? '18px' : '26px',
+            transition: 'gap 0.3s ease'
+          }}
+        >
+          {/* Search Icon */}
+          <button 
+            type="button" 
+            className="drft-icon-btn" 
+            aria-label="Search"
+            onClick={() => alert("Search collection")}
+            style={{ color: textColor, transition: 'color 0.3s ease' }}
+          >
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" strokeWidth="1.9" strokeLinecap="round" strokeLinejoin="round">
+              <circle cx="11" cy="11" r="7.5"></circle>
+              <line x1="21" y1="21" x2="16.5" y2="16.5"></line>
+            </svg>
+          </button>
+
+          {/* Wishlist / Heart Icon */}
+          <button 
+            type="button" 
+            className="drft-icon-btn" 
+            aria-label="Wishlist"
+            onClick={() => alert("Wishlist")}
+            style={{ color: textColor, transition: 'color 0.3s ease' }}
+          >
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" strokeWidth="1.9" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+            </svg>
+          </button>
+
+          {/* Account Icon */}
+          <button 
+            type="button" 
+            className="drft-icon-btn" 
+            aria-label="Account"
+            onClick={onGetStarted}
+            style={{ color: textColor, transition: 'color 0.3s ease' }}
+          >
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" strokeWidth="1.9" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+              <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+          </button>
+
+          {/* Bag / Cart Icon */}
+          <button 
+            type="button" 
+            className="drft-icon-btn drft-cart-btn" 
+            aria-label="Cart"
+            onClick={() => alert("Bag: 0 items")}
+            style={{ color: textColor, transition: 'color 0.3s ease' }}
+          >
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" strokeWidth="1.9" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <path d="M16 10a4 4 0 0 1-8 0"></path>
+            </svg>
+          </button>
+
+          {/* Mobile Menu Button */}
+          <button 
+            type="button" 
+            className="drft-mobile-toggle" 
+            aria-label="Open Menu"
+            onClick={() => setIsMobileMenuOpen(true)}
+            style={{ color: textColor, transition: 'color 0.3s ease' }}
+          >
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2.2">
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+      </header>
+
+      {/* Mobile Drawer */}
+      <div className={`drft-mobile-drawer ${isMobileMenuOpen ? 'open' : ''}`}>
+        <div className="drft-drawer-header">
+          <span className="drft-logo-text">DRFT DEON</span>
+          <button 
+            type="button" 
+            className="drft-drawer-close-btn"
+            onClick={() => setIsMobileMenuOpen(false)}
+          >
+            &times;
+          </button>
+        </div>
+
+        <nav className="drft-drawer-nav">
+          <Link href="/fashion-ecommerce-ai" onClick={() => { setIsMobileMenuOpen(false); onViewChange('fashion-ecommerce-ai'); }}>
+            SHOP
+          </Link>
+          <Link href="/projects" onClick={() => { setIsMobileMenuOpen(false); onViewChange('research'); }}>
+            NEW DROPS
+          </Link>
+          <Link href="/company" onClick={() => { setIsMobileMenuOpen(false); onViewChange('company'); }}>
+            ABOUT
+          </Link>
+          <Link href="/career" onClick={() => { setIsMobileMenuOpen(false); onViewChange('career'); }}>
+            CONTACT
+          </Link>
+        </nav>
+
+        <div className="drft-drawer-footer">
+          <button 
+            type="button" 
+            className="drft-drawer-auth-btn"
+            onClick={() => { setIsMobileMenuOpen(false); onGetStarted(); }}
+          >
+            ACCOUNT / LOGIN
+          </button>
         </div>
       </div>
     </>

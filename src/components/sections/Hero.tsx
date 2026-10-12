@@ -1,35 +1,39 @@
 import React from 'react';
-const heroBanner = '/assets/images/hero-banner-models.png';
-const nexusaiLogo = '/assets/images/nexusai-logo-white-sparkle.png';
 
 const Hero: React.FC = () => {
   return (
-    <section className="hero-section">
-      <div className="scroll-cue" aria-hidden="true">
-        <span className="scroll-cue-text">Scroll for more</span>
-        <span className="scroll-cue-line"></span>
+    <section className="drft-hero-section">
+      {/* Background Image Container */}
+      <div className="drft-hero-bg-container">
+        <img
+          src="/hero_lifestyle_v3.webp"
+          alt="DRFT DEON - A New Standard in Streetwear"
+          className="drft-hero-img"
+          loading="eager"
+        />
+        <div className="drft-hero-overlay" />
       </div>
-      <div 
-        className="hero-copy" 
-        style={{ animation: 'gentle-fade-in 1.5s cubic-bezier(0.16, 1, 0.3, 1) both' }}
-      >
-        <div className="hero-main-logo">
-          <img src={nexusaiLogo} alt="Trialshopy logo" style={{ width: '12.5rem', height: '11.5rem', objectFit: 'contain', animation: 'logo-float 3s ease-in-out infinite' }} />
-          <span className="logo-text-bold" style={{ fontFamily: 'var(--font-inter-tight), sans-serif', fontWeight: 700, fontSize: '2.5rem', color: 'black', letterSpacing: '-0.02em' }}>Trialshopy</span>
+
+      {/* Hero Content Overlay */}
+      <div className="drft-hero-content-wrapper">
+        <div className="drft-hero-text-block">
+          <h1 className="drft-hero-headline">
+            A NEW<br />
+            STANDARD<br />
+            IN<br />
+            STREETWEAR
+          </h1>
+
+          <p className="drft-hero-tagline">
+            ELEVATING EVERYDAY ESSENTIALS
+          </p>
+
+          <div className="drft-hero-cta-wrapper">
+            <a href="/fashion-ecommerce-ai" className="drft-hero-cta-btn">
+              SHOP THE DROP
+            </a>
+          </div>
         </div>
-        <p className="hero-tagline">
-          <span className="hero-tagline-accent">Smart AR Shopping Platform — Innovate. Transform. Grow.</span>
-        </p>
-      </div>
-      <div 
-        className="hero-image-wrapper" 
-        style={{ 
-          background: 'none', 
-          boxShadow: 'none',
-          animation: 'gentle-fade-in 1.5s cubic-bezier(0.16, 1, 0.3, 1) 0.18s both'
-        }}
-      >
-        <img src={heroBanner} alt="Trialshopy AR shopping experience" className="hero-image" loading="eager" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'contain' }} />
       </div>
     </section>
   );

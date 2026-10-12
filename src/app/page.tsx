@@ -2,28 +2,25 @@
 import React from 'react';
 import { useRouter } from 'next/navigation';
 import Hero from '@/components/sections/Hero';
+import ExploreTheDrop from '@/components/sections/ExploreTheDrop';
 import Products from '@/components/sections/Products';
 import HowItWorks from '@/components/sections/HowItWorks';
-import Benefits from '@/components/sections/Benefits';
 import Testimonials from '@/components/sections/Testimonials';
-import Pricing from '@/components/sections/Pricing';
 import FAQ from '@/components/sections/FAQ';
 
 export default function Home() {
   const router = useRouter();
 
   return (
-    <div className="flex-1">
-      <main className="home-page">
-        <div className="home-container">
-          <Hero />
-          <Products onKnowMore={() => router.push('/fashion-ecommerce-ai')} />
-          <HowItWorks />
-          <Benefits onKnowMore={() => router.push('/smart-assistants-ai')} />
-          <Testimonials />
-          <Pricing />
-          <FAQ />
-        </div>
+    <div style={{ backgroundColor: '#000000', color: '#ffffff', minHeight: '100vh', width: '100%' }}>
+      <main style={{ padding: 0, margin: 0, width: '100%' }}>
+        <Hero />
+        {/* Section right after Hero */}
+        <ExploreTheDrop />
+        <Products onKnowMore={() => router.push('/fashion-ecommerce-ai')} />
+        <HowItWorks />
+        <Testimonials />
+        <FAQ />
       </main>
     </div>
   );
