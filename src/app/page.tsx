@@ -3,6 +3,7 @@ import React from 'react';
 import { useRouter } from 'next/navigation';
 import Hero from '@/components/sections/Hero';
 import ExploreTheDrop from '@/components/sections/ExploreTheDrop';
+import CategoryBanners from '@/components/sections/CategoryBanners';
 import Products from '@/components/sections/Products';
 import HowItWorks from '@/components/sections/HowItWorks';
 import Testimonials from '@/components/sections/Testimonials';
@@ -17,6 +18,8 @@ export default function Home() {
         <Hero />
         {/* Section right after Hero */}
         <ExploreTheDrop />
+        {/* Category Banners matching user screenshot */}
+        <CategoryBanners onSelectCategory={() => router.push('/fashion-ecommerce-ai')} />
         <Products onKnowMore={() => router.push('/fashion-ecommerce-ai')} />
         <HowItWorks />
         <Testimonials />
