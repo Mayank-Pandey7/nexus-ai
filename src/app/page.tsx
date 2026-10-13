@@ -5,8 +5,7 @@ import Hero from '@/components/sections/Hero';
 import ExploreTheDrop from '@/components/sections/ExploreTheDrop';
 import CategoryBanners from '@/components/sections/CategoryBanners';
 import Products from '@/components/sections/Products';
-import HowItWorks from '@/components/sections/HowItWorks';
-import Testimonials from '@/components/sections/Testimonials';
+import PhilosophySection from '@/components/sections/PhilosophySection';
 import FAQ from '@/components/sections/FAQ';
 
 export default function Home() {
@@ -21,8 +20,8 @@ export default function Home() {
         {/* Category Banners matching user screenshot */}
         <CategoryBanners onSelectCategory={() => router.push('/fashion-ecommerce-ai')} />
         <Products onKnowMore={() => router.push('/fashion-ecommerce-ai')} />
-        <HowItWorks />
-        <Testimonials />
+        {/* The Philosophy section directly after FEATURED COLLECTION / LATEST DROPS */}
+        <PhilosophySection onReadStory={() => router.push('/company')} />
         <FAQ />
       </main>
     </div>

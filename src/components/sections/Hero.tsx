@@ -1,4 +1,7 @@
+"use client";
+
 import React from 'react';
+import { motion } from 'motion/react';
 
 const Hero: React.FC = () => {
   return (
@@ -14,26 +17,79 @@ const Hero: React.FC = () => {
         <div className="drft-hero-overlay" />
       </div>
 
-      {/* Hero Content Overlay */}
+      {/* Hero Content Overlay with Smooth Floating Animation */}
       <div className="drft-hero-content-wrapper">
-        <div className="drft-hero-text-block">
-          <h1 className="drft-hero-headline">
+        <motion.div 
+          className="drft-hero-text-block"
+          initial={{ y: 0 }}
+          animate={{ 
+            y: [-6, 6, -6],
+            rotate: [-0.3, 0.3, -0.3]
+          }}
+          transition={{
+            duration: 6,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+        >
+          <motion.h1 
+            className="drft-hero-headline"
+            animate={{ 
+              y: [-3, 3, -3] 
+            }}
+            transition={{
+              duration: 5,
+              repeat: Infinity,
+              ease: "easeInOut"
+            }}
+          >
             A NEW<br />
             STANDARD<br />
             IN<br />
             STREETWEAR
-          </h1>
+          </motion.h1>
 
-          <p className="drft-hero-tagline">
+          <motion.p 
+            className="drft-hero-tagline"
+            animate={{ 
+              y: [-2, 2, -2] 
+            }}
+            transition={{
+              duration: 5.5,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: 0.2
+            }}
+          >
             ELEVATING EVERYDAY ESSENTIALS
-          </p>
+          </motion.p>
 
-          <div className="drft-hero-cta-wrapper">
-            <a href="/fashion-ecommerce-ai" className="drft-hero-cta-btn">
+          <motion.div 
+            className="drft-hero-cta-wrapper"
+            animate={{ 
+              y: [-3, 3, -3] 
+            }}
+            transition={{
+              duration: 4.8,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: 0.4
+            }}
+          >
+            <motion.a 
+              href="/fashion-ecommerce-ai" 
+              className="drft-hero-cta-btn"
+              whileHover={{ 
+                scale: 1.05,
+                y: -4,
+                boxShadow: "0 10px 25px rgba(255, 255, 255, 0.2)"
+              }}
+              whileTap={{ scale: 0.98 }}
+            >
               SHOP THE DROP
-            </a>
-          </div>
-        </div>
+            </motion.a>
+          </motion.div>
+        </motion.div>
       </div>
     </section>
   );

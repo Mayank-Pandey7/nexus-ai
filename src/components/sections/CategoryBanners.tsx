@@ -55,26 +55,10 @@ const CategoryBanners: React.FC<CategoryBannersProps> = ({ onSelectCategory }) =
     <section className="w-full bg-[#000000] text-white select-none">
       {/* Top Value Proposition Ticker / Ribbon matching DRFT DEON reference */}
       <div 
-        style={{
-          width: '100%',
-          backgroundColor: '#000000',
-          borderTop: '1px solid #171717',
-          borderBottom: '1px solid #171717',
-          height: '34px',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          padding: '0 16px',
-        }}
+        className="w-full bg-[#000000] border-t border-b border-[#171717] h-[34px] sm:h-[38px] flex items-center justify-center px-3 sm:px-6 overflow-x-auto [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
       >
         <div 
-          style={{
-            width: '100%',
-            maxWidth: '1080px',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'space-between',
-          }}
+          className="w-full max-w-[1080px] flex items-center justify-between min-w-[540px] md:min-w-0"
         >
           {tickerItems.map((item, idx) => (
             <React.Fragment key={idx}>
@@ -111,12 +95,12 @@ const CategoryBanners: React.FC<CategoryBannersProps> = ({ onSelectCategory }) =
       </div>
 
       {/* 4 Column Category Hero Showcase */}
-      <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-0 bg-[#000000]">
+      <div className="w-full grid grid-cols-2 md:grid-cols-4 gap-0 bg-[#000000]">
         {categories.map((cat) => (
           <div
             key={cat.id}
             onClick={() => onSelectCategory && onSelectCategory(cat.id)}
-            className="group relative h-[360px] sm:h-[420px] md:h-[480px] lg:h-[520px] w-full overflow-hidden cursor-pointer border-b sm:border-b-0 sm:border-r border-[#151515] last:border-r-0"
+            className="group relative h-[300px] sm:h-[380px] md:h-[440px] lg:h-[520px] w-full overflow-hidden cursor-pointer border-b md:border-b-0 border-r border-[#151515] [&:nth-child(2n)]:border-r-0 md:[&:nth-child(2n)]:border-r md:last:border-r-0"
           >
             {/* Background Image with hover zoom & dark aesthetic */}
             <div
@@ -131,13 +115,13 @@ const CategoryBanners: React.FC<CategoryBannersProps> = ({ onSelectCategory }) =
             <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-black/35 group-hover:from-black/60 group-hover:via-black/10 transition-colors duration-500" />
 
             {/* Centered Editorial Title & Button */}
-            <div className="absolute inset-0 flex flex-col items-center justify-center p-6 text-center z-10">
-              <h3 className="text-2xl sm:text-3xl md:text-[28px] lg:text-[30px] font-black tracking-[0.14em] uppercase text-white drop-shadow-[0_4px_12px_rgba(0,0,0,0.8)] transition-transform duration-300 group-hover:-translate-y-1">
+            <div className="absolute inset-0 flex flex-col items-center justify-center p-4 sm:p-6 text-center z-10">
+              <h3 className="text-xl sm:text-2xl md:text-[24px] lg:text-[30px] font-black tracking-[0.12em] sm:tracking-[0.14em] uppercase text-white drop-shadow-[0_4px_12px_rgba(0,0,0,0.8)] transition-transform duration-300 group-hover:-translate-y-1">
                 {cat.title}
               </h3>
               
-              <div className="mt-3 flex items-center justify-center">
-                <span className="text-[11px] sm:text-[12px] tracking-[0.25em] font-semibold uppercase text-white/90 border-b border-white/60 pb-0.5 group-hover:border-white group-hover:text-white transition-all duration-300">
+              <div className="mt-2.5 sm:mt-3 flex items-center justify-center">
+                <span className="text-[10px] sm:text-[11px] md:text-[12px] tracking-[0.22em] sm:tracking-[0.25em] font-semibold uppercase text-white/90 border-b border-white/60 pb-0.5 group-hover:border-white group-hover:text-white transition-all duration-300">
                   {cat.linkText}
                 </span>
               </div>

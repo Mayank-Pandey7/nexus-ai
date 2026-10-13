@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { usePathname } from 'next/navigation';
 import Navigation from '@/components/sections/Navigation';
 import Footer from '@/components/sections/Footer';
+import FluidGradientText from '@/components/ui/FluidGradientText';
 import LoginModal from '@/components/sections/LoginModal';
 import '@/index.css';
 
@@ -77,15 +78,20 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <meta name="description" content="Trialshopy is an AI-powered Smart AR Shopping Platform integrating IoT, AI, and Augmented Reality to transform enterprise retail — incubated at NIT Patna." />
         <link rel="icon" href="/favicon.png" />
       </head>
-      <body style={{ margin: 0, padding: 0, backgroundColor: '#000000', color: '#ffffff' }}>
+      <body style={{ margin: 0, padding: 0, backgroundColor: '#000000', color: '#ffffff', overflowX: 'hidden', width: '100%', maxWidth: '100%' }}>
         <Navigation 
           onGetStarted={() => setIsLoginOpen(true)} 
           activeView={activeView} 
           onViewChange={() => {}} 
         />
-        <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
+        <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh', width: '100%', overflowX: 'hidden' }}>
           {children}
         </div>
+        {pathname !== '/team' && (
+          <div className="w-full bg-black text-white overflow-hidden pt-12 md:pt-20 pb-0">
+            <FluidGradientText text="DRFT DEON" />
+          </div>
+        )}
         {pathname !== '/team' && <Footer />}
         <LoginModal isOpen={isLoginOpen} onClose={() => setIsLoginOpen(false)} />
       </body>

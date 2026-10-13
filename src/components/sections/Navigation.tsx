@@ -35,12 +35,12 @@ const Navigation: React.FC<NavigationProps> = ({ onGetStarted, activeView, onVie
         className="drft-header" 
         style={{ 
           position: 'fixed', 
-          top: isScrolled ? '16px' : '0px', 
+          top: isScrolled ? '12px' : '0px', 
           left: '50%',
           transform: 'translateX(-50%)',
-          width: isScrolled ? 'min(980px, calc(100vw - 32px))' : '100%', 
-          height: isScrolled ? '64px' : '88px',
-          padding: isScrolled ? '0 28px' : '0 48px',
+          width: isScrolled ? 'min(980px, calc(100vw - 24px))' : '100%', 
+          height: isScrolled ? '60px' : '88px',
+          padding: isScrolled ? '0 16px' : '0 24px',
           borderRadius: '9999px',
           zIndex: 9999,
           backgroundColor: isScrolled ? 'rgba(255, 255, 255, 0.42)' : 'transparent',
@@ -57,21 +57,37 @@ const Navigation: React.FC<NavigationProps> = ({ onGetStarted, activeView, onVie
           boxSizing: 'border-box'
         }}
       >
-        {/* Left: Brand Logo Wordmark */}
-        <div className="drft-header-left">
-          <Link className="drft-logo-link" href="/" onClick={() => onViewChange('home')}>
-            <span 
-              className="drft-logo-text"
+        {/* Left: Brand Logo Wordmark matching custom typography */}
+        <div 
+          className="drft-header-left"
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            height: '100%',
+          }}
+        >
+          <Link 
+            className="drft-logo-link" 
+            href="/" 
+            onClick={() => onViewChange('home')}
+            style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              lineHeight: 1,
+            }}
+          >
+            <img 
+              src={isScrolled ? '/drft_deon_logo_black.png' : '/drft_deon_logo_white.png'}
+              alt="DRFT DEON"
               style={{
-                fontSize: isScrolled ? '1.35rem' : '1.65rem',
-                fontWeight: 900,
-                letterSpacing: '0.12em',
-                color: textColor,
-                transition: 'font-size 0.3s ease, color 0.3s ease'
+                height: isScrolled ? '21px' : '25px',
+                width: 'auto',
+                display: 'block',
+                objectFit: 'contain',
+                transform: 'translateY(1.5px)',
+                transition: 'height 0.3s ease, filter 0.3s ease, transform 0.3s ease'
               }}
-            >
-              DRFT DEON
-            </span>
+            />
           </Link>
         </div>
 
@@ -228,7 +244,16 @@ const Navigation: React.FC<NavigationProps> = ({ onGetStarted, activeView, onVie
       {/* Mobile Drawer */}
       <div className={`drft-mobile-drawer ${isMobileMenuOpen ? 'open' : ''}`}>
         <div className="drft-drawer-header">
-          <span className="drft-logo-text">DRFT DEON</span>
+          <img 
+            src="/drft_deon_logo_white.png"
+            alt="DRFT DEON"
+            style={{
+              height: '22px',
+              width: 'auto',
+              display: 'block',
+              objectFit: 'contain'
+            }}
+          />
           <button 
             type="button" 
             className="drft-drawer-close-btn"
