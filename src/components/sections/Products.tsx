@@ -17,21 +17,21 @@ const products = [
     title: 'TECHNICAL CARGO PANT // SLATE',
     price: '₹3,499',
     category: 'BOTTOMS',
-    image: '/assets/images/p1.jpg'
+    image: '/images/p1.jpg'
   },
   {
     id: 3,
     title: 'RELAXED DROP-SHOULDER HOODIE',
     price: '₹3,999',
     category: 'OUTERWEAR',
-    image: '/assets/images/p2.jpg'
+    image: '/images/p2.jpg'
   },
   {
     id: 4,
     title: 'OVERSIZED HEAVYWEIGHT TEE // CHALK',
     price: '₹1,999',
     category: 'ESSENTIALS',
-    image: '/assets/images/p3.jpg'
+    image: '/images/p3.jpg'
   }
 ];
 
