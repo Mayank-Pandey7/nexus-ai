@@ -77,7 +77,11 @@ const Hero: React.FC = () => {
             }}
           >
             <motion.a 
-              href="/fashion-ecommerce-ai" 
+              href="#shop" 
+              onClick={(e) => {
+                e.preventDefault();
+                document.querySelector('.drft-products-section')?.scrollIntoView({ behavior: 'smooth' });
+              }}
               className="drft-hero-cta-btn"
               whileHover={{ 
                 scale: 1.05,
