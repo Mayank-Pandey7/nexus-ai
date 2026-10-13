@@ -10,20 +10,20 @@ const FAQ: React.FC = () => {
 
   const faqData: FAQItem[] = [
     {
-      question: "What is Trialshopy's Virtual Try-on technology?",
-      answer: "Trialshopy's Virtual Try-on uses advanced Generative AI to model clothing fit, fabric drape, and proportions instantly and pixel-truely across different body types and skin tones in under 4 seconds."
+      question: "What makes DRFT DEON streetwear different?",
+      answer: "Every DRFT DEON piece is engineered with custom heavyweight cottons, pre-shrunk fabrics, and architectural drop-shoulder silhouettes designed for durability, structure, and effortless everyday wear."
     },
     {
-      question: "How fast does Trialshopy render virtual catalogue models?",
-      answer: "Our rendering pipeline processes and delivers high-fidelity on-model visual campaigns in about 4 seconds—roughly 10 times quicker than general-purpose diffusion models."
+      question: "How do your oversized silhouettes fit?",
+      answer: "Our garments are intentionally tailored with a relaxed, boxy streetwear fit. We recommend staying true to your standard size for the intended oversized drape, or sizing down if you prefer a closer fit."
     },
     {
-      question: "Can Trailshopy integrate with native mobile applications?",
-      answer: "Yes. Trialshopy provides cross-platform mobile SDKs (iOS and Android) and web plugins designed to drop into modern frontend stacks seamlessly."
+      question: "How often do you release new drops?",
+      answer: "We release limited drops in curated capsule collections. Quantities are strictly limited to maintain quality control and uniqueness. Once a drop sells out, restocks are not guaranteed."
     },
     {
-      question: "Does the 3D visualizer support real-time interactions?",
-      answer: "Yes, our web-native 3D visualization platform supports smooth drag-and-drop scene editing, real-time rotations, lighting adaptation, and ultra-high-fidelity digital twins."
+      question: "What is your shipping and return policy?",
+      answer: "Orders are processed within 24-48 hours with express domestic delivery. We offer hassle-free 7-day exchanges and returns on all unworn items with original tags intact."
     }
   ];
 

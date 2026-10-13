@@ -16,19 +16,19 @@ const Footer: React.FC = () => {
         {/* Links 1 */}
         <div className="drft-footer-col">
           <h4 className="drft-footer-col-title">COLLECTIONS</h4>
-          <a href="/fashion-ecommerce-ai" className="drft-footer-link">OVERSIZED TEES</a>
-          <a href="/fashion-ecommerce-ai" className="drft-footer-link">HOODIES & SWEATS</a>
-          <a href="/fashion-ecommerce-ai" className="drft-footer-link">CARGOS & PANTS</a>
-          <a href="/fashion-ecommerce-ai" className="drft-footer-link">ACCESSORIES</a>
+          <a href="#shop" onClick={(e) => { e.preventDefault(); document.querySelector('.drft-products-section')?.scrollIntoView({ behavior: 'smooth' }); }} className="drft-footer-link">OVERSIZED TEES</a>
+          <a href="#shop" onClick={(e) => { e.preventDefault(); document.querySelector('.drft-products-section')?.scrollIntoView({ behavior: 'smooth' }); }} className="drft-footer-link">HOODIES & SWEATS</a>
+          <a href="#shop" onClick={(e) => { e.preventDefault(); document.querySelector('.drft-products-section')?.scrollIntoView({ behavior: 'smooth' }); }} className="drft-footer-link">CARGOS & PANTS</a>
+          <a href="#shop" onClick={(e) => { e.preventDefault(); document.querySelector('.drft-products-section')?.scrollIntoView({ behavior: 'smooth' }); }} className="drft-footer-link">ACCESSORIES</a>
         </div>
 
         {/* Links 2 */}
         <div className="drft-footer-col">
           <h4 className="drft-footer-col-title">INFORMATION</h4>
-          <a href="/company" className="drft-footer-link">OUR STORY</a>
-          <a href="/career" className="drft-footer-link">CAREERS</a>
-          <a href="/blogs" className="drft-footer-link">EDITORIAL</a>
-          <a href="#" className="drft-footer-link">SHIPPING & RETURNS</a>
+          <a href="#philosophy" onClick={(e) => { e.preventDefault(); document.querySelector('.drft-philosophy-section')?.scrollIntoView({ behavior: 'smooth' }); }} className="drft-footer-link">OUR STORY</a>
+          <a href="#philosophy" onClick={(e) => { e.preventDefault(); document.querySelector('.drft-philosophy-section')?.scrollIntoView({ behavior: 'smooth' }); }} className="drft-footer-link">THE PHILOSOPHY</a>
+          <a href="#faq" onClick={(e) => { e.preventDefault(); document.querySelector('.faq-section')?.scrollIntoView({ behavior: 'smooth' }); }} className="drft-footer-link">FAQ & HELP</a>
+          <a href="#faq" onClick={(e) => { e.preventDefault(); document.querySelector('.faq-section')?.scrollIntoView({ behavior: 'smooth' }); }} className="drft-footer-link">SHIPPING & RETURNS</a>
         </div>
 
         {/* Links 3 - Newsletter */}

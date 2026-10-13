@@ -1,5 +1,4 @@
 import React from 'react';
-import { useRouter } from 'next/navigation';
 
 interface PhilosophySectionProps {
   onReadStory?: () => void;
@@ -51,13 +50,11 @@ const philosophyFeatures = [
 ];
 
 const PhilosophySection: React.FC<PhilosophySectionProps> = ({ onReadStory }) => {
-  const router = useRouter();
-
   const handleAction = () => {
     if (onReadStory) {
       onReadStory();
     } else {
-      router.push('/company');
+      document.querySelector('.drft-philosophy-section')?.scrollIntoView({ behavior: 'smooth' });
     }
   };
 

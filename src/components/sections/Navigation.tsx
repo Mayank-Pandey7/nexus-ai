@@ -3,11 +3,11 @@ import { Link } from './Link';
 
 interface NavigationProps {
   onGetStarted: () => void;
-  activeView: 'home' | 'research' | 'company' | 'blog' | 'career' | 'fashion-ecommerce-ai' | 'accessories-try-on' | 'smart-assistants-ai' | 'visualization-ai' | 'team';
-  onViewChange: (view: 'home' | 'research' | 'company' | 'blog' | 'career' | 'fashion-ecommerce-ai' | 'accessories-try-on' | 'smart-assistants-ai' | 'visualization-ai' | 'team') => void;
+  activeView?: string;
+  onViewChange?: (view: string) => void;
 }
 
-const Navigation: React.FC<NavigationProps> = ({ onGetStarted, activeView, onViewChange }) => {
+const Navigation: React.FC<NavigationProps> = ({ onGetStarted }) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -102,62 +102,78 @@ const Navigation: React.FC<NavigationProps> = ({ onGetStarted, activeView, onVie
             transition: 'gap 0.3s ease'
           }}
         >
-          <Link 
-            className={`drft-nav-item ${activeView === 'fashion-ecommerce-ai' ? 'active' : ''}`}
-            href="/fashion-ecommerce-ai" 
-            onClick={() => onViewChange('fashion-ecommerce-ai')}
+          <a 
+            className="drft-nav-item"
+            href="#shop" 
+            onClick={(e) => {
+              e.preventDefault();
+              document.querySelector('.drft-products-section')?.scrollIntoView({ behavior: 'smooth' });
+            }}
             style={{ 
               color: textColor, 
               fontSize: '15px', 
               fontWeight: 700, 
               letterSpacing: '0.14em',
-              transition: 'color 0.3s ease' 
+              transition: 'color 0.3s ease',
+              textDecoration: 'none'
             }}
           >
             SHOP
-          </Link>
-          <Link 
-            className={`drft-nav-item ${activeView === 'research' ? 'active' : ''}`}
-            href="/projects" 
-            onClick={() => onViewChange('research')}
+          </a>
+          <a 
+            className="drft-nav-item"
+            href="#drops" 
+            onClick={(e) => {
+              e.preventDefault();
+              document.querySelector('.drft-explore-section')?.scrollIntoView({ behavior: 'smooth' });
+            }}
             style={{ 
               color: textColor, 
               fontSize: '15px', 
               fontWeight: 700, 
               letterSpacing: '0.14em',
-              transition: 'color 0.3s ease' 
+              transition: 'color 0.3s ease',
+              textDecoration: 'none'
             }}
           >
             NEW DROPS
-          </Link>
-          <Link 
-            className={`drft-nav-item ${activeView === 'company' ? 'active' : ''}`}
-            href="/company" 
-            onClick={() => onViewChange('company')}
+          </a>
+          <a 
+            className="drft-nav-item"
+            href="#philosophy" 
+            onClick={(e) => {
+              e.preventDefault();
+              document.querySelector('.drft-philosophy-section')?.scrollIntoView({ behavior: 'smooth' });
+            }}
             style={{ 
               color: textColor, 
               fontSize: '15px', 
               fontWeight: 700, 
               letterSpacing: '0.14em',
-              transition: 'color 0.3s ease' 
+              transition: 'color 0.3s ease',
+              textDecoration: 'none'
             }}
           >
             ABOUT
-          </Link>
-          <Link 
-            className={`drft-nav-item ${activeView === 'career' ? 'active' : ''}`}
-            href="/career" 
-            onClick={() => onViewChange('career')}
+          </a>
+          <a 
+            className="drft-nav-item"
+            href="#faq" 
+            onClick={(e) => {
+              e.preventDefault();
+              document.querySelector('.faq-section')?.scrollIntoView({ behavior: 'smooth' });
+            }}
             style={{ 
               color: textColor, 
               fontSize: '15px', 
               fontWeight: 700, 
               letterSpacing: '0.14em',
-              transition: 'color 0.3s ease' 
+              transition: 'color 0.3s ease',
+              textDecoration: 'none'
             }}
           >
-            CONTACT
-          </Link>
+            FAQ
+          </a>
         </nav>
 
         {/* Right: Modern Streetwear Utility Icons */}
@@ -264,18 +280,46 @@ const Navigation: React.FC<NavigationProps> = ({ onGetStarted, activeView, onVie
         </div>
 
         <nav className="drft-drawer-nav">
-          <Link href="/fashion-ecommerce-ai" onClick={() => { setIsMobileMenuOpen(false); onViewChange('fashion-ecommerce-ai'); }}>
+          <a 
+            href="#shop" 
+            onClick={(e) => { 
+              e.preventDefault(); 
+              setIsMobileMenuOpen(false); 
+              document.querySelector('.drft-products-section')?.scrollIntoView({ behavior: 'smooth' }); 
+            }}
+          >
             SHOP
-          </Link>
-          <Link href="/projects" onClick={() => { setIsMobileMenuOpen(false); onViewChange('research'); }}>
+          </a>
+          <a 
+            href="#drops" 
+            onClick={(e) => { 
+              e.preventDefault(); 
+              setIsMobileMenuOpen(false); 
+              document.querySelector('.drft-explore-section')?.scrollIntoView({ behavior: 'smooth' }); 
+            }}
+          >
             NEW DROPS
-          </Link>
-          <Link href="/company" onClick={() => { setIsMobileMenuOpen(false); onViewChange('company'); }}>
+          </a>
+          <a 
+            href="#philosophy" 
+            onClick={(e) => { 
+              e.preventDefault(); 
+              setIsMobileMenuOpen(false); 
+              document.querySelector('.drft-philosophy-section')?.scrollIntoView({ behavior: 'smooth' }); 
+            }}
+          >
             ABOUT
-          </Link>
-          <Link href="/career" onClick={() => { setIsMobileMenuOpen(false); onViewChange('career'); }}>
-            CONTACT
-          </Link>
+          </a>
+          <a 
+            href="#faq" 
+            onClick={(e) => { 
+              e.preventDefault(); 
+              setIsMobileMenuOpen(false); 
+              document.querySelector('.faq-section')?.scrollIntoView({ behavior: 'smooth' }); 
+            }}
+          >
+            FAQ
+          </a>
         </nav>
 
         <div className="drft-drawer-footer">

@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-const nexusaiLogo = '/assets/images/nexusai-logo-black.png';
 
 interface LoginModalProps {
   isOpen: boolean;
@@ -29,9 +28,9 @@ const LoginModal: React.FC<LoginModalProps> = ({ isOpen, onClose }) => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (isSignUp) {
-      alert(`Welcome, ${name}! Your Trialshopy account has been created successfully.`);
+      alert(`Welcome, ${name}! Your DRFT DEON member account has been created.`);
     } else {
-      alert(`Successfully signed in as ${email}. Welcome back to Trialshopy!`);
+      alert(`Welcome back to DRFT DEON, ${email}!`);
     }
     // Reset forms and close modal
     setEmail('');
@@ -58,14 +57,13 @@ const LoginModal: React.FC<LoginModalProps> = ({ isOpen, onClose }) => {
 
         <div className="login-modal-header">
           <div className="login-modal-logo" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', justifyContent: 'center' }}>
-            <img src={nexusaiLogo} alt="Trialshopy logo" style={{ width: '2rem', height: '2rem', objectFit: 'contain' }} />
-            <span className="logo-text-bold" style={{ fontFamily: 'var(--font-inter-tight), sans-serif', fontWeight: 700, fontSize: '1.25rem', color: '#1d1d1f', letterSpacing: '-0.02em' }}>Trialshopy</span>
+            <img src="/drft_deon_logo_black.png" alt="DRFT DEON logo" style={{ height: '1.5rem', width: 'auto', objectFit: 'contain' }} />
           </div>
           <h2 className="login-modal-title">
-            {isSignUp ? 'Create Account' : 'Welcome Back'}
+            {isSignUp ? 'Create Member Account' : 'Welcome Back'}
           </h2>
           <p className="login-modal-subtitle">
-            {isSignUp ? 'Sign up to build virtual try-ons and 3D scenes' : 'Sign in to access your Trialshopy workspace'}
+            {isSignUp ? 'Sign up for private drop notifications and order tracking' : 'Sign in to access your saved orders & bag'}
           </p>
         </div>
 
